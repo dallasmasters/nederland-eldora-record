@@ -1,0 +1,216 @@
+<title>The Eldora FAQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column of numbered questions, same palette and type as the Eldora Record */
+:root {
+  --bg: #f6f8f8; --surface: #ffffff; --fg: #17242a; --muted: #5a6b72; --line: #d7e0e2;
+  --accent: #1f6b5c; --accent-soft: #e2f0ec; --warn: #9a4a1c; --warn-soft: #f8e9df;
+  --body: "Public Sans", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11191c; --surface: #172226; --fg: #e3ecee; --muted: #93a6ad; --line: #2b3a40;
+  --accent: #6cc7b1; --accent-soft: #1b3832; --warn: #f0a774; --warn-soft: #3d2618; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11191c; --surface: #172226; --fg: #e3ecee; --muted: #93a6ad; --line: #2b3a40;
+  --accent: #6cc7b1; --accent-soft: #1b3832; --warn: #f0a774; --warn-soft: #3d2618; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 15px/1.55 var(--body); margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 64px; display: grid; gap: 22px; }
+.wrap > *, section.q > * { min-width: 0; }
+/* Text keeps a readable measure; tables and charts use the full width, as on the record page */
+p, ul, ol, nav.toc { max-width: 80ch; }
+.eyebrow { font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--accent); }
+h1 { font: 800 clamp(28px, 4.5vw, 42px)/1.1 var(--body); margin: 4px 0 0; text-wrap: balance; letter-spacing: -.01em; }
+.byline { color: var(--muted); margin: 0; font-size: 15px; }
+.note { background: var(--accent-soft); border-left: 4px solid var(--accent); padding: 12px 16px; margin: 0; border-radius: 0 6px 6px 0; display: grid; gap: 8px; }
+.note p { margin: 0; }
+a { color: var(--accent); }
+nav.toc { display: grid; gap: 4px; font-size: 15px; }
+nav.toc b { font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-top: 6px; }
+nav.toc ol { margin: 0; padding-left: 22px; display: grid; gap: 2px; }
+.part { font: 600 12px var(--mono); text-transform: uppercase; letter-spacing: .1em; color: var(--muted);
+  border-top: 2px solid var(--fg); padding-top: 8px; margin: 18px 0 0; }
+section.q { display: grid; gap: 10px; scroll-margin-top: 16px; }
+section.q h2 { font-size: 21px; line-height: 1.25; margin: 0; text-wrap: balance; display: flex; gap: 10px; }
+section.q h2 .n { font: 600 15px/1.9 var(--mono); color: var(--accent); flex: none; }
+section.q p, section.q ul { margin: 0; }
+section.q ul { padding-left: 20px; display: grid; gap: 4px; }
+.src { font-size: 14px; color: var(--muted); }
+.src a { font-weight: 600; }
+.pointer { border-left: 3px solid var(--warn); padding-left: 12px; color: var(--muted); font-size: 15px; }
+.figs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.fig { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; display: grid; gap: 2px; min-width: 0; }
+.fig b { font: 600 22px var(--mono); font-variant-numeric: tabular-nums; }
+.fig span { font-size: 13px; color: var(--muted); }
+.fig.total { border-color: var(--warn); }
+.figure { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px; margin: 0; display: grid; gap: 6px; }
+.figure figcaption { font-weight: 600; }
+.figure .cap { font-size: 13px; color: var(--muted); }
+.figure svg { display: block; width: 100%; height: auto; }
+.figure .chart-narrow { display: none; }
+.grid { stroke: var(--line); stroke-width: 1; }
+.zero { stroke: var(--muted); stroke-width: 1.2; }
+.tick { stroke: var(--muted); }
+.ylab, .xlab { fill: var(--muted); font: 11px var(--mono); }
+.ylab { text-anchor: end; }
+.xlab { text-anchor: middle; }
+.wf-start { fill: var(--accent); }
+.wf-down { fill: var(--warn); }
+.wf-end { fill: var(--fg); }
+.wf-link { stroke: var(--muted); stroke-dasharray: 3 3; }
+.wf-lab { fill: var(--fg); font: 600 12px var(--mono); text-anchor: middle; }
+.wf-cat { fill: var(--muted); font: 11px var(--body); text-anchor: middle; }
+.ct-area { fill: var(--warn-soft); stroke: none; }
+.ct-line { fill: none; stroke: var(--warn); stroke-width: 2; }
+.dot { fill: var(--warn); }
+.ct-owed { fill: var(--warn); }
+.ct-est { stroke: var(--fg); stroke-dasharray: 5 4; stroke-width: 1.2; }
+.ct-lab { fill: var(--fg); font: 600 13px var(--mono); }
+.ct-note { fill: var(--muted); font: 11px var(--mono); }
+footer { border-top: 1px solid var(--line); padding-top: 14px; font-size: 14px; color: var(--muted); display: grid; gap: 6px; }
+footer p { margin: 0; }
+@media (max-width: 560px) {
+  h1 { font-size: 27px; }
+  .figs { grid-template-columns: 1fr; }
+  .figure { padding: 10px; }
+  .figure .chart-wide { display: none; }
+  .figure .chart-narrow { display: block; }
+}
+</style>
+
+<main class="wrap">
+  <header style="display:grid;gap:12px">
+    <div class="eyebrow">The Eldora Record · short version</div>
+    <h1>The Eldora FAQ</h1>
+    <p class="byline">Dallas Masters, Nederland resident · Figures through the Nov. 9, 2026, warrant list · Updated with the record, last Nov. 18, 2026</p>
+    <div class="note">
+      <p>Short answers to the questions residents ask about the Town's pursuit of Eldora Mountain Resort. Each answer comes from <a href="https://eldorarecord.org/">the Eldora Record</a> and ends with a link to the part of the record that has the details and the Town sources.</p>
+      <p>The record is built from the Town's own public records: Board meeting records from Jan. 3, 2023, through Nov. 17, 2026, resolutions, ordinances, finance documents, staff reports, Town website and Facebook posts, and records released under the Colorado Open Records Act. Where it does its own math, it says so; where it can't find something, it says "not in the records searched." Corrections are logged (<a href="https://eldorarecord.org/#method-ai">how this was done</a>).</p>
+      <p>Like the record, this page is facts only. <a href="https://eldorarecord.org/opinion.html">My opinions</a>, <a href="https://eldorarecord.org/resolution.html">Resolution 2026-31</a> with my amendments, and the plain-language <a href="https://eldorarecord.org/cliffs-notes.html">Eldora Deal Cliffs Notes</a> are on separate pages.</p>
+    </div>
+    <nav class="toc" aria-label="Questions">
+      <b>The costs</b><ol start="1"><li><a href="#q1">How much has the Town paid, and did the Board know?</a></li><li><a href="#q2">How much does the Town owe in all?</a></li></ol>
+      <b>Paying for it</b><ol start="3"><li><a href="#q3">Does the General Fund have the cash?</a></li><li><a href="#q4">How would the budget cover it?</a></li><li><a href="#q5">What does Resolution 2026-31 require?</a></li></ol>
+      <b>The deal</b><ol start="6"><li><a href="#q6">Where does the deal stand?</a></li><li><a href="#q7">What would the purchase commit the Town to?</a></li><li><a href="#q8">What would it mean for the fire and library districts?</a></li></ol>
+      <b>What's next</b><ol start="9"><li><a href="#q9">What don't we know yet?</a></li><li><a href="#q10">What can I do?</a></li></ol>
+    </nav>
+  </header>
+
+  <p class="part">The costs</p>
+
+  <section class="q" id="q1">
+    <h2><span class="n">1.</span>How much has the Town paid, and did the Board know?</h2>
+    <p>$1,254,931 through the Nov. 9, 2026, warrant list, mostly to lawyers and consultants. The largest payees are Widner Juran LLP ($293,931), POWDR Corp ($197,079), Plante Moran ($161,656), Hogan Lovells ($148,795), and SE Group ($134,231). All of it is charged to the General Fund, which pays for day-to-day Town services, and neither the 2025 nor the 2026 budget included it. The Board of Trustees, which includes the Mayor, approved every step: the purchase agreement, the bond ordinance, and five 2025 resolutions letting staff hire counsel and consultants with no dollar limit. Every recorded vote on the acquisition was unanimous among the trustees present.</p>
+    <p>The running total was in the packets the Board approved: each warrant list showed the Eldora payments and the account's balance, $915,922 by July 7, 2026. The minutes searched record no discussion of it. The risk was raised in January 2025, when the Town Attorney said bond counsel "would need to be paid by the town" if the deal didn't close. Until November 2026 the payments were carried as money the Town expected to recover from bonds; its Nov. 9 forecast now counts them as spending.</p>
+    <figure class="figure" role="figure" aria-label="Eldora acquisition costs: the running total">
+      <figcaption>Eldora acquisition costs: the running total</figcaption>
+      <svg viewBox="0 0 760 320" class="chart-wide" role="img" aria-label="Eldora acquisition costs paid by the General Fund, rising from $0.07M in October 2025 to $1.25M, plus $1.62M firms confirmed is still owed, for about $2.9M; the Town estimates $2.76M"><line x1="64" x2="590" y1="284.0" y2="284.0" class="grid"/><text x="56" y="288.0" class="ylab">$0</text><line x1="64" x2="590" y1="246.9" y2="246.9" class="grid"/><text x="56" y="250.9" class="ylab">$0.5M</text><line x1="64" x2="590" y1="209.7" y2="209.7" class="grid"/><text x="56" y="213.7" class="ylab">$1M</text><line x1="64" x2="590" y1="172.6" y2="172.6" class="grid"/><text x="56" y="176.6" class="ylab">$1.5M</text><line x1="64" x2="590" y1="135.4" y2="135.4" class="grid"/><text x="56" y="139.4" class="ylab">$2M</text><line x1="64" x2="590" y1="98.3" y2="98.3" class="grid"/><text x="56" y="102.3" class="ylab">$2.5M</text><line x1="64" x2="590" y1="61.1" y2="61.1" class="grid"/><text x="56" y="65.1" class="ylab">$3M</text><line x1="64" x2="590" y1="24.0" y2="24.0" class="grid"/><text x="56" y="28.0" class="ylab">$3.5M</text><line x1="64.0" x2="64.0" y1="284" y2="289" class="tick"/><text x="64.0" y="304" class="xlab">October 2025</text><line x1="177.6" x2="177.6" y1="284" y2="289" class="tick"/><text x="177.6" y="304" class="xlab">January 2026</text><line x1="288.7" x2="288.7" y1="284" y2="289" class="tick"/><text x="288.7" y="304" class="xlab">April 2026</text><line x1="401.1" x2="401.1" y1="284" y2="289" class="tick"/><text x="401.1" y="304" class="xlab">July 2026</text><line x1="514.7" x2="514.7" y1="284" y2="289" class="tick"/><text x="514.7" y="304" class="xlab">October 2026</text><path d="M64.0,284.0L71.4,284.0L71.4,279.0L88.7,279.0L88.7,271.6L107.2,271.6L107.2,266.5L123.3,266.5L123.3,263.6L140.6,263.6L140.6,256.9L157.8,256.9L157.8,256.5L201.1,256.5L201.1,249.1L218.3,249.1L218.3,247.0L235.6,247.0L235.6,244.2L252.9,244.2L252.9,231.2L287.5,231.2L287.5,227.8L313.4,227.8L313.4,227.8L330.7,227.8L330.7,224.8L348.0,224.8L348.0,224.0L365.3,224.0L365.3,222.6L382.6,222.6L382.6,222.3L408.5,222.3L408.5,216.0L425.8,216.0L425.8,199.1L460.4,199.1L460.4,199.0L494.9,199.0L494.9,198.6L520.9,198.6L520.9,195.2L538.1,195.2L538.1,195.2L562.8,195.2L562.8,190.8L562.8,284.0Z" class="ct-area"/><path d="M64.0,284.0L71.4,284.0L71.4,279.0L88.7,279.0L88.7,271.6L107.2,271.6L107.2,266.5L123.3,266.5L123.3,263.6L140.6,263.6L140.6,256.9L157.8,256.9L157.8,256.5L201.1,256.5L201.1,249.1L218.3,249.1L218.3,247.0L235.6,247.0L235.6,244.2L252.9,244.2L252.9,231.2L287.5,231.2L287.5,227.8L313.4,227.8L313.4,227.8L330.7,227.8L330.7,224.8L348.0,224.8L348.0,224.0L365.3,224.0L365.3,222.6L382.6,222.6L382.6,222.3L408.5,222.3L408.5,216.0L425.8,216.0L425.8,199.1L460.4,199.1L460.4,199.0L494.9,199.0L494.9,198.6L520.9,198.6L520.9,195.2L538.1,195.2L538.1,195.2L562.8,195.2L562.8,190.8" class="ct-line"/><circle cx="71.4" cy="279.0" r="3" class="dot"><title>Oct. 7, 2025: $67,492</title></circle><circle cx="88.7" cy="271.6" r="3" class="dot"><title>Oct. 21, 2025: $167,130</title></circle><circle cx="107.2" cy="266.5" r="3" class="dot"><title>Nov. 5, 2025: $236,212</title></circle><circle cx="123.3" cy="263.6" r="3" class="dot"><title>Nov. 18, 2025: $274,416</title></circle><circle cx="140.6" cy="256.9" r="3" class="dot"><title>Dec. 2, 2025: $364,567</title></circle><circle cx="157.8" cy="256.5" r="3" class="dot"><title>Dec. 16, 2025: $370,841</title></circle><circle cx="201.1" cy="249.1" r="3" class="dot"><title>Jan. 20, 2026: $469,493</title></circle><circle cx="218.3" cy="247.0" r="3" class="dot"><title>Feb. 3, 2026: $497,805</title></circle><circle cx="235.6" cy="244.2" r="3" class="dot"><title>Feb. 17, 2026: $536,295</title></circle><circle cx="252.9" cy="231.2" r="3" class="dot"><title>March 3, 2026: $710,295</title></circle><circle cx="287.5" cy="227.8" r="3" class="dot"><title>March 31, 2026: $756,622</title></circle><circle cx="313.4" cy="227.8" r="3" class="dot"><title>April 21, 2026: $756,822</title></circle><circle cx="330.7" cy="224.8" r="3" class="dot"><title>May 5, 2026: $796,470</title></circle><circle cx="348.0" cy="224.0" r="3" class="dot"><title>May 19, 2026: $807,391</title></circle><circle cx="365.3" cy="222.6" r="3" class="dot"><title>June 2, 2026: $826,180</title></circle><circle cx="382.6" cy="222.3" r="3" class="dot"><title>June 16, 2026: $830,221</title></circle><circle cx="408.5" cy="216.0" r="3" class="dot"><title>July 7, 2026: $915,922</title></circle><circle cx="425.8" cy="199.1" r="3" class="dot"><title>July 21, 2026: $1,143,083</title></circle><circle cx="460.4" cy="199.0" r="3" class="dot"><title>Aug. 18, 2026: $1,143,563</title></circle><circle cx="494.9" cy="198.6" r="3" class="dot"><title>Sept. 15, 2026: $1,149,904</title></circle><circle cx="520.9" cy="195.2" r="3" class="dot"><title>Oct. 6, 2026: $1,195,749</title></circle><circle cx="538.1" cy="195.2" r="3" class="dot"><title>Oct. 20, 2026: $1,195,949</title></circle><circle cx="562.8" cy="190.8" r="3" class="dot"><title>Nov. 9, 2026: $1,254,931</title></circle><rect x="570.8" y="70.2" width="22" height="120.6" class="ct-owed"><title>Confirmed owed: $1.62M</title></rect><rect x="570.8" y="190.8" width="22" height="93.2" class="ct-area"><title>Paid: $1.25M</title></rect><text x="598.8" y="74.2" class="ct-lab">$2.9M total</text><text x="598.8" y="134.5" class="ct-note">+$1.6M owed</text><text x="598.8" y="204.8" class="ct-note">$1.3M paid</text><line x1="64" x2="592.8" y1="79.0" y2="79.0" class="ct-est"/><text x="70" y="73.0" class="ct-note">Town estimate: $2.76M</text></svg><svg viewBox="0 0 380 280" class="chart-narrow" role="img" aria-label="Eldora acquisition costs paid by the General Fund, rising from $0.07M in October 2025 to $1.25M, plus $1.62M firms confirmed is still owed, for about $2.9M; the Town estimates $2.76M"><line x1="50" x2="288" y1="246.0" y2="246.0" class="grid"/><text x="42" y="250.0" class="ylab">$0</text><line x1="50" x2="288" y1="190.5" y2="190.5" class="grid"/><text x="42" y="194.5" class="ylab">$1M</text><line x1="50" x2="288" y1="135.0" y2="135.0" class="grid"/><text x="42" y="139.0" class="ylab">$2M</text><line x1="50" x2="288" y1="79.5" y2="79.5" class="grid"/><text x="42" y="83.5" class="ylab">$3M</text><line x1="50" x2="288" y1="24.0" y2="24.0" class="grid"/><text x="42" y="28.0" class="ylab">$4M</text><line x1="50.0" x2="50.0" y1="246" y2="251" class="tick"/><text x="50.0" y="266" class="xlab">October 2025</text><line x1="151.7" x2="151.7" y1="246" y2="251" class="tick"/><text x="151.7" y="266" class="xlab">April 2026</text><line x1="253.9" x2="253.9" y1="246" y2="251" class="tick"/><text x="253.9" y="266" class="xlab">October 2026</text><path d="M50.0,246.0L53.4,246.0L53.4,242.3L61.2,242.3L61.2,236.7L69.6,236.7L69.6,232.9L76.8,232.9L76.8,230.8L84.6,230.8L84.6,225.8L92.5,225.8L92.5,225.4L112.0,225.4L112.0,219.9L119.8,219.9L119.8,218.4L127.7,218.4L127.7,216.2L135.5,216.2L135.5,206.6L151.1,206.6L151.1,204.0L162.9,204.0L162.9,204.0L170.7,204.0L170.7,201.8L178.5,201.8L178.5,201.2L186.3,201.2L186.3,200.1L194.1,200.1L194.1,199.9L205.9,199.9L205.9,195.2L213.7,195.2L213.7,182.6L229.3,182.6L229.3,182.5L245.0,182.5L245.0,182.2L256.7,182.2L256.7,179.6L264.5,179.6L264.5,179.6L275.7,179.6L275.7,176.4L275.7,246.0Z" class="ct-area"/><path d="M50.0,246.0L53.4,246.0L53.4,242.3L61.2,242.3L61.2,236.7L69.6,236.7L69.6,232.9L76.8,232.9L76.8,230.8L84.6,230.8L84.6,225.8L92.5,225.8L92.5,225.4L112.0,225.4L112.0,219.9L119.8,219.9L119.8,218.4L127.7,218.4L127.7,216.2L135.5,216.2L135.5,206.6L151.1,206.6L151.1,204.0L162.9,204.0L162.9,204.0L170.7,204.0L170.7,201.8L178.5,201.8L178.5,201.2L186.3,201.2L186.3,200.1L194.1,200.1L194.1,199.9L205.9,199.9L205.9,195.2L213.7,195.2L213.7,182.6L229.3,182.6L229.3,182.5L245.0,182.5L245.0,182.2L256.7,182.2L256.7,179.6L264.5,179.6L264.5,179.6L275.7,179.6L275.7,176.4" class="ct-line"/><circle cx="53.4" cy="242.3" r="2.5" class="dot"><title>Oct. 7, 2025: $67,492</title></circle><circle cx="61.2" cy="236.7" r="2.5" class="dot"><title>Oct. 21, 2025: $167,130</title></circle><circle cx="69.6" cy="232.9" r="2.5" class="dot"><title>Nov. 5, 2025: $236,212</title></circle><circle cx="76.8" cy="230.8" r="2.5" class="dot"><title>Nov. 18, 2025: $274,416</title></circle><circle cx="84.6" cy="225.8" r="2.5" class="dot"><title>Dec. 2, 2025: $364,567</title></circle><circle cx="92.5" cy="225.4" r="2.5" class="dot"><title>Dec. 16, 2025: $370,841</title></circle><circle cx="112.0" cy="219.9" r="2.5" class="dot"><title>Jan. 20, 2026: $469,493</title></circle><circle cx="119.8" cy="218.4" r="2.5" class="dot"><title>Feb. 3, 2026: $497,805</title></circle><circle cx="127.7" cy="216.2" r="2.5" class="dot"><title>Feb. 17, 2026: $536,295</title></circle><circle cx="135.5" cy="206.6" r="2.5" class="dot"><title>March 3, 2026: $710,295</title></circle><circle cx="151.1" cy="204.0" r="2.5" class="dot"><title>March 31, 2026: $756,622</title></circle><circle cx="162.9" cy="204.0" r="2.5" class="dot"><title>April 21, 2026: $756,822</title></circle><circle cx="170.7" cy="201.8" r="2.5" class="dot"><title>May 5, 2026: $796,470</title></circle><circle cx="178.5" cy="201.2" r="2.5" class="dot"><title>May 19, 2026: $807,391</title></circle><circle cx="186.3" cy="200.1" r="2.5" class="dot"><title>June 2, 2026: $826,180</title></circle><circle cx="194.1" cy="199.9" r="2.5" class="dot"><title>June 16, 2026: $830,221</title></circle><circle cx="205.9" cy="195.2" r="2.5" class="dot"><title>July 7, 2026: $915,922</title></circle><circle cx="213.7" cy="182.6" r="2.5" class="dot"><title>July 21, 2026: $1,143,083</title></circle><circle cx="229.3" cy="182.5" r="2.5" class="dot"><title>Aug. 18, 2026: $1,143,563</title></circle><circle cx="245.0" cy="182.2" r="2.5" class="dot"><title>Sept. 15, 2026: $1,149,904</title></circle><circle cx="256.7" cy="179.6" r="2.5" class="dot"><title>Oct. 6, 2026: $1,195,749</title></circle><circle cx="264.5" cy="179.6" r="2.5" class="dot"><title>Oct. 20, 2026: $1,195,949</title></circle><circle cx="275.7" cy="176.4" r="2.5" class="dot"><title>Nov. 9, 2026: $1,254,931</title></circle><rect x="283.7" y="86.2" width="14" height="90.1" class="ct-owed"><title>Confirmed owed: $1.62M</title></rect><rect x="283.7" y="176.4" width="14" height="69.6" class="ct-area"><title>Paid: $1.25M</title></rect><text x="303.7" y="90.2" class="ct-lab">$2.9M</text><text x="303.7" y="135.3" class="ct-note">+$1.6M owed</text><text x="303.7" y="190.4" class="ct-note">$1.3M paid</text><line x1="50" x2="297.7" y1="92.8" y2="92.8" class="ct-est"/><text x="56" y="86.8" class="ct-note">Town est. $2.76M</text></svg>
+      <span class="cap">Paid from the General Fund after each warrant list, then what firms confirmed is still owed as of Oct. 16, 2026. The dashed line is the Town's estimate, about $2.76 million, not itemized.</span>
+    </figure>
+    <p class="src">Details and sources: <a href="https://eldorarecord.org/#payees">Who was paid</a> · <a href="https://eldorarecord.org/#running-total">The running total in the packets</a> · <a href="https://eldorarecord.org/#receivable">How the costs are recorded</a> · <a href="https://eldorarecord.org/#board-votes">How the Board voted</a></p>
+  </section>
+
+  <section class="q" id="q2">
+    <h2><span class="n">2.</span>How much does the Town owe in all?</h2>
+    <div class="figs">
+      <div class="fig"><span>Already paid</span><b>$1,254,931</b><span>through the Nov. 9, 2026, warrant list</span></div>
+      <div class="fig"><span>Confirmed owed</span><b>$1,623,777</b><span>by the firms as of Oct. 16, 2026, less bills paid Nov. 9</span></div>
+      <div class="fig total"><span>Total</span><b>~$2.9M</b><span>about $4,202 per household</span></div>
+    </div>
+    <p>This total can be traced firm by firm: the warrant lists for what has been paid, and the firms' signed confirmations, released Oct. 29, for what is owed. Most of what is owed is real estate counsel Brownstein Hyatt Farber Schreck's $1,174,083, billed when the deal is completed or ends, with a 10% discount if it fails. The Town's own estimate, about $2.76 million, isn't itemized.</p>
+    <p>The total could rise. It leaves out firms that sent no confirmation, such as Hogan Lovells, Plante Moran, and POWDR, and work after Oct. 16. It would be lower if Brownstein's discount applies (about $2.76 million if it applies to all of its fees).</p>
+    <p class="src">Details and sources: <a href="https://eldorarecord.org/#bottom-line">The bottom line</a> · <a href="https://eldorarecord.org/#payees">Who is owed</a></p>
+  </section>
+
+  <p class="part">Paying for it</p>
+
+  <section class="q" id="q3">
+    <h2><span class="n">3.</span>Does the General Fund have the cash? Could the Town go bankrupt?</h2>
+    <p>Barely any of the cash is the General Fund's. The Town keeps all its funds' cash in one pool, including CSAFE, and on Sept. 30, 2026, the General Fund's share was below zero, at &minus;$105,870. Paying the rest would in effect use Water and Sewer cash, leaving those funds roughly $0.54 million above their required reserves.</p>
+    <p>Bankruptcy and dissolving aren't ways out. Colorado law allows municipal bankruptcy only for irrigation and drainage districts, and a town can dissolve only after providing for its debts. By the record's reading, this is a budget problem the Board must close over later budgets, by cutting or delaying spending, negotiating with the firms, selling Town property (park land needs voter approval), or asking voters for a tax.</p>
+    <p class="src">Details and sources: <a href="https://eldorarecord.org/#csafe">CSAFE and the pooled cash</a> · <a href="https://eldorarecord.org/#other-funds">Could other funds cover it?</a> · <a href="https://eldorarecord.org/#bankruptcy">Bankruptcy and dissolution</a></p>
+  </section>
+
+  <section class="q" id="q4">
+    <h2><span class="n">4.</span>How would the budget cover it?</h2>
+    <p>The Town's Nov. 9, 2026, forecast has the General Fund ending 2026 at −$1,948,512 and 2027 at −$2,132,122, in a fund that spends about $3.2 million a year. With the record's itemized total, 2026 would end at about −$2,068,634.</p>
+    <figure class="figure" role="figure" aria-label="The General Fund in the Town's Nov. 9, 2026, forecast">
+      <figcaption>The General Fund in 2026: the Town's forecast</figcaption>
+      <svg viewBox="0 0 760 320" class="chart-wide" role="img" aria-label="General Fund balance in the Town's Nov. 9, 2026, forecast: $1.03M at the end of 2025, −$0.22M in 2026 without Eldora, −$2.76M in Eldora costs, ending 2026 at −$1.95M"><line x1="64" x2="744" y1="268.0" y2="268.0" class="grid"/><text x="56" y="272.0" class="ylab">−$2M</text><line x1="64" x2="744" y1="233.7" y2="233.7" class="grid"/><text x="56" y="237.7" class="ylab">−$1.5M</text><line x1="64" x2="744" y1="199.4" y2="199.4" class="grid"/><text x="56" y="203.4" class="ylab">−$1M</text><line x1="64" x2="744" y1="165.1" y2="165.1" class="grid"/><text x="56" y="169.1" class="ylab">−$0.5M</text><line x1="64" x2="744" y1="130.9" y2="130.9" class="zero"/><text x="56" y="134.9" class="ylab">$0</text><line x1="64" x2="744" y1="96.6" y2="96.6" class="grid"/><text x="56" y="100.6" class="ylab">$0.5M</text><line x1="64" x2="744" y1="62.3" y2="62.3" class="grid"/><text x="56" y="66.3" class="ylab">$1M</text><line x1="64" x2="744" y1="28.0" y2="28.0" class="grid"/><text x="56" y="32.0" class="ylab">$1.5M</text><rect x="101.4" y="60.2" width="95.2" height="70.6" class="wf-start"><title>End of 2025: $1.03M</title></rect><line x1="196.6" x2="271.4" y1="60.2" y2="60.2" class="wf-link"/><text x="149.0" y="53.2" class="wf-lab">$1.03M</text><text x="149.0" y="288" class="wf-cat">End of 2025</text><rect x="271.4" y="60.2" width="95.2" height="15.1" class="wf-down"><title>2026 forecast, without Eldora: −$0.22M</title></rect><line x1="366.6" x2="441.4" y1="75.3" y2="75.3" class="wf-link"/><text x="319.0" y="90.3" class="wf-lab">−$0.22M</text><text x="319.0" y="288" class="wf-cat">2026 forecast,</text><text x="319.0" y="302" class="wf-cat">without Eldora</text><rect x="441.4" y="75.3" width="95.2" height="189.2" class="wf-down"><title>Eldora costs, Town estimate: −$2.76M</title></rect><line x1="536.6" x2="611.4" y1="264.5" y2="264.5" class="wf-link"/><text x="489.0" y="279.5" class="wf-lab">−$2.76M</text><text x="489.0" y="288" class="wf-cat">Eldora costs,</text><text x="489.0" y="302" class="wf-cat">Town estimate</text><rect x="611.4" y="130.9" width="95.2" height="133.6" class="wf-end"><title>End of 2026 (Town forecast): −$1.95M</title></rect><text x="659.0" y="279.5" class="wf-lab">−$1.95M</text><text x="659.0" y="288" class="wf-cat">End of 2026</text><text x="659.0" y="302" class="wf-cat">(Town forecast)</text></svg><svg viewBox="0 0 380 300" class="chart-narrow" role="img" aria-label="General Fund balance in the Town's Nov. 9, 2026, forecast: $1.03M at the end of 2025, −$0.22M in 2026 without Eldora, −$2.76M in Eldora costs, ending 2026 at −$1.95M"><line x1="50" x2="372" y1="244.0" y2="244.0" class="grid"/><text x="42" y="248.0" class="ylab">−$2M</text><line x1="50" x2="372" y1="189.5" y2="189.5" class="grid"/><text x="42" y="193.5" class="ylab">−$1M</text><line x1="50" x2="372" y1="135.0" y2="135.0" class="zero"/><text x="42" y="139.0" class="ylab">$0</text><line x1="50" x2="372" y1="80.5" y2="80.5" class="grid"/><text x="42" y="84.5" class="ylab">$1M</text><line x1="50" x2="372" y1="26.0" y2="26.0" class="grid"/><text x="42" y="30.0" class="ylab">$2M</text><rect x="65.3" y="78.9" width="49.9" height="56.1" class="wf-start"><title>End of 2025: $1.03M</title></rect><line x1="115.2" x2="145.8" y1="78.9" y2="78.9" class="wf-link"/><text x="90.2" y="71.9" class="wf-lab">$1.03M</text><text x="90.2" y="264" class="wf-cat">End of</text><text x="90.2" y="278" class="wf-cat">2025</text><rect x="145.8" y="78.9" width="49.9" height="12.0" class="wf-down"><title>2026, no Eldora: −$0.22M</title></rect><line x1="195.7" x2="226.3" y1="90.9" y2="90.9" class="wf-link"/><text x="170.8" y="105.9" class="wf-lab">−$0.22M</text><text x="170.8" y="264" class="wf-cat">2026,</text><text x="170.8" y="278" class="wf-cat">no Eldora</text><rect x="226.3" y="90.9" width="49.9" height="150.3" class="wf-down"><title>Eldora costs: −$2.76M</title></rect><line x1="276.2" x2="306.8" y1="241.2" y2="241.2" class="wf-link"/><text x="251.2" y="256.2" class="wf-lab">−$2.76M</text><text x="251.2" y="264" class="wf-cat">Eldora</text><text x="251.2" y="278" class="wf-cat">costs</text><rect x="306.8" y="135.0" width="49.9" height="106.2" class="wf-end"><title>End of 2026: −$1.95M</title></rect><text x="331.8" y="256.2" class="wf-lab">−$1.95M</text><text x="331.8" y="264" class="wf-cat">End of</text><text x="331.8" y="278" class="wf-cat">2026</text></svg>
+      <span class="cap">From the Town's Nov. 9, 2026, budget presentation, which says its figures are preliminary and may grow.</span>
+    </figure>
+    <p>A Nov. 16 staff memo proposes transfers, not loans, of up to $800,000 from the Community Center Fund and up to $2.3 million from the Water and Sewer Funds, described as "user fees," recorded in an amended 2026 budget on Dec. 1. Voters approved the Community Center's sales tax for the Community Center, most recently in 2022, and the Town's books list that fund as fully restricted; voters dedicated the utilities' sales tax to their state loans. By the record's check, the memo's 75% share from Sewer exceeds Sewer's cash, and the plan closes only if nearly all of the money in the three funds can be used. Whether the transfers are lawful is a question for the Town Attorney. The 2027 budget hearing is Dec. 1, and adoption is set for Dec. 8.</p>
+    <p class="src">Details and sources: <a href="https://eldorarecord.org/#gf-tables">The General Fund deficit</a> · <a href="https://eldorarecord.org/#nov16-plan">The Nov. 16 plan</a> · <a href="https://eldorarecord.org/#fund-dedications">What voters approved</a> · <a href="https://eldorarecord.org/#budget-check">The record's check</a></p>
+  </section>
+
+  <section class="q" id="q5">
+    <h2><span class="n">5.</span>What does Resolution 2026-31 require?</h2>
+    <p>The Board adopted it Nov. 17, 2026, and it took effect that day. It's the Town Attorney's revision of a resident's draft. It:</p>
+    <ul>
+      <li>stops billable work by the firms, except toward a term sheet, with written notice due by Nov. 20;</li>
+      <li>allows up to $80,000 toward a term sheet, only after the Board appropriates it, and requires a vote to continue if total costs pass $3 million;</li>
+      <li>requires Board approval of any new engagement;</li>
+      <li>requires monthly cost reports starting Dec. 1 and a firm-by-firm accounting at the Dec. 15 meeting;</li>
+      <li>requires budget items for the costs and a General Fund plan if the deal fails; and</li>
+      <li>sets deadlines the Board can extend only by a vote before each passes: a term sheet by Feb. 14, 2027, a signed agreement and financing by April 14, and a closing by June 30. If one passes without an extension, the Town's pursuit ends.</li>
+    </ul>
+    <p class="src">Details and sources: <a href="https://eldorarecord.org/#res-2026-31">Resolution 2026-31</a> · <a href="https://eldorarecord.org/resolution.html">The adopted text</a></p>
+  </section>
+
+  <p class="part">The deal</p>
+
+  <section class="q" id="q6">
+    <h2><span class="n">6.</span>Where does the deal stand, and who would run the resort?</h2>
+    <p>No purchase agreement is in force. The April 30, 2026, closing deadline passed, and the Town said Sept. 30 that the agreement "has expired." No bonds have been sold, and the Board's authority to sell them ran out July 19, 2026. The Town says talks with POWDR "remain active." Its new plan is a sale-leaseback, in which a bond trustee would hold title and lease the resort back to the Town's enterprise; on Oct. 22 the interim Town Manager wrote that the lease "has not been drafted." Any new agreement, lease, or bond ordinance would need Board approval at a public meeting.</p>
+    <p>The Town dropped its planned operating partner, 303 Ski, by April 2026 and said it would rely on Eldora's existing management, then "professional on-mountain management" after a two-year transition agreement with POWDR.</p>
+    <p class="src">Details and sources: <a href="https://eldorarecord.org/#revised-plan">Where things stand</a> · <a href="https://eldorarecord.org/#transition-services">Transition services</a></p>
+  </section>
+
+  <section class="q" id="q7">
+    <h2><span class="n">7.</span>What would the purchase commit the Town to, and what would bondholders control?</h2>
+    <ul>
+      <li>A $120 million price, with no deposit, in the agreement approved Jan. 6, 2026, which has expired.</li>
+      <li>Revenue bonds of up to $225 million, for up to 40 years at no more than 9%, repaid only from the resort's income, not taxes. The Board expected to borrow $180 million.</li>
+      <li>At least $1 million a year to POWDR for two years of transition services, in a January 2026 draft.</li>
+    </ul>
+    <p>The May 2026 draft bond documents, the newest released, would have an independent consultant approve the resort's budgets, send spare revenue first to paying off the senior bonds early, bar the Town from ending POWDR's transition agreement without bondholder consent, and pay part of the price in subordinate bonds to POWDR, paid only after the senior bonds. Under the sale-leaseback, the trustee could act after a default "without first completing a traditional foreclosure process." No financial model or offering document with revenue forecasts is public.</p>
+    <p class="pointer">Whether the numbers can work is a judgment, so it's on the <a href="https://eldorarecord.org/opinion.html#debt-check">opinion page</a>.</p>
+    <p class="src">Details and sources: <a href="https://eldorarecord.org/#commitments">Commitments</a> · <a href="https://eldorarecord.org/#may-draft">The May 2026 draft</a> · <a href="https://eldorarecord.org/#profit">Profit</a></p>
+  </section>
+
+  <section class="q" id="q8">
+    <h2><span class="n">8.</span>What would the purchase mean for the fire and library districts?</h2>
+    <p>Town-owned property is generally exempt from property tax. The sellers' property now pays about $568,000 a year to all taxing authorities. By the record's estimate at 2025 rates, the Nederland Fire Protection District would lose $97,000 to $107,000 a year (about 6% of its property tax), the library district $29,000 to $32,000 (about 5%), and the EcoPass district $10,000 to $11,000. These are estimates: the County Assessor decides, leased Town property can stay taxable, and under the sale-leaseback a bond trustee, not the Town, would hold title.</p>
+    <p class="src">Details and sources: <a href="https://eldorarecord.org/#district-taxes">Property taxes on the resort</a></p>
+  </section>
+
+  <p class="part">What's next</p>
+
+  <section class="q" id="q9">
+    <h2><span class="n">9.</span>What don't we know yet?</h2>
+    <p>Among the most important gaps in the records searched:</p>
+    <ul>
+      <li>What makes up the Town's $2.76 million estimate, and what firms that sent no confirmation are owed.</li>
+      <li>The financial projections behind the purchase, including SE Group's final report and Plante Moran's review of Eldora's earnings, which POWDR says is confidential in its entirety.</li>
+      <li>The full bond offering memorandum, including any revenue forecast.</li>
+      <li>The sale-leaseback's lease, its bond amount, and the status of talks with POWDR.</li>
+      <li>Hogan Lovells' role, and the purpose of POWDR's invoices.</li>
+    </ul>
+    <p class="src">Details and sources: <a href="https://eldorarecord.org/#open-questions">Not in the records searched</a> · <a href="https://eldorarecord.org/#questions">Records requests from the public</a></p>
+  </section>
+
+  <section class="q" id="q10">
+    <h2><span class="n">10.</span>What can I do?</h2>
+    <ul>
+      <li><strong>Speak</strong> during public comment (3 minutes), or <strong>write</strong> to the Board at BOT@nederlandco.org and ask that your email be included as public comment. The 2027 budget hearing is Dec. 1.</li>
+      <li><strong>Petition.</strong> Registered voters can petition to send most ordinances, including one approving a new purchase agreement or bonds, to a public vote, with signatures from 5% of registered voters within 30 days after the ordinance is published.</li>
+      <li><strong>Ask for records</strong> from the Town Clerk under CORA; the first hour of staff time is free. The Town posts released records on <a href="https://www.nederlandco.gov/m/newsflash/home/detail/27" target="_blank" rel="noopener">its website</a>.</li>
+      <li><strong>Follow updates</strong> to the record by email or feed, and send corrections to <a href="mailto:corrections@eldorarecord.org">corrections@eldorarecord.org</a>.</li>
+    </ul>
+    <p class="src">Details and sources: <a href="https://eldorarecord.org/#get-involved">Get involved</a></p>
+  </section>
+
+  <footer>
+    <p>This is an independent compilation, not affiliated with, endorsed by, or produced by the Town of Nederland, Eldora Mountain Resort, or POWDR. It is updated with <a href="https://eldorarecord.org/">the Eldora Record</a>, and the record governs if the two ever differ.</p>
+  </footer>
+</main>

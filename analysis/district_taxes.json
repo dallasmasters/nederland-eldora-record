@@ -1,0 +1,138 @@
+{
+ "categories": [
+  {
+   "key": "base",
+   "label": "Base area: about 255 acres and its buildings",
+   "accounts": [
+    "R0026875"
+   ],
+   "av": 3817515.0,
+   "tax": 374353.16,
+   "basis": [
+    "treasurer"
+   ],
+   "district": {
+    "NFD": 70872.16597500001,
+    "NLD": 21213.930855,
+    "NEPD": 7062.40275
+   },
+   "n": 1
+  },
+  {
+   "key": "equip",
+   "label": "Equipment and other business personal property at the base area",
+   "accounts": [
+    "P0401681"
+   ],
+   "av": 672715.0,
+   "tax": 66017.78,
+   "basis": [
+    "treasurer"
+   ],
+   "district": {
+    "NFD": 12488.953975000002,
+    "NLD": 3738.2772550000004,
+    "NEPD": 1244.52275
+   },
+   "n": 1
+  },
+  {
+   "key": "permit",
+   "label": "Interest in about 480 acres of National Forest used under the Forest Service permit",
+   "accounts": [
+    "R0071874"
+   ],
+   "av": 545076.0,
+   "tax": 53451.26,
+   "basis": [
+    "treasurer"
+   ],
+   "district": {
+    "NFD": 10119.33594,
+    "NLD": 3028.9873320000006,
+    "NEPD": 1008.3906000000001
+   },
+   "n": 1
+  },
+  {
+   "key": "other",
+   "label": "Other ski-area land and improvements: the parking parcel, a 140-acre parcel, Lake Eldora lots, a mining claim, and small improvement accounts",
+   "accounts": [],
+   "av": 511017.0,
+   "tax": 50112.26189,
+   "basis": [
+    "calculated"
+   ],
+   "district": {
+    "NFD": 9487.030605,
+    "NLD": 2839.721469,
+    "NEPD": 945.38145
+   },
+   "n": 21
+  },
+  {
+   "key": "ned",
+   "label": "Three properties in Nederland, including Nederhaus",
+   "accounts": [],
+   "av": 201729.0,
+   "tax": 24147.2188,
+   "basis": [
+    "calculated"
+   ],
+   "district": {
+    "NED": 3484.666746,
+    "NFD": 3745.0988850000003,
+    "NLD": 1121.008053,
+    "NEPD": 373.19865,
+    "NEDDDA": 497.5
+   },
+   "n": 4
+  }
+ ],
+ "estimate": {
+  "NFD": {
+   "levy": 18.565,
+   "low": 96593.24944000001,
+   "high": 106712.58538000002,
+   "district_total": 1711177.30143,
+   "cert": 92172222,
+   "share_low": 0.0564484167475099,
+   "share_high": 0.062362085618376445
+  },
+  "NLD": {
+   "levy": 5.557,
+   "low": 28912.937632,
+   "high": 31941.924964,
+   "district_total": 642652.43509,
+   "cert": 115647370,
+   "share_low": 0.04499000712251389,
+   "share_high": 0.049703266057844635,
+   "bond_part_low": 6019.843232,
+   "bond_part_high": 6650.496164
+  },
+  "NEPD": {
+   "levy": 1.85,
+   "low": 9625.5056,
+   "high": 10633.896200000001,
+   "district_total": 214595.88375,
+   "cert": 115997775,
+   "share_low": 0.04485410172738227,
+   "share_high": 0.04955312289395206
+  }
+ },
+ "levy": {
+  "NFD": 18.565,
+  "NLD": 5.557,
+  "NLDB": 1.157,
+  "NEPD": 1.85,
+  "NED": 17.274,
+  "NEDDDA": 5.0
+ },
+ "cert": {
+  "NFD": 92172222,
+  "NLD": 115647370,
+  "NEPD": 115997775
+ },
+ "total_av": 5748052.0,
+ "total_tax": 568081.68069
+}
