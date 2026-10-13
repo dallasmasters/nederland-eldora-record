@@ -1,0 +1,368 @@
+"""Write analysis/cliffs_notes.html, The Eldora Deal Cliffs Notes: the acquisition told in order, in plain language.
+
+An opinion page, like opinion.html: chapters 1 to 6 retell what the Eldora Record shows and link each part to it, and
+chapter 7 is the author's view of what happens if the deal fails. Passages of the author's own reading are labeled.
+
+Numbers that change with the record come from analysis/figures.json, which eldora_spending_page.py writes on each
+build, so run that first (update.sh does). Budget figures from the adopted 2026 budget and the 2025 audit are fixed and
+written in. The flow drawing in chapter 7 has a wide and a narrow version, swapped by width, as the FAQ's charts are.
+"""
+import json
+import os
+
+from eldora_spending_page import american_dates
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def main():
+    figures = json.load(open(os.path.join(ROOT, 'analysis', 'figures.json')))
+    t = figures['text']
+    short = lambda s: s.replace(' million', 'M')   # noqa: E731  "$1.80 million" -> "$1.80M" for the drawing
+    # "$0.11 million" reads better as "$110,000" for a general reader
+    thousands = lambda s: f"${round(float(s.strip('$').split()[0]) * 1000) * 1000:,}"   # noqa: E731
+    page = TEMPLATE.format(**t, R=t['site'], need_lo_s=short(t['need_lo']), need_hi_s=short(t['need_hi']),
+                           left_lo_k=thousands(t['left_lo']), left_hi_k=thousands(t['left_hi']))
+    page = american_dates(page)
+    with open(os.path.join(ROOT, 'analysis', 'cliffs_notes.html'), 'w') as f:
+        f.write(page)
+    print(f'analysis/cliffs_notes.html: paid {t["balance"]}, owed {t["conf"]}, General Fund {t["fb_end"]}')
+
+
+# The same boxes, arrows, and words in two layouts. Colors are the page's tokens, so both themes work.
+FLOW_WIDE = '''<svg class="flow-wide" viewBox="0 50 1100 394" role="img" aria-label="If the deal fails: the sequence under the Citizen Plan and under the Town's proposal">
+        <defs><marker id="fw-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--muted)"/></marker></defs>
+        <g fill="none" stroke="var(--muted)" stroke-width="1.4">
+          <path d="M260 112H289" marker-end="url(#fw-arrow)"/><path d="M533 112H562" marker-end="url(#fw-arrow)"/>
+          <path d="M806 112H835" marker-end="url(#fw-arrow)"/><path d="M959 154V184H550V202" marker-end="url(#fw-arrow)"/>
+          <path d="M430 244H250V318" marker-end="url(#fw-arrow)"/><path d="M670 244H850V318" marker-end="url(#fw-arrow)"/>
+        </g>
+        <g text-anchor="middle" style="font-family: var(--body)">
+          <rect x="20" y="70" width="240" height="84" rx="8" fill="var(--surface)" stroke="var(--muted)" stroke-width="1.2"/>
+          <text x="140" y="96" font-size="15" font-weight="600" fill="var(--fg)">The effort winds down</text>
+          <text x="140" y="118" font-size="12.5" fill="var(--muted)">A deadline passes, financing</text>
+          <text x="140" y="136" font-size="12.5" fill="var(--muted)">fails, or POWDR sells</text>
+          <rect x="293" y="70" width="240" height="84" rx="8" fill="var(--surface)" stroke="var(--muted)" stroke-width="1.2"/>
+          <text x="413" y="96" font-size="15" font-weight="600" fill="var(--fg)">The final bills arrive</text>
+          <text x="413" y="118" font-size="12.5" fill="var(--muted)">About $2.5M to $3M in all,</text>
+          <text x="413" y="136" font-size="12.5" fill="var(--muted)">mostly legal fees</text>
+          <rect x="566" y="70" width="240" height="84" rx="8" fill="var(--warn-soft)" stroke="var(--warn)" stroke-width="2"/>
+          <text x="686" y="96" font-size="15" font-weight="600" fill="var(--fg)">Spending becomes a loss</text>
+          <text x="686" y="118" font-size="12.5" fill="var(--fg)">General Fund ends 2026 about</text>
+          <text x="686" y="136" font-size="12.5" fill="var(--fg)">$2.2M below zero</text>
+          <rect x="839" y="70" width="240" height="84" rx="8" fill="var(--surface)" stroke="var(--muted)" stroke-width="1.2"/>
+          <text x="959" y="96" font-size="15" font-weight="600" fill="var(--fg)">2027 budget must balance</text>
+          <text x="959" y="118" font-size="12.5" fill="var(--muted)">The Board adopts it</text>
+          <text x="959" y="136" font-size="12.5" fill="var(--muted)">on Dec. 15, 2026</text>
+          <polygon points="430,244 550,204 670,244 550,284" fill="var(--surface)" stroke="var(--muted)" stroke-width="1.2"/>
+          <text x="550" y="240" font-size="14" fill="var(--fg)">Which approach does</text>
+          <text x="550" y="258" font-size="14" fill="var(--fg)">the Board adopt?</text>
+          <rect x="50" y="320" width="400" height="104" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+          <text x="250" y="346" font-size="15" font-weight="600" fill="var(--fg)">The Citizen Plan</text>
+          <text x="250" y="368" font-size="12.5" fill="var(--fg)">Savings first: about $880,000 in 2027</text>
+          <text x="250" y="386" font-size="12.5" fill="var(--fg)">Loans of about $1.75M at the end of 2027</text>
+          <text x="250" y="404" font-size="12.5" fill="var(--fg)">Loans repaid, and the funds' reserves rebuilt</text>
+          <rect x="650" y="320" width="400" height="104" rx="8" fill="var(--surface)" stroke="var(--muted)" stroke-width="1.2"/>
+          <text x="850" y="346" font-size="15" font-weight="600" fill="var(--fg)">Town's proposal</text>
+          <text x="850" y="368" font-size="12.5" fill="var(--muted)">Transfers of about $2.6M in 2026</text>
+          <text x="850" y="386" font-size="12.5" fill="var(--muted)">Spending stays about the same</text>
+          <text x="850" y="404" font-size="12.5" fill="var(--muted)">About $2.1M below zero again by 2031</text>
+        </g>
+      </svg>'''
+
+FLOW_NARROW = '''<svg class="flow-narrow" viewBox="0 0 380 676" role="img" aria-label="If the deal fails: the sequence under the Citizen Plan and under the Town's proposal">
+        <defs><marker id="fn-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--muted)"/></marker></defs>
+        <g fill="none" stroke="var(--muted)" stroke-width="1.4">
+          <path d="M190 74V92" marker-end="url(#fn-arrow)"/><path d="M190 158V176" marker-end="url(#fn-arrow)"/>
+          <path d="M190 242V260" marker-end="url(#fn-arrow)"/><path d="M190 326V344" marker-end="url(#fn-arrow)"/>
+          <path d="M190 414V438" marker-end="url(#fn-arrow)"/><path d="M310 380H370V608H362" marker-end="url(#fn-arrow)"/>
+        </g>
+        <g text-anchor="middle" style="font-family: var(--body)">
+          <rect x="20" y="10" width="340" height="64" rx="8" fill="var(--surface)" stroke="var(--muted)" stroke-width="1.2"/>
+          <text x="190" y="34" font-size="14.5" font-weight="600" fill="var(--fg)">The effort winds down</text>
+          <text x="190" y="56" font-size="12" fill="var(--muted)">A deadline passes, financing fails, or POWDR sells</text>
+          <rect x="20" y="94" width="340" height="64" rx="8" fill="var(--surface)" stroke="var(--muted)" stroke-width="1.2"/>
+          <text x="190" y="118" font-size="14.5" font-weight="600" fill="var(--fg)">The final bills arrive</text>
+          <text x="190" y="140" font-size="12" fill="var(--muted)">About $2.5M to $3M in all, mostly legal fees</text>
+          <rect x="20" y="178" width="340" height="64" rx="8" fill="var(--warn-soft)" stroke="var(--warn)" stroke-width="2"/>
+          <text x="190" y="202" font-size="14.5" font-weight="600" fill="var(--fg)">Spending becomes a loss</text>
+          <text x="190" y="224" font-size="12" fill="var(--fg)">General Fund ends 2026 about $2.2M below zero</text>
+          <rect x="20" y="262" width="340" height="64" rx="8" fill="var(--surface)" stroke="var(--muted)" stroke-width="1.2"/>
+          <text x="190" y="286" font-size="14.5" font-weight="600" fill="var(--fg)">The 2027 budget must balance</text>
+          <text x="190" y="308" font-size="12" fill="var(--muted)">The Board adopts it on Dec. 15, 2026</text>
+          <polygon points="70,380 190,346 310,380 190,414" fill="var(--surface)" stroke="var(--muted)" stroke-width="1.2"/>
+          <text x="190" y="376" font-size="13.5" fill="var(--fg)">Which approach does</text>
+          <text x="190" y="393" font-size="13.5" fill="var(--fg)">the Board adopt?</text>
+          <rect x="20" y="440" width="340" height="98" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+          <text x="190" y="464" font-size="14.5" font-weight="600" fill="var(--fg)">The Citizen Plan</text>
+          <text x="190" y="486" font-size="12" fill="var(--fg)">Savings first: about $880,000 in 2027</text>
+          <text x="190" y="504" font-size="12" fill="var(--fg)">Loans of about $1.75M at the end of 2027</text>
+          <text x="190" y="522" font-size="12" fill="var(--fg)">Loans repaid, and the funds' reserves rebuilt</text>
+          <rect x="20" y="558" width="340" height="98" rx="8" fill="var(--surface)" stroke="var(--muted)" stroke-width="1.2"/>
+          <text x="190" y="582" font-size="14.5" font-weight="600" fill="var(--fg)">Town's proposal</text>
+          <text x="190" y="604" font-size="12" fill="var(--muted)">Transfers of about $2.6M in 2026</text>
+          <text x="190" y="622" font-size="12" fill="var(--muted)">Spending stays about the same</text>
+          <text x="190" y="640" font-size="12" fill="var(--muted)">About $2.1M below zero again by 2031</text>
+        </g>
+      </svg>'''
+
+TEMPLATE = '''<title>The Eldora Deal Cliffs Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column of numbered chapters, same palette and type as the Eldora Record and the FAQ */
+:root {{
+  --bg: #f6f8f8; --surface: #ffffff; --fg: #17242a; --muted: #5a6b72; --line: #d7e0e2;
+  --accent: #1f6b5c; --accent-soft: #e2f0ec; --warn: #9a4a1c; --warn-soft: #f8e9df;
+  --body: "Public Sans", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}}
+@media (prefers-color-scheme: dark) {{ :root:not([data-theme="light"]) {{
+  --bg: #11191c; --surface: #172226; --fg: #e3ecee; --muted: #93a6ad; --line: #2b3a40;
+  --accent: #6cc7b1; --accent-soft: #1b3832; --warn: #f0a774; --warn-soft: #3d2618; color-scheme: dark }} }}
+:root[data-theme="dark"] {{
+  --bg: #11191c; --surface: #172226; --fg: #e3ecee; --muted: #93a6ad; --line: #2b3a40;
+  --accent: #6cc7b1; --accent-soft: #1b3832; --warn: #f0a774; --warn-soft: #3d2618; color-scheme: dark }}
+body {{ background: var(--bg); color: var(--fg); font: 15px/1.55 var(--body); margin: 0; }}
+.wrap {{ max-width: 1200px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 64px; display: grid; gap: 22px; }}
+.wrap > *, section.q > *, .opinion > * {{ min-width: 0; }}
+/* Text keeps a readable measure; tables and the drawing use the full width, as on the record page */
+p, ul, ol, nav.toc {{ max-width: 80ch; }}
+.eyebrow {{ font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--accent); }}
+h1 {{ font: 800 clamp(28px, 4.5vw, 42px)/1.1 var(--body); margin: 4px 0 0; text-wrap: balance; letter-spacing: -.01em; }}
+.byline {{ color: var(--muted); margin: 0; font-size: 15px; }}
+.lead {{ font-size: 17px; margin: 0; }}
+.note {{ background: var(--accent-soft); border-left: 4px solid var(--accent); padding: 12px 16px; margin: 0; border-radius: 0 6px 6px 0; }}
+a {{ color: var(--accent); }}
+nav.toc {{ display: grid; gap: 4px; font-size: 15px; }}
+nav.toc b {{ font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-top: 6px; }}
+nav.toc ol {{ margin: 0; padding-left: 22px; display: grid; gap: 2px; }}
+section.q {{ display: grid; gap: 10px; scroll-margin-top: 16px; }}
+section.q h2 {{ font-size: 21px; line-height: 1.25; margin: 0; text-wrap: balance; display: flex; gap: 10px; }}
+section.q h2 .n {{ font: 600 15px/1.9 var(--mono); color: var(--accent); flex: none; }}
+section.q p, section.q ul, section.q ol {{ margin: 0; }}
+section.q ul, section.q ol {{ padding-left: 20px; display: grid; gap: 6px; }}
+section.q ol ul {{ margin-top: 6px; }}
+.src {{ font-size: 14px; color: var(--muted); }}
+.src a {{ font-weight: 600; }}
+.mine {{ border-left: 3px solid var(--warn); padding-left: 12px; }}
+.mine b.tag, .opinion .tag {{ font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--warn); }}
+.opinion {{ background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--warn); border-radius: 6px; padding: 14px 18px; display: grid; gap: 10px; }}
+.scroll {{ overflow-x: auto; }}
+table {{ border-collapse: collapse; width: 100%; font-size: 15px; font-variant-numeric: tabular-nums; background: var(--surface); }}
+th, td {{ text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }}
+thead th {{ font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }}
+td.when {{ white-space: nowrap; }}
+td.num {{ text-align: right; white-space: nowrap; }}
+tr.total td {{ font-weight: 600; border-top: 2px solid var(--line); }}
+.figs {{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }}
+.fig {{ background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; display: grid; gap: 2px; min-width: 0; }}
+.fig b {{ font: 600 22px var(--mono); font-variant-numeric: tabular-nums; }}
+.fig span {{ font-size: 13px; color: var(--muted); }}
+.fig.total {{ border-color: var(--warn); }}
+.figure {{ background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 14px; margin: 0; display: grid; gap: 6px; max-width: none; }}
+.figure figcaption {{ font-weight: 600; }}
+.figure .cap {{ font-size: 13px; color: var(--muted); }}
+.figure svg {{ display: block; width: 100%; height: auto; }}
+.figure .flow-narrow {{ display: none; max-width: 420px; margin: 0 auto; }}
+footer {{ border-top: 1px solid var(--line); padding-top: 14px; font-size: 14px; color: var(--muted); display: grid; gap: 6px; }}
+footer p {{ margin: 0; }}
+@media (max-width: 560px) {{
+  h1 {{ font-size: 27px; }}
+  .figs {{ grid-template-columns: 1fr; }}
+  th, td {{ padding: 6px 5px; }}
+  table {{ font-size: 14px; }}
+  .opinion {{ padding: 12px; }}
+  .figure {{ padding: 10px; }}
+  .figure .flow-wide {{ display: none; }}
+  .figure .flow-narrow {{ display: block; }}
+}}
+</style>
+
+<main class="wrap">
+  <header style="display:grid;gap:12px">
+    <div class="eyebrow">Facts and a prediction · not part of the record</div>
+    <h1>The Eldora Deal Cliffs Notes</h1>
+    <p class="byline">Dallas Masters, Nederland resident · Nov. 12, 2026 · Figures through the {asof} warrant list, updated with the record, last {cov_updated}</p>
+    <p class="lead">Nederland has spent two years trying to buy Eldora Mountain Resort. The purchase hasn't happened, but the Town has run up about {owed_m} in bills trying to make it happen. If the deal never closes, the Town has to cover that itself. That is nearly as much as the General Fund spends on everything else in a year.</p>
+    <p class="note">This page tells the story in order, in plain language. Chapters 1 through 6 retell what <a href="{R}">the Eldora Record</a> shows, and each ends with links to the part of the record that has the details and sources; if the two ever differ, the record is correct. Passages marked &ldquo;My reading&rdquo; and all of chapter 7 are my opinion. For facts only, see <a href="{R}">the Eldora Record</a>; my fuller opinions are on <a href="{R}opinion.html">a separate page</a>.</p>
+    <nav class="toc" aria-label="Chapters">
+      <b>How we got here</b><ol start="1"><li><a href="#c1">The plan to buy Eldora</a></li><li><a href="#c2">The lawyers and consultants</a></li><li><a href="#c3">The deal stalled, and the bills grew</a></li></ol>
+      <b>The money</b><ol start="4"><li><a href="#c4">How the Town recorded the costs</a></li><li><a href="#c5">What the law allows</a></li><li><a href="#c6">If the deal closes</a></li></ol>
+      <b>What comes next</b><ol start="7"><li><a href="#c7">What I think will happen</a></li><li><a href="#watch">What to watch</a></li><li><a href="#terms">Definitions</a></li></ol>
+    </nav>
+  </header>
+
+  <section class="q" id="c1">
+    <h2><span class="n">1.</span>The plan to buy Eldora</h2>
+    <p>In 2024, POWDR, the company that owns Eldora, put the ski area up for sale, and the Town decided to try to buy it. The Board began discussing it in closed session on Sept. 3, 2024. Its first open discussion was on Nov. 19, 2024.</p>
+    <p>The Town gave two main reasons: local control of the mountain, and long-term revenue, including &ldquo;addressing recurring budget shortfalls through a more stable revenue base.&rdquo;</p>
+    <ul>
+      <li><strong>A new Town business.</strong> The resort would be owned by the Mountain Recreation Enterprise, a Town-owned business set up for this purpose.</li>
+      <li><strong>Borrowing paid back by the resort.</strong> The Town would sell revenue bonds, which are loans from investors. Lift tickets, passes, and other resort income would repay them. Property taxes and the Town's regular budget would not.</li>
+      <li><strong>Big numbers.</strong> In January 2026, the Board approved a $120 million purchase price and up to $225 million in bonds.</li>
+    </ul>
+    <p>Think of it like buying a rental house with a loan that only the rent can repay. If the rent falls short, the lender takes the house, not your paycheck. But you still have to pay the lawyers and inspectors you hire before closing, even if you never get the keys. That is where Nederland's money is at risk now.</p>
+    <p class="src">Details and sources: <a href="{R}#in-brief">The acquisition in brief</a></p>
+  </section>
+
+  <section class="q" id="c2">
+    <h2><span class="n">2.</span>The lawyers and consultants the Town hired</h2>
+    <p>Starting in January 2025, the Town hired real estate lawyers, bond lawyers, water-rights lawyers, accountants to check the resort's books, ski-industry consultants, surveyors, and a financial advisor. The resolutions that let staff hire them set no dollar limits.</p>
+    <p>Some firms get paid only if the sale closes. Others get paid either way:</p>
+    <div class="scroll"><table>
+      <thead><tr><th scope="col">Paid only if the sale closes</th><th scope="col">Paid either way</th></tr></thead>
+      <tbody>
+        <tr><td>Financial advisor Stifel ($325,000 fee at the bond sale)</td><td>Real estate lawyers Brownstein, billed when the deal is completed <em>or</em> ended</td></tr>
+        <tr><td>Disclosure lawyers Butler Snow (about $100,000)</td><td>Bond lawyers Kline Alvarado Veio, hourly if no bonds are sold</td></tr>
+        <tr><td>The bond underwriters</td><td>The Town Attorney, accountants, consultants, surveyors, and others</td></tr>
+      </tbody>
+    </table></div>
+    <p>The purchase agreement also said each side pays its own costs, whether or not the sale closes. The Town planned to pay itself back from the bond money at closing. Until then, it pays the bills itself.</p>
+    <p class="src">Details and sources: <a href="{R}#payees">Who was paid and who is owed</a> · <a href="{R}#no-limits">Budget and limits</a> · <a href="{R}#no-sale">What happens to the costs</a></p>
+  </section>
+
+  <section class="q" id="c3">
+    <h2><span class="n">3.</span>The deal stalled, and the bills grew</h2>
+    <p>The closing deadline was April 30, 2026. It passed without a closing, and the bills have grown to about {owed_m}.</p>
+    <div class="scroll"><table>
+      <thead><tr><th scope="col">When</th><th scope="col">What happened</th></tr></thead>
+      <tbody>
+        <tr><td class="when">July 2025</td><td>The Town and POWDR signed a non-binding term sheet.</td></tr>
+        <tr><td class="when">Jan. 2026</td><td>The Board approved the $120 million purchase and up to $225 million in bonds.</td></tr>
+        <tr><td class="when">April 30, 2026</td><td>The deadline to close passed without a closing. No bonds had been sold.</td></tr>
+        <tr><td class="when">July 19, 2026</td><td>The Board's authority to sell the bonds ran out.</td></tr>
+        <tr><td class="when">Summer 2026</td><td>The Town Manager resigned and the Town Treasurer retired. A former Town Manager returned as interim on Sept. 25.</td></tr>
+        <tr><td class="when">Sept. 30, 2026</td><td>The Town said the agreement had expired but it was still pursuing a restructured &ldquo;sale-leaseback&rdquo; deal. It estimated the costs at about $2.5 million.</td></tr>
+        <tr><td class="when">Oct. 22, 2026</td><td>The Town said the lease the new deal needs &ldquo;has not been drafted.&rdquo;</td></tr>
+        <tr><td class="when">Nov. 9, 2026</td><td>The Town's budget forecast counted its updated cost estimate, about $2.76 million, as spending, and put the General Fund {town_fb_m} below zero at the end of 2026. Staff offered three ways to cover it, all using money from other Town funds. A draft resolution said the Town was restructuring the deal &ldquo;in response to feedback from prospective bondholders.&rdquo; The Board put off its vote on the resolution.</td></tr>
+        <tr><td class="when">Nov. 16, 2026</td><td>A revised budget memo proposed moving money from the Community Center, Water, and Sewer Funds into the General Fund to cover the gap, and recording it in an amended 2026 budget.</td></tr>
+        <tr><td class="when">Nov. 17, 2026</td><td>The Board adopted Resolution 2026-31: spending limits, monthly cost reports, and deadlines it can extend, starting with a term sheet by Feb. 15, 2027.</td></tr>
+      </tbody>
+    </table></div>
+    <p>The Eldora Record's count, checked firm by firm against Town records:</p>
+    <div class="figs">
+      <div class="fig"><span>Already paid</span><b>{balance}</b><span>through the {asof} warrant list</span></div>
+      <div class="fig"><span>Owed</span><b>{conf}</b><span>as the firms confirmed as of Oct. 16, 2026, less bills paid Nov. 9</span></div>
+      <div class="fig total"><span>Total if the deal fails</span><b>~{owed_short}</b><span>about {hh_est} per household</span></div>
+    </div>
+    <p>About $1.2 million of what is owed goes to the real estate lawyers. Their agreement sends the bill when the deal is completed or ended, so most of it hasn't been invoiced yet. Some other firms' invoices have gone unpaid for more than a year. And while the effort continues, some costs keep adding up every month, such as the Town Attorney's time and the online data room.</p>
+    <p class="src">Details and sources: <a href="{R}#revised-plan">Where things stand</a> · <a href="{R}#bottom-line">The bottom line</a> · <a href="{R}#overdue">Overdue invoices</a></p>
+  </section>
+
+  <section class="q" id="c4">
+    <h2><span class="n">4.</span>How the Town recorded the costs</h2>
+    <p>At first, the Town didn't treat the Eldora bills as spending. Through October 2026, it recorded them in a General Fund account called &ldquo;Due From,&rdquo; as money it expected to be paid back from the bonds. Accountants call this a receivable.</p>
+    <ul>
+      <li><strong>The costs weren't in the budget.</strong> Neither the 2025 nor the 2026 budget includes them. The Board approved the payments on the regular bill lists (&ldquo;warrant lists&rdquo;), each approved with the rest of the consent agenda.</li>
+      <li><strong>The General Fund's balance looked better than its cash.</strong> The General Fund pays for the Town's day-to-day work: administration, police, streets, parks, and the like. At the end of 2025 it showed a balance of about $1 million, a figure that counted the 2025 Eldora costs as money owed to it. Its cash was negative by $757,482.</li>
+      <li><strong>Other funds' cash covered the gap.</strong> The Town keeps all its funds' cash in one bank pool and tracks each fund's share on paper. When the General Fund's share runs out, its bills are paid with cash that belongs to the Water Fund, the Sewer Fund, and others.</li>
+    </ul>
+    <p>That way of recording the costs only works if bonds are sold, and right now there is no purchase agreement and no authority to sell bonds.</p>
+    <p>On Nov. 9, 2026, the Town changed course. New Eldora bills started going to a General Fund account called &ldquo;Eldora Expense,&rdquo; with a $0 budget. The same day, its budget forecast counted its whole $2.76 million estimate as General Fund spending, and said the 2025 payments would be moved out of receivables.</p>
+    <p class="mine"><b class="tag">My reading</b><br>Counting the costs as spending is right. It means they now have to be covered in the budget.</p>
+    <p class="src">Details and sources: <a href="{R}#receivable">How the costs are recorded</a> · <a href="{R}#eldora-expense">The new account</a> · <a href="{R}#csafe">The pooled cash</a></p>
+  </section>
+
+  <section class="q" id="c5">
+    <h2><span class="n">5.</span>What the law allows</h2>
+    <p>State law, the Colorado Constitution, and taxes voters approved for specific uses all limit how the Town can pay these costs.</p>
+    <ul>
+      <li><strong>Spending needs Board approval in the budget.</strong> Colorado law says a town can't spend or contract to spend more than its budget authorizes (&ldquo;appropriates&rdquo;) for each fund. The 2026 General Fund authority is $5,674,176, a limit for the fund as a whole. Staff forecast 2026 spending, including the Eldora costs, at $5,493,955, about $180,000 under it. The room is mostly there because grant projects budgeted at $2,250,000 largely didn't happen this year, so their grant money didn't come either. That keeps 2026 within its limit, but it doesn't pay for the Eldora costs; it's why the General Fund ends the year below zero.</li>
+      <li><strong>A budget can't spend more than the Town has.</strong> Spending can't be more than expected revenue plus money left over from past years. A fund that starts the year below zero has to make up the difference with more revenue, less spending, or a transfer from another fund. Staff's analysis is that a loan from another fund doesn't count, because under standard accounting rules a loan adds an equal debt. But the Town's 2016 audit counted a Water Fund loan as a resource of the fund that borrowed it, so the question isn't settled.</li>
+      <li><strong>TABOR requires a public vote</strong> for any new tax or tax increase, and for debt or other financial obligations lasting more than a year that aren't backed by cash set aside in advance. TABOR's emergency reserve, $147,000, can't be used for a revenue shortfall.</li>
+      <li><strong>Some money can be used only for certain purposes.</strong> The Community Center Fund ($890,426 on Sept. 30, 2026) comes mostly from a sales tax voters approved for community-center purposes, most recently in April 2022, and the Town's own books list all of it as restricted. The Downtown Development Authority's money ($1,695,723) is mostly property tax collected for downtown projects and debts, from every taxing district's levy, not just the Town's. Moving either into the General Fund doesn't change what it can be spent on.</li>
+      <li><strong>Water and sewer money comes from rates and a sales tax voters dedicated to their debt,</strong> and repays their state loans. Staff now propose a one-way transfer from their rate money, which voters didn't restrict, rather than a loan; staff dropped the loan because it wouldn't improve the General Fund's balance. Whether a transfer is allowed is a question for the Town attorney.</li>
+      <li><strong>Bankruptcy and dissolving the Town aren't ways out.</strong> The record found no Colorado law that lets a town file for bankruptcy, and a town can dissolve only after providing for all its debts.</li>
+    </ul>
+    <p>In short, the General Fund will have to pay the {owed_m}, most likely over several years.</p>
+    <p class="src">Details and sources: <a href="{R}#gf-deficit">If the General Fund ends in deficit</a> · <a href="{R}#other-funds">Could other funds cover it?</a> · <a href="{R}#bankruptcy">Bankruptcy and dissolution</a></p>
+  </section>
+
+  <section class="q" id="c6">
+    <h2><span class="n">6.</span>If the deal closes</h2>
+    <p>If the deal closes, bond money would repay the Town for most of the {owed_m}. But owning a ski area has its own risks.</p>
+    <ul>
+      <li><strong>The debt would be large.</strong> The Board authorized up to $225 million in bonds, and an earlier plan expected about $180 million. The Town now models interest rates near 8.5%. The restructured deal is meant to borrow less, but no new amount has been made public.</li>
+      <li><strong>Only the resort pays it back.</strong> The bonds would be repaid from resort income alone, not from taxes. That protects the Town's budget from the debt itself, but a run of poor snow years could leave too little to pay bondholders.</li>
+      <li><strong>The resort could change hands if the bonds default.</strong> Under the sale-leaseback, a bond trustee would hold title and lease the resort back to the Town's business. If the bonds defaulted, the trustee could act &ldquo;without first completing a traditional foreclosure process,&rdquo; which could change who runs the resort.</li>
+      <li><strong>The Town might not see profits for years.</strong> Under the May 2026 draft bond documents, an outside consultant would approve the resort's budgets, and money would reach the Town only after the resort earned twice its main bond payments for three years in a row.</li>
+      <li><strong>Other local districts would lose tax revenue.</strong> Town-owned property is generally tax-exempt. By the record's estimate, the Nederland Fire Protection District would lose {dt_fire} a year and the library district {dt_lib}.</li>
+    </ul>
+    <p class="mine"><b class="tag">My reading</b><br>My rough review of the resort's reported earnings suggests it can support about $90 million to $95 million in borrowing. That points to a cash price of about $70 million or less, well below $120 million. The Town hasn't named where the difference would come from.</p>
+    <p class="src">Details and sources: <a href="{R}#if-closes">If the purchase closes</a> · <a href="{R}#may-draft">The May 2026 draft</a> · <a href="{R}#district-taxes">Property taxes on the resort</a> · <a href="{R}opinion.html#debt-check">My rough review</a></p>
+  </section>
+
+  <section class="q" id="c7">
+    <h2><span class="n">7.</span>What I think will happen if the deal fails</h2>
+    <div class="opinion">
+      <span class="tag">Prediction</span>
+      <p>I think the deal is more likely to fail than to close. The main reasons are a gap between the $120 million price and what the resort's earnings can support, harder financing at today's interest rates, staff turnover, and the need to redo every major document. Nothing stops POWDR from selling to someone else.</p>
+      <p>If it fails, here is the sequence I expect. Steps 4 through 8 are what happens if the Board adopts the <a href="{R}citizen-plan.html">Citizen Plan</a>, which I wrote with other residents.</p>
+      <ol>
+        <li><strong>The effort winds down slowly.</strong> Resolution 2026-31, adopted Nov. 17, limits new spending and requires monthly cost reports. Work continues into 2027, adding modest costs each month, until a deadline passes, financing can't be found, or POWDR moves on.</li>
+        <li><strong>The final bills arrive.</strong> The real estate lawyers bill when the deal ends: about $1.2 million, perhaps less a 10% discount their agreement offers for a failed deal. The bond lawyers bill their hours. Firms that haven't confirmed what they're owed may send more. The total lands around $2.5 million to $3 million.</li>
+        <li><strong>The costs land in the budget.</strong> The Town's forecast already counts its $2.76 million estimate as spending, and nearly all of what the firms confirmed they're owed is in it. Staff's Nov. 16 tables have the General Fund ending 2026 about $2.2 million below zero, counting only money it can spend, and 2027 about $2.5 million below zero, in a fund that spends about $3.2 million a year on operations. The costs fit within 2026's spending limit, so 2026 needs no budget change, but the 2027 budget has to cover the gap.</li>
+        <li><strong>The Board adopts the Citizen Plan.</strong> It holds the acquisition bills and makes no change to the 2026 budget. Forecast 2026 spending is under the amount the Board approved, so 2026 needs no amendment and no transfer. The Town pays no acquisition bill until the Board approves a settlement at a public meeting. All of the Town's funds share one cash account, so until then the General Fund's bills are paid with cash that belongs to the other funds.</li>
+        <li><strong>Spending comes down first.</strong> The Board gives notice to reduce the Sheriff's contract, about $930,000 a year, to a sergeant and two deputies, and asks the County to bill the Town for two of those positions, because deputies also cover the area outside town. That saves about $296,000 in 2027 and $507,000 a year after. A review of the General Fund's spending and an organizational review find about $151,000 of cuts, with the 3% raise for employees kept, and the Downtown Development Authority takes on the Visitor Center. The Town settles the firms' bills for less through counsel.</li>
+        <li><strong>The 2027 budget balances with loans, not transfers.</strong> For the amount the savings don't cover, the General Fund borrows from the Community Center Fund first, then up to about $400,000 from Sewer, then from Water last: about $1.75 million in all, against the $2.6 million staff propose to transfer. The Community Center Fund's and Sewer's spare money is fee money. Water's is mostly sales tax voters dedicated to water debt, because the 2026 budget shows Water's rates below its operating costs in each year since 2023, so I think it can be lent but not transferred. Staff say a loan doesn't count toward a balanced budget. The Town's 2016 audit counted one, so the plan asks the Town's auditor to answer in writing.</li>
+        <li><strong>During 2027, settlements and land sales lower the amount borrowed.</strong> The loans are made at the end of 2027, only for the amount still needed. Each dollar saved on a settlement, and each sale of Town land that is free to sell, lowers the Water loan first. Park and government land needs voter approval to sell, and sales are slow, so the plan counts no land money until a sale is completed.</li>
+        <li><strong>From 2028, the savings repay the loans.</strong> With the plan's changes the General Fund spends about $667,000 a year less, so its revenue exceeds its spending by about $40,000 to $90,000 a year. Repaying $1.75 million over 10 years takes about $175,000 a year, so the rest has to come from land sales, larger settlement savings, costs charged to the right fund, and more County cost sharing. The three funds get their money back, and their reserves are rebuilt. Expect tight budgets and little money for anything new for years.</li>
+      </ol>
+      <figure class="figure" role="figure" aria-label="If the deal fails: the Citizen Plan and the Town's proposal">
+        <figcaption>If the deal fails: what happens under the Citizen Plan and under the Town's proposal</figcaption>
+        ''' + FLOW_WIDE + '''
+        ''' + FLOW_NARROW + '''
+        <span class="cap">My view of the sequence. Amounts are from the Eldora Record, the Citizen Plan, and staff's Nov. 16 and 17 budget memo and tables.</span>
+      </figure>
+      <p><strong>If the Board adopts the Town's proposal instead:</strong> about $2.6 million moves from the Community Center, Water, and Sewer Funds to the General Fund in 2026 as permanent transfers, and spending stays about the same. The General Fund would then spend about $500,000 a year more than it takes in, and would be about $2.1 million below zero again by the end of 2031. The three funds would not get the money back, and water and sewer rates may rise to rebuild their reserves.</p>
+      <p><strong>What doesn't happen:</strong> the Town doesn't go bankrupt or dissolve, because Colorado law allows neither as a way out of debts. Residents' homes aren't on the line, and no bonds default, because none were ever sold. This is a long-term budget problem, not a collapse. But it would limit what the Town can do for years, and for a decade or more without deep cuts.</p>
+    </div>
+    <p class="src">Details and sources: <a href="{R}#gf-deficit">If the General Fund ends in deficit</a> · <a href="{R}#pay-rest">Could the Town pay the rest?</a> · <a href="{R}#gf-recovery">The General Fund year by year</a> · <a href="{R}opinion.html">My opinions</a> · <a href="{R}citizen-plan.html">The Citizen Plan</a></p>
+  </section>
+
+  <section class="q" id="watch">
+    <h2>What to watch</h2>
+    <div class="scroll"><table>
+      <thead><tr><th scope="col">When</th><th scope="col">What to watch for</th></tr></thead>
+      <tbody>
+        <tr><td class="when">Nov. 20, 2026</td><td>The deadline in Resolution 2026-31 for the Town Manager to tell each firm in writing to stop billable work, other than work toward a term sheet. That day the Interim Town Manager emailed eight firms to pause billable work.</td></tr>
+        <tr><td class="when">Dec. 1, 2026</td><td>The first monthly update under the resolution, and more discussion of the 2027 budget. Staff won't present an amended 2026 budget, saying the General Fund is likely to stay within what the Board approved for 2026, and report about $170,000 in possible fee reductions so far. Watch how much the 2027 budget moves from the Community Center, Water, and Sewer Funds, whether a written legal opinion says that is allowed, and whether it sets aside money for term-sheet work, which the resolution requires before that work can be billed.</td></tr>
+        <tr><td class="when">Dec. 8, 2026</td><td>The public hearing on the 2027 budget, at a special meeting.</td></tr>
+        <tr><td class="when">Dec. 15, 2026</td><td>Adoption of the 2027 budget, and whether it actually closes. Also the firm-by-firm accounting of what's owed, required by Resolution 2026-31 (I had proposed Dec. 1).</td></tr>
+        <tr><td class="when">Jan. 10, 2027</td><td>The Town's confidentiality agreement with POWDR ends, two years after signing, unless the deal closes first; material POWDR marked as trade secrets stays confidential. A natural time to ask again for Plante Moran's review of Eldora's earnings.</td></tr>
+        <tr><td class="when">Feb. 15, 2027</td><td>The resolution&rsquo;s deadline for a term sheet presented to the Board.</td></tr>
+        <tr><td class="when">Feb. 28, 2027</td><td>The interim Town Manager's contract ends.</td></tr>
+        <tr><td class="when">April 15, 2027</td><td>The deadline for a signed purchase agreement and written financing commitments.</td></tr>
+        <tr><td class="when">June 30, 2027</td><td>The deadline to close.</td></tr>
+      </tbody>
+    </table></div>
+    <p>The Board can extend each deadline by resolution before it passes; if one passes without an extension, the Town&rsquo;s pursuit ends (<a href="{R}#res-2026-31">Resolution 2026-31</a>). Residents can comment at any Board meeting.</p>
+    <p class="src">Details and sources: <a href="{R}#get-involved">Get involved</a></p>
+  </section>
+
+  <section class="q" id="terms">
+    <h2>Definitions</h2>
+    <div class="scroll"><table>
+      <thead><tr><th scope="col">Term</th><th scope="col">What it means</th></tr></thead>
+      <tbody>
+        <tr><td><strong>General Fund</strong></td><td>The Town's main account for everyday services. The Eldora costs are charged here.</td></tr>
+        <tr><td><strong>Appropriation</strong></td><td>The spending limit the Board sets for each fund in the budget.</td></tr>
+        <tr><td><strong>Warrant list</strong></td><td>The list of bills the Board approves for payment at each meeting.</td></tr>
+        <tr><td><strong>Receivable</strong></td><td>Money a fund expects to be paid back. Until November 2026, the Town recorded the Eldora costs this way, expecting to recover them from bonds; it now counts them as spending.</td></tr>
+        <tr><td><strong>Pooled cash</strong></td><td>One shared pool holding every fund's cash, tracked separately on paper.</td></tr>
+        <tr><td><strong>Revenue bonds</strong></td><td>Loans from investors repaid only from a specific source, here the resort's income.</td></tr>
+        <tr><td><strong>Sale-leaseback</strong></td><td>A bond trustee holds the resort's title and leases it back to the Town's business until the bonds are paid.</td></tr>
+        <tr><td><strong>TABOR</strong></td><td>Colorado's Taxpayer's Bill of Rights, which requires voter approval for new taxes and multi-year debt.</td></tr>
+        <tr><td><strong>Restricted money</strong></td><td>Money that law or a ballot measure limits to certain uses.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <footer>
+    <p>This is an independent page of facts and a prediction, not affiliated with, endorsed by, or produced by the Town of Nederland, Eldora Mountain Resort, or POWDR, and not affiliated with the CliffsNotes study guides. Its figures are updated with <a href="{R}">the Eldora Record</a>, and the record governs if the two ever differ.</p>
+  </footer>
+</main>
+'''
+
+if __name__ == '__main__':
+    main()
