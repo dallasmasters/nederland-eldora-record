@@ -1,0 +1,158 @@
+<title>Citizen Plan One-Page Summary</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column, same palette and type as the Eldora Record */
+:root {
+  --bg: #f6f8f8; --surface: #ffffff; --fg: #17242a; --muted: #5a6b72; --line: #d7e0e2;
+  --accent: #1f6b5c; --accent-soft: #e2f0ec; --warn: #9a4a1c; --warn-soft: #f7ebe1; --neg: #b42318;
+  --c1: #6b5bb5; --c2: #1f6b5c; --c3: #8f6d1a; --c4: #5a6b72; --c5: #b9541f; --on-fill: #ffffff;
+  --body: "Public Sans", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11191c; --surface: #172226; --fg: #e3ecee; --muted: #93a6ad; --line: #2b3a40;
+  --accent: #6cc7b1; --accent-soft: #1b3832; --warn: #f0a774; --warn-soft: #33261b; --neg: #ff8a80;
+  --c1: #7d6fc4; --c2: #2f8a78; --c3: #9a7a26; --c4: #63757c; --c5: #c5642e; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11191c; --surface: #172226; --fg: #e3ecee; --muted: #93a6ad; --line: #2b3a40;
+  --accent: #6cc7b1; --accent-soft: #1b3832; --warn: #f0a774; --warn-soft: #33261b; --neg: #ff8a80;
+  --c1: #7d6fc4; --c2: #2f8a78; --c3: #9a7a26; --c4: #63757c; --c5: #c5642e; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 15px/1.5 var(--body); margin: 0; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.eyebrow { font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0 0 8px; }
+.back { font-weight: 600; margin: 0 0 18px; }
+.byline { color: var(--muted); margin: 6px 0 0; }
+h1 { font: 800 clamp(28px, 4.5vw, 42px)/1.1 var(--body); margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; font-variant-numeric: tabular-nums; background: var(--surface); }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+thead th { font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+@media (max-width: 520px) { th, td { padding: 6px 5px; } table { font-size: 14px; } thead th { font-size: 11px; letter-spacing: .03em; } }
+td.n, th.n { text-align: right; white-space: nowrap; }
+tr.total td { font-weight: 700; border-top: 2px solid var(--fg); }
+td.sub2 { font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding-top: 10px; }
+footer { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 40px; font-size: 14px; color: var(--muted); }
+footer a { margin-right: 14px; }
+.page{max-width:52rem;margin:0 auto;padding-block:1.5rem 3rem;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font:800 clamp(24px,4vw,34px)/1.1 var(--body);margin:0 0 .3rem;text-wrap:balance;letter-spacing:-.01em}
+h2{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin:1.1rem 0 .3rem}
+p{margin:.35rem 0}
+ul,ol{margin:.3rem 0;padding-left:1.3rem}
+li{margin:.18rem 0}
+.sub{color:var(--muted);margin:0 0 .6rem}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:0 2rem}
+.cols>div{min-width:0}
+@media (max-width:640px){.cols{grid-template-columns:1fr}}
+table{font-size:.95em}
+td{padding:.22rem .3rem}
+.when{display:grid;grid-template-columns:6.5rem 1fr;gap:.15rem .7rem;margin:.3rem 0}
+.when dt{font-weight:700}
+.when dd{margin:0;min-width:0}
+.note{color:var(--muted);font-size:.9em;margin-top:.9rem}
+.fig{margin:.4rem 0;max-width:34rem}
+.fig figcaption{margin-bottom:.3rem}
+.fig svg{width:100%;height:auto;display:block}
+.fig .note{margin-top:.3rem}
+.grid line{stroke:var(--line);stroke-width:1}
+.axis text{fill:var(--muted);font-size:15px;font-family:var(--body)}
+.lab{fill:var(--fg);font-size:17px;font-weight:600;font-family:var(--body)}
+.l-staff{stroke:var(--warn);stroke-width:2.5}
+.l-plan{stroke:var(--accent);stroke-width:2.5}
+.d-staff circle{fill:var(--warn);stroke:var(--bg);stroke-width:2}
+.d-plan circle{fill:var(--accent);stroke:var(--bg);stroke-width:2}
+</style>
+
+<main class="page">
+<p class="back"><a href="index.html">&larr; The Eldora Record</a></p>
+<p class="eyebrow">Citizen plan &middot; one-page summary</p>
+<h1>Citizen Plan for Nederland's Budget Crisis</h1>
+<p class="sub">One-page summary. Written by Nederland residents Melody Baumhover, Karen Blakemore, Dallas Masters, and Ben White, from the Town's public records. Nov. 24, 2026. Not a Town document. The <a href="citizen-plan.html">full plan</a> gives the reasons and records behind each step.</p>
+
+<h2>The problem</h2>
+<p>The Town has paid or owes <a href="index.html#costs">about $2.9 million</a> for work on the possible Eldora purchase, and $1.62 million of it is still owed to seven firms. Staff <a href="index.html#gf-deficit">forecast the General Fund</a> at −$2.18 million at the end of 2026 and −$2.53 million at the end of 2027. State law requires the 2027 budget to balance. Staff <a href="index.html#nov16-plan">propose</a> about $2.6 million in transfers from the Water, Sewer, and Community Center funds, with no reduction in the General Fund's yearly operating spending.</p>
+
+<h2>The plan</h2>
+<ol>
+<li><strong>Stop new spending on the acquisition, and hold the bills.</strong> No new Town spending on the acquisition. Hold every acquisition bill until the Board approves a settlement in public. The plan doesn't decide whether the Town buys Eldora.</li>
+<li><strong>No change to the 2026 budget.</strong> No supplemental appropriation, amendment, or transfer. 2026 spending is forecast at $180,221 under the approved budget.</li>
+<li><strong>Charge each fund its own costs.</strong></li>
+<li><strong>Settle the bills for less,</strong> through counsel, with each settlement approved in public.</li>
+<li><strong>Reduce the Sheriff contract</strong> to a sergeant and two deputies, and ask the County to bill the Town for only two of those three positions, because deputies also cover the area outside town. Keep the co-responder and the traffic shifts.</li>
+<li><strong>Borrow from the Community Center Fund first,</strong> using only money voters didn't restrict. Operations stay funded, and capital work is deferred.</li>
+<li><strong>Cut General Fund spending,</strong> after a review of the fund's spending and an organizational review, keep the 3% raise for employees, and ask the Downtown Development Authority to take on the Visitor Center.</li>
+<li><strong>Borrow from Sewer and Water last.</strong> At the end of 2027, a loan of up to $400,000 from Sewer, then a loan from Water for the amount still needed.</li>
+</ol>
+
+<div class="cols">
+<div>
+<h2>How the 2027 budget balances</h2>
+<table>
+<tr class="total"><td>Amount needed for the General Fund to reach $0 at the end of 2027, including the co-responder and the 3% raise</td><td class="n">$2,628,000</td></tr>
+<tr><td colspan="2" class="sub2">Where that amount comes from</td></tr>
+<tr><td>Settlement savings (planning figure)</td><td class="n">$406,000</td></tr>
+<tr><td>Sheriff contract, from June 1</td><td class="n">$296,000</td></tr>
+<tr><td>General Fund cuts</td><td class="n">$151,000</td></tr>
+<tr><td>Visitor Center</td><td class="n">$27,000</td></tr>
+<tr><td>Community Center Fund loan</td><td class="n">$825,000</td></tr>
+<tr><td>Sewer loan at year-end</td><td class="n">$400,000</td></tr>
+<tr><td>Water loan at year-end</td><td class="n">$523,000</td></tr>
+<tr class="total"><td>Total</td><td class="n">$2,628,000</td></tr>
+</table>
+<p>The savings and loans equal the amount needed, so the General Fund ends 2027 at $0.</p>
+<p>To be determined (TBD), and each would lower the Water loan: larger settlement savings, land sales, more County cost sharing, and cost corrections.</p>
+</div>
+<div>
+<h2>Key dates</h2>
+<dl class="when">
+<dt>Dec. 1</dt><dd>Hold payments. Send the Sheriff notice. Direct staff to prepare a budget that follows this plan. Each month of delay on the notice costs about $42,000.</dd>
+<dt>Dec. 8</dt><dd>Budget hearing.</dd>
+<dt>Dec. 15</dt><dd>Adopt a balanced 2027 budget and the three loan resolutions, and approve the co-responder's 2027 budget by Dec. 31 so the service continues.</dd>
+<dt>Jan. to April</dt><dd>Settlements, land sales, Town Attorney search.</dd>
+<dt>June 1</dt><dd>Smaller Sheriff contract starts.</dd>
+<dt>Dec. 2027</dt><dd>Loans made, only for the amount still needed.</dd>
+</dl>
+</div>
+</div>
+
+<div class="cols">
+<div>
+<h2>2028 through 2031</h2>
+<figure class="fig">
+<figcaption><strong>General Fund balance at the end of each year</strong>, starting from a balance of $0 at the end of 2027 under each approach</figcaption>
+<svg viewBox="0 0 560 250" role="img" aria-label="Line chart. Under the Town's proposal the General Fund falls from zero at the end of 2027 to about negative 2.1 million dollars at the end of 2031. Under this plan it rises to about positive 0.3 million dollars.">
+<g class="grid">
+<line x1="60" x2="500" y1="44.6" y2="44.6"/><line x1="60" x2="500" y1="117.7" y2="117.7"/><line x1="60" x2="500" y1="190.8" y2="190.8"/>
+</g>
+<g class="axis">
+<text x="52" y="48.6" text-anchor="end">$0</text><text x="52" y="121.7" text-anchor="end">−$1M</text><text x="52" y="194.8" text-anchor="end">−$2M</text>
+<text x="60" y="236" text-anchor="middle">2027</text><text x="170" y="236" text-anchor="middle">2028</text><text x="280" y="236" text-anchor="middle">2029</text><text x="390" y="236" text-anchor="middle">2030</text><text x="500" y="236" text-anchor="middle">2031</text>
+</g>
+<polyline class="l-staff" fill="none" points="60,44.6 170,82 280,120.5 390,160.2 500,201.1"/>
+<polyline class="l-plan" fill="none" points="60,44.6 170,38 280,32.5 390,28.2 500,25.1"/>
+<g class="d-staff"><circle cx="170" cy="82" r="4"/><circle cx="280" cy="120.5" r="4"/><circle cx="390" cy="160.2" r="4"/><circle cx="500" cy="201.1" r="4"/></g>
+<g class="d-plan"><circle cx="60" cy="44.6" r="4"/><circle cx="170" cy="38" r="4"/><circle cx="280" cy="32.5" r="4"/><circle cx="390" cy="28.2" r="4"/><circle cx="500" cy="25.1" r="4"/></g>
+<text class="lab" x="500" y="66" text-anchor="end">Citizen Plan: about +$0.3 million</text>
+<text class="lab" x="70" y="172" text-anchor="start">Town's proposal: −$2.1 million</text>
+</svg>
+<p class="note">Staff's line assumes the transfers bring the balance to $0 and the yearly shortfall of $497,155 grows 3% a year. This plan's line is before loan payments.</p>
+</figure>
+</div>
+<div>
+<h2>What the plan achieves</h2>
+<ul>
+<li>The Community Center, Sewer, and Water funds' reserves are rebuilt: about $1.75 million is borrowed from them and repaid. The Town's proposal transfers $2.6 million from the same funds permanently, with no repayment.</li>
+<li>Spending falls about $667,000 a year, so revenue exceeds spending by $40,000 to $90,000 each year through 2031. Under the Town's proposal the General Fund falls to about −$2.1 million again.</li>
+</ul>
+</div>
+</div>
+
+<h2>What the numbers assume</h2>
+<p>The settlement savings are a planning figure, not an offer. The Sheriff savings assume the County bills the Town for two of the three positions, and pays at least half of the co-responder, as it did for 2026. The money from the Community Center, Sewer, and Water funds is lent, not transferred. The Board approves each loan by resolution, and each loan is made at the end of 2027, only for the amount still needed. Water's money is mostly sales tax voters dedicated to water debt, so it can be lent but not transferred. Sewer's and the Community Center's money is fee money, so if a loan can't be counted toward the budget, it could be a transfer that is returned. If the Town's auditor won't count a Water loan toward the budget, the Board has to find about $523,000 elsewhere.</p>
+
+<p><strong>To support this plan,</strong> email the Board of Trustees before Dec. 1. The full plan has the addresses and a draft email: <a href="citizen-plan.html#support">how to support this plan</a>.</p>
+
+<p class="note">Sources: staff's Nov. 16 and 17, 2026, budget memo and tables; the 2025 audit; the 2026 Budget Book; the Sheriff and co-responder agreements; the firms' confirmations of amounts owed. The <a href="citizen-plan.html">full plan</a> lists each one, and the records are in <a href="index.html">the Eldora Record</a>.</p>
+<footer><a href="citizen-plan.html">The full plan</a><a href="index.html">The Eldora Record</a><a href="cliffs-notes.html">Cliffs Notes</a><a href="resolution.html">Resolution 2026-31</a><a href="opinion.html">Opinion</a><br>The Eldora Record is drawn from Town records and official sources. This plan is a proposal from residents and is kept separate from it.</footer>
+</main>

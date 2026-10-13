@@ -1,0 +1,773 @@
+<title>Citizen Plan for Nederland's Budget Crisis</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column, same palette and type as the Eldora Record */
+:root {
+  --bg: #f6f8f8; --surface: #ffffff; --fg: #17242a; --muted: #5a6b72; --line: #d7e0e2;
+  --accent: #1f6b5c; --accent-soft: #e2f0ec; --warn: #9a4a1c; --warn-soft: #f7ebe1; --neg: #b42318;
+  --c1: #6b5bb5; --c2: #1f6b5c; --c3: #8f6d1a; --c4: #5a6b72; --c5: #b9541f; --c6: #2f6f9f; --on-fill: #ffffff;
+  --body: "Public Sans", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11191c; --surface: #172226; --fg: #e3ecee; --muted: #93a6ad; --line: #2b3a40;
+  --accent: #6cc7b1; --accent-soft: #1b3832; --warn: #f0a774; --warn-soft: #33261b; --neg: #ff8a80;
+  --c1: #7d6fc4; --c2: #2f8a78; --c3: #9a7a26; --c4: #63757c; --c5: #c5642e; --c6: #4a8fc0; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11191c; --surface: #172226; --fg: #e3ecee; --muted: #93a6ad; --line: #2b3a40;
+  --accent: #6cc7b1; --accent-soft: #1b3832; --warn: #f0a774; --warn-soft: #33261b; --neg: #ff8a80;
+  --c1: #7d6fc4; --c2: #2f8a78; --c3: #9a7a26; --c4: #63757c; --c5: #c5642e; --c6: #4a8fc0; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 15px/1.55 var(--body); margin: 0; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.eyebrow { font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0 0 8px; }
+.back { font-weight: 600; margin: 0 0 18px; }
+.byline { color: var(--muted); margin: 6px 0 0; }
+h1 { font: 800 clamp(28px, 4.5vw, 42px)/1.1 var(--body); margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; font-variant-numeric: tabular-nums; background: var(--surface); }
+th, td { text-align: left; padding: 5px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+thead th { font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+@media (max-width: 520px) { th, td { padding: 6px 5px; } table { font-size: 14px; } thead th { font-size: 11px; letter-spacing: .03em; } }
+td.n, th.n { text-align: right; white-space: nowrap; }
+tr.total td { font-weight: 700; border-top: 2px solid var(--fg); }
+footer { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 28px; font-size: 14px; color: var(--muted); }
+footer a { margin-right: 14px; }
+.page{max-width:54rem;margin:0 auto;padding-block:1.5rem 3rem;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h2{font-size:23px;line-height:1.2;margin:1.6rem 0 .4rem;padding-top:.7rem;border-top:2px solid var(--line);text-wrap:balance}
+h3{font-size:18px;margin:1.1rem 0 .3rem;text-wrap:balance}
+h4{font-size:1em;margin:.8rem 0 .2rem}
+p{margin:.4rem 0}
+ul,ol{margin:.35rem 0;padding-left:1.4rem}
+li{margin:.18rem 0}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.lede{font-size:17px;color:var(--fg)}
+.note{color:var(--muted);font-size:.93em}
+.draft{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--warn);color:var(--fg);border-radius:0 6px 6px 0;padding:.5rem .8rem;font-size:.92rem;margin:1rem 0}
+.draft{font-size:.8rem;color:var(--muted);padding:.4rem .8rem}
+.sumlink{margin:.7rem 0 .5rem}
+.sumlink a{display:inline-block;font-weight:700;font-size:1em;padding:.45rem .9rem;border:2px solid var(--accent);border-radius:6px;text-decoration:none;background:var(--surface)}
+.sumlink a:hover,.sumlink a:focus-visible{background:var(--accent-soft)}
+.draft{font-size:.82rem;color:var(--muted);padding:.45rem .8rem}
+.box{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 6px 6px 0;padding:.9rem 1.1rem;margin:1rem 0}
+.box h3{margin-top:.2rem}
+.key{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:0 6px 6px 0;padding:.6rem 1rem;margin:.8rem 0;max-width:80ch}
+.key p{margin:0;max-width:none}
+.key p+p{margin-top:.45rem}
+.toc{columns:2;column-gap:2rem;font-size:1em;padding-left:1.2rem;margin:.6rem 0}
+@media (max-width:560px){.toc{columns:1}}
+.tw{overflow-x:auto;margin:.6rem 0}
+.when{display:grid;grid-template-columns:8.5rem 1fr;gap:.2rem 1rem;margin:.8rem 0}
+.when dt{font-weight:700;color:var(--accent)}
+.when dd{margin:0;min-width:0}
+@media (max-width:560px){.when{grid-template-columns:1fr}.when dd{margin-bottom:.6rem}}
+.step{border-left:3px solid var(--accent-soft);padding-left:1rem;margin:.7rem 0}
+.step h4{margin:0 0 .15rem;font-size:1.05em}
+.step p{margin:.2rem 0}
+.more{font-size:inherit}
+.phase{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin:0}
+.fig{margin:.9rem 0}
+.fig figcaption{margin-bottom:.5rem}
+.fig.tl img{display:block;width:100%;max-width:30rem;margin:0 auto;border-radius:6px}
+.fig.tl a{display:block}
+.fig.tl .big{text-align:center;font-size:.85rem;margin:.3rem 0 0}
+.fig svg{width:100%;height:auto;display:block}
+.grid line{stroke:var(--line);stroke-width:1}
+.axis text{fill:var(--muted);font-size:12px;font-family:var(--body)}
+.lab{fill:var(--fg);font-size:13px;font-weight:600;font-family:var(--body)}
+.l-staff{stroke:var(--warn);stroke-width:2.5}.l-plan{stroke:var(--accent);stroke-width:2.5}
+.d-staff circle{fill:var(--warn);stroke:var(--bg);stroke-width:2}.d-plan circle{fill:var(--accent);stroke:var(--bg);stroke-width:2}
+.bars{display:grid;gap:.5rem}
+.barrow{display:grid;grid-template-columns:8rem 1fr;gap:.6rem;align-items:center}
+.barlab{font-size:.92rem}
+.bartrack{display:flex;gap:2px;min-width:0}
+.bar{display:block;padding:.35rem .5rem;font-size:.85rem;font-weight:600;border-radius:3px;white-space:nowrap;overflow:hidden;color:var(--bg)}
+.bar.staff{background:var(--warn)}.bar.plan{background:var(--accent)}.bar.plan2{background:var(--accent);opacity:.75}.bar.plan3{background:var(--accent);opacity:.55}
+@media (max-width:560px){.barrow{grid-template-columns:1fr;gap:.15rem}}
+.stack{display:flex;gap:2px;margin:.6rem 0}
+.stack span{display:block;padding:.55rem .3rem;color:var(--on-fill);font-size:.82rem;font-weight:700;text-align:center;white-space:nowrap;overflow:hidden;border-radius:3px;min-width:0}
+.s1{background:var(--c1)}.s2{background:var(--c2)}.s3{background:var(--c3)}.s4{background:var(--c4)}.s5{background:var(--c5)}.s6{background:var(--c6)}.s7{background:var(--warn)}
+.cmp{display:grid;gap:.5rem}
+.cmprow{display:grid;grid-template-columns:8rem 1fr;gap:.6rem;align-items:center}
+.cmprow .stack{margin:0;min-width:0}
+@media (max-width:560px){.cmprow{grid-template-columns:1fr;gap:.15rem}}
+.legend{list-style:none;padding:0;margin:.4rem 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.2rem 1rem;font-size:.92rem}
+.legend li{margin:0;display:flex;gap:.5rem;align-items:baseline}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;flex:none;transform:translateY(.08rem)}
+.hb{display:grid;gap:.4rem;margin:.6rem 0}
+.hb div{display:grid;grid-template-columns:9.5rem 1fr;gap:.6rem;align-items:center}
+.hb b{display:block;padding:.3rem .5rem;border-radius:3px;color:var(--on-fill);font-size:.88rem;white-space:nowrap}
+.hb .hot{background:var(--c5)}.hb .cool{background:var(--c4)}.hb .planb{background:var(--c2)}
+.miles{display:grid;grid-template-columns:repeat(auto-fit,minmax(11.5rem,1fr));gap:.8rem 0;margin:.8rem 0;padding:0;list-style:none}
+.miles li{margin:0;border-top:2px solid var(--line);padding:.6rem .6rem 0 0;position:relative;min-width:0}
+.miles li::before{content:"";position:absolute;top:-6px;left:0;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.miles li.dl::before{background:var(--c5)}
+.miles strong{display:block;font-size:.88rem}
+.miles span{display:block;font-size:.78rem;line-height:1.35;color:var(--fg)}
+p,ul,ol,dl{max-width:80ch}
+.toc{max-width:none}
+.miles{max-width:none}
+.letter{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:0 6px 6px 0;padding:.6rem 1rem;margin:.6rem 0;max-width:80ch}
+.letter p{margin:.45rem 0}
+.sumlink a+a{margin-left:.5rem}
+.fig p{max-width:none}
+</style>
+
+<main class="page">
+
+<p class="back"><a href="index.html">&larr; The Eldora Record</a></p>
+<p class="eyebrow">Citizen plan &middot; a proposal from residents</p>
+<h1>Citizen Plan for Nederland's Budget Crisis</h1>
+<p class="byline">Written by Nederland residents Melody Baumhover, Karen Blakemore, Dallas Masters, and Ben White, from the Town's public records. Published Nov. 24, 2026. Not a Town document or legal advice. Amounts are rounded estimates.</p>
+<p class="lede">A plan to pay for the Eldora acquisition costs and balance the Town's 2027 budget, using the least money from the Town's other funds and paying all of it back.</p>
+<div class="key">
+<p><strong>This plan needs no change to the 2026 budget.</strong> No supplemental appropriation, no budget amendment, and no transfer from another fund in 2026. Staff forecast 2026 General Fund spending at $5,493,955, which is $180,221 under the $5,674,176 the Board approved. <a class="more" href="#d-2026">Why</a></p>
+<p><strong>This plan rebuilds the reserves of the Community Center, Sewer, and Water funds.</strong> Everything those funds provide is a loan, repaid with interest on a written schedule, so each fund gets its money back. Under the Town's proposal, about $2.6 million leaves those funds as permanent transfers. <a class="more" href="#after">How the loans are repaid</a></p>
+</div>
+<p class="sumlink"><a href="citizen-plan-summary.html">Read the one-page summary &rarr;</a><a href="#support">How to support this plan &rarr;</a></p>
+
+<nav aria-label="Contents">
+<ol class="toc">
+<li><a href="#brief">The plan in brief</a></li>
+<li><a href="#compare">Compared with the Town's proposal</a></li>
+<li><a href="#balance">How the 2027 budget balances</a></li>
+<li><a href="#steps">The plan, step by step</a></li>
+<li><a href="#after">The yearly budget from 2028 through 2031, and repaying the loans</a></li>
+<li><a href="#support">How to support this plan</a></li>
+<li><a href="#qa">Questions and answers</a></li>
+<li><a href="#detail">Supporting detail: the reasons and records behind each step</a></li>
+</ol>
+</nav>
+
+<h2 id="brief">1. The plan in brief</h2>
+
+<h3>The problem</h3>
+<ul>
+<li>The Town has paid or owes <a href="index.html#costs">about $2.9 million</a> for work on the possible purchase of Eldora Mountain Resort. About $1.25 million is paid, and <a href="index.html#owed-confirmed">$1.62 million is owed</a> to seven firms.</li>
+<li>Staff <a href="index.html#gf-deficit">forecast the General Fund's available balance</a> at −$2.18 million at the end of 2026, and −$2.53 million at the end of 2027 if nothing changes.</li>
+<li><a href="index.html#deficit-law">State law</a> requires the 2027 budget to balance.</li>
+<li>Staff <a href="index.html#nov16-plan">have proposed</a> covering the deficit with about $2.6 million in transfers from the Water, Sewer, and Community Center funds, while General Fund spending stays about the same.</li>
+</ul>
+
+<h3>What this plan does</h3>
+<ol>
+<li><strong>Stop new spending on the acquisition, and hold the bills.</strong> The Town spends no more on the acquisition, because the General Fund has no money for it, and pays no acquisition bill until the Board approves a settlement at a public meeting.</li>
+<li><strong>Make no change to the 2026 budget.</strong> No supplemental appropriation, no amendment, and no transfer from another fund. Forecast 2026 spending is under the General Fund's approved budget, so none is needed.</li>
+<li><strong>Charge each fund its own costs.</strong> Move costs that belong to Water, Sewer, and the Community Center out of the General Fund.</li>
+<li><strong>Settle the bills for less.</strong> Negotiate each bill through counsel. This plan uses a planning figure of about $406,000 in savings.</li>
+<li><strong>Reduce the Sheriff contract.</strong> Give notice by Dec. 1 to reduce it to a sergeant and two deputies, and ask Boulder County to bill the Town for two of the three positions. Keep the co-responder, a behavioral health responder who works with deputies, and the traffic shifts. This saves about $296,000 in 2027 and $507,000 a year after.</li>
+<li><strong>Borrow from the Community Center Fund first.</strong> Borrow about $825,000, the part of its balance that voters didn't restrict, and pay it back. The fund has spent more on the center than its sales tax brought in, so on the Town's stated practice of spending restricted money first, the balance is other revenue. Keep the center's operations funded and defer its capital work.</li>
+<li><strong>Cut General Fund spending, and ask the Downtown Development Authority to pay downtown costs.</strong> The cuts come from a review of the fund's spending and an organizational review. Together these save about $178,000 in 2027. Employees keep the 3% raise, and about $35,000 of the cuts pays for it.</li>
+<li><strong>Borrow from Sewer and Water last.</strong> At the end of 2027, borrow up to about $400,000 from Sewer, the amount its own draft plan shows it can lend and still keep its operating reserve. Then borrow from Water only the amount still needed, about $523,000. Both funds have made loans by Board resolution before.</li>
+</ol>
+<p><strong>All three are loans.</strong> This plan asks the Board to borrow from the Community Center Fund, Sewer, and Water by resolution, each with an interest rate and a repayment schedule (<a class="more" href="#loan-terms">loan terms</a>). Sewer and Water have both lent this way before: Water lent the Downtown Development Authority $482,500 in 2012 and $340,000 in 2016, and Sewer lent it $13,000 in 2015. The 2016 audit counted the Water loan as a resource of the borrower.</p>
+<p><strong>If a loan can't be counted toward the 2027 budget.</strong> The Town's auditor decides that. The Community Center Fund's and Sewer's money is fee money, so each loan could instead be a transfer that the General Fund returns on a written schedule. Water's money is mostly sales tax that voters dedicated to water debt, so it can only be lent. If the auditor won't count a Water loan, the Board has to find about $523,000 elsewhere before it adopts the budget. <a class="more" href="#d-water">Details</a></p>
+<p>This plan doesn't decide whether the Town buys Eldora. The acquisition effort can continue under <a href="resolution.html">Resolution 2026-31</a>. The plan asks only that the Town spend no new money on it, because the General Fund's balance is already about $2.2 million below zero and it has no money to pay for more work. Resolution 2026-31 allows up to $80,000 of term-sheet work if the Board adopts a supplemental appropriation for it. This plan's figures include none of that. If the Board approves it, the amount needed rises by the same amount, and so does the Water loan.</p>
+
+<h3>What the plan achieves</h3>
+<ul>
+<li>The 2027 budget balances. The General Fund's balance is $0 at the end of 2027, up from −$2.18 million.</li>
+<li>About $1.75 million is borrowed from three funds and repaid. The Town's proposal takes about $2.6 million from the same funds, as permanent transfers.</li>
+<li>Yearly spending falls by about $667,000, so revenue exceeds spending by about $40,000 to $90,000 each year from 2028 through 2031. Under the Town's proposal the General Fund would fall to about −$2.1 million again by the end of 2031.</li>
+<li>Larger settlement savings, land sales, and cost sharing by the County would each reduce the Water loan (<a href="#balance">section 3</a>).</li>
+</ul>
+
+<h3>Key dates</h3>
+<ul class="miles">
+<li><strong>Dec. 1, 2026</strong><span>The Board holds acquisition payments, sends the Sheriff notice, asks the County to share costs, makes no change to the 2026 budget, and directs staff to prepare a 2027 budget that follows this plan.</span></li>
+<li><strong>Dec. 8</strong><span>Public hearing on the 2027 budget, with the Town's proposal and a budget that follows this plan side by side.</span></li>
+<li><strong>Dec. 15</strong><span>The Board adopts a balanced 2027 budget and the three loan resolutions, and certifies the mill levy.</span></li>
+<li class="dl"><strong>By Dec. 31</strong><span>The Town and County approve the co-responder's 2027 budget, so the service continues without a break.</span></li>
+<li><strong>Jan. to April 2027</strong><span>Settlements with the firms, land sales, and a search for Town Attorney services.</span></li>
+<li><strong>June 1, 2027</strong><span>The smaller Sheriff contract takes effect.</span></li>
+<li><strong>December 2027</strong><span>The Community Center Fund, Sewer, and Water lend only the amount still needed.</span></li>
+<li><strong>2028 and after</strong><span>Yearly savings cover the yearly shortfall, and the loans are repaid as money allows.</span></li>
+</ul>
+
+<h2 id="compare">2. Compared with the Town's proposal</h2>
+<p><a href="https://nederlandco.civicweb.net/document/133495/" target="_blank" rel="noopener">Staff's Nov. 16 memo</a> proposes transfers from three funds and says the 2027 budget would "generally maintain existing operating expenditures." This plan calls that the Town's proposal. The Board hasn't adopted it.</p>
+<h3>Where the two agree</h3>
+<ul>
+<li><strong>The starting figures.</strong> This plan uses staff's forecast: −$2.18 million at the end of 2026 and −$2.53 million at the end of 2027.</li>
+<li><strong>The 2027 budget has to balance,</strong> and that requires money from other funds.</li>
+<li><strong>The Community Center Fund has fee money available.</strong> Staff say $800,000. This plan borrows $825,000.</li>
+<li><strong>Water has money available.</strong> Staff say up to $1.4 million. This plan borrows $523,000.</li>
+<li><strong>Sewer has money available.</strong> Staff say up to $900,000. This plan borrows up to $400,000.</li>
+<li><strong>Each fund should pay its own costs.</strong> The Interim Town Manager has said she wants this corrected.</li>
+<li><strong>The Downtown Development Authority isn't dissolved.</strong> Staff left that out of the preliminary budget.</li>
+</ul>
+<h3>Where they differ</h3>
+<ul>
+<li><strong>Reduce spending before borrowing.</strong> The Town's proposal keeps spending about the same. This plan lowers it by about $667,000 a year.</li>
+<li><strong>Make loans, not transfers.</strong> All three funds lend the money and are repaid.</li>
+<li><strong>Make no change to the 2026 budget.</strong> Staff's Nov. 16 memo recommended amending the 2026 budget to record the transfers this year; their Dec. 1 memo no longer does. This plan needs no 2026 supplemental appropriation, amendment, or transfer.</li>
+<li><strong>Borrow a smaller amount, and borrow it later.</strong> This plan borrows about $1.75 million at the end of 2027. The Town's proposal transfers $2.6 million in 2026.</li>
+</ul>
+<div class="tw"><table>
+<thead><tr><th></th><th class="n">Town's proposal</th><th class="n">This plan</th></tr></thead>
+<tbody>
+<tr><td>Money from other funds</td><td class="n">$2,600,000</td><td class="n">$1,748,000</td></tr>
+<tr><td>From Water</td><td class="n">up to $1,400,000</td><td class="n">$523,000</td></tr>
+<tr><td>From Sewer</td><td class="n">up to $900,000</td><td class="n">$400,000</td></tr>
+<tr><td>From the Community Center Fund</td><td class="n">$800,000</td><td class="n">$825,000</td></tr>
+<tr><td>How the money is provided</td><td class="n">permanent transfers</td><td class="n">loans, repaid</td></tr>
+<tr><td>When the money is provided</td><td class="n">2026</td><td class="n">end of 2027</td></tr>
+<tr><td>Change in yearly spending</td><td class="n">$0</td><td class="n">−$667,000</td></tr>
+<tr><td>Sheriff contract, per year</td><td class="n">$931,629</td><td class="n">$424,400</td></tr>
+<tr><td>General Fund revenue minus spending, 2028 through 2031 combined</td><td class="n">−$2,141,000</td><td class="n">+$267,000</td></tr>
+</tbody></table></div>
+
+<figure class="fig">
+<figcaption><strong>How each approach covers the 2027 shortfall of about $2.6 million</strong></figcaption>
+<div class="cmp" role="img" aria-label="Two stacked bars on one scale. The Town's proposal covers the shortfall with 800 thousand dollars from the Community Center Fund and 1.8 million from Water and Sewer, all as permanent transfers, and no savings. This plan covers it with 880 thousand dollars of savings, made up of 406 thousand in settlement savings, 296 thousand from the Sheriff contract, and 178 thousand in General Fund cuts and the Visitor Center, then loans of 825 thousand from the Community Center Fund, 400 thousand from Sewer, and 523 thousand from Water.">
+<div class="cmprow"><span class="barlab">Town's proposal</span><div class="stack"><span class="s3" style="width:30.8%">$800K</span><span class="s7" style="width:69.2%">$1.8M from Water and Sewer</span></div></div>
+<div class="cmprow"><span class="barlab">This plan</span><div class="stack"><span class="s1" style="width:15.4%">$406K</span><span class="s2" style="width:11.3%">$296K</span><span class="s4" style="width:6.8%"></span><span class="s3" style="width:31.4%">$825K</span><span class="s6" style="width:15.2%">$400K</span><span class="s5" style="width:19.9%">$523K</span></div></div>
+</div>
+<ul class="legend">
+<li><i class="s1"></i>Settlement savings, $406,000</li>
+<li><i class="s2"></i>Sheriff contract, $296,000</li>
+<li><i class="s4"></i>General Fund cuts and the Visitor Center, $178,000</li>
+<li><i class="s3"></i>Community Center Fund (a loan in this plan)</li>
+<li><i class="s6"></i>Sewer loan</li>
+<li><i class="s5"></i>Water loan</li>
+<li><i class="s7"></i>Water and Sewer, split not settled in staff's memo</li>
+</ul>
+<p class="note">The Town's proposal covers the whole shortfall with permanent transfers and no savings. This plan covers about a third of it, $880,000, with savings, and borrows the rest. It also pays for the 3% raise for employees, which staff's figure here leaves out. Bars are on one scale.</p>
+</figure>
+
+<figure class="fig">
+<figcaption><strong>General Fund balance at the end of each year</strong>, starting from a balance of $0 at the end of 2027 under each approach</figcaption>
+<svg viewBox="0 0 560 250" role="img" aria-label="Line chart. Under the Town's proposal the General Fund falls from zero at the end of 2027 to about negative 2.1 million dollars at the end of 2031. Under this plan it rises to about positive 0.3 million dollars.">
+<g class="grid">
+<line x1="60" x2="500" y1="44.6" y2="44.6"/><line x1="60" x2="500" y1="117.7" y2="117.7"/><line x1="60" x2="500" y1="190.8" y2="190.8"/>
+</g>
+<g class="axis">
+<text x="52" y="48.6" text-anchor="end">$0</text><text x="52" y="121.7" text-anchor="end">−$1M</text><text x="52" y="194.8" text-anchor="end">−$2M</text>
+<text x="60" y="236" text-anchor="middle">2027</text><text x="170" y="236" text-anchor="middle">2028</text><text x="280" y="236" text-anchor="middle">2029</text><text x="390" y="236" text-anchor="middle">2030</text><text x="500" y="236" text-anchor="middle">2031</text>
+</g>
+<polyline class="l-staff" fill="none" points="60,44.6 170,82 280,120.5 390,160.2 500,201.1"/>
+<polyline class="l-plan" fill="none" points="60,44.6 170,38 280,32.5 390,28.2 500,25.1"/>
+<g class="d-staff"><circle cx="170" cy="82" r="4"/><circle cx="280" cy="120.5" r="4"/><circle cx="390" cy="160.2" r="4"/><circle cx="500" cy="201.1" r="4"/></g>
+<g class="d-plan"><circle cx="60" cy="44.6" r="4"/><circle cx="170" cy="38" r="4"/><circle cx="280" cy="32.5" r="4"/><circle cx="390" cy="28.2" r="4"/><circle cx="500" cy="25.1" r="4"/></g>
+<text class="lab" x="500" y="62" text-anchor="end">Citizen Plan: about +$0.3 million</text>
+<text class="lab" x="70" y="172" text-anchor="start">Town's proposal: −$2.1 million</text>
+</svg>
+<p class="note">Staff's line assumes the transfers bring the General Fund's balance to $0 and the yearly shortfall of $497,155 grows 3% a year. Any cuts staff add would improve it. This plan's line is before loan payments.</p>
+</figure>
+
+<h2 id="balance">3. How the 2027 budget balances</h2>
+<p>The plan uses these sources in this order. Each source reduces the amount the later ones have to supply.</p>
+<div class="tw"><table>
+<thead><tr><th>Item</th><th class="n">2027</th><th>Details</th></tr></thead>
+<tbody>
+<tr><td>Amount needed for the General Fund's balance to reach $0 at the end of 2027 (staff's tables)</td><td class="n">$2,528,000</td><td><a href="#d-fund">Details</a></td></tr>
+<tr><td>Plus the Town's half of the co-responder</td><td class="n">$65,000</td><td><a href="#d-sheriff">Details</a></td></tr>
+<tr><td>Plus the 3% raise for employees</td><td class="n">$35,000</td><td><a href="#d-cuts">Details</a></td></tr>
+<tr class="total"><td>Total needed</td><td class="n">$2,628,000</td><td></td></tr>
+<tr><td>1. Charge each fund its own costs (amount assumed to be small)</td><td class="n">TBD</td><td><a href="#d-costs">Details</a></td></tr>
+<tr><td>2. Settlement savings on the $1.62 million owed (planning figure)</td><td class="n">$406,000</td><td><a href="#d-settle">Details</a></td></tr>
+<tr><td>3. Sheriff contract: a sergeant and two deputies, billed as two positions, from June 1</td><td class="n">$296,000</td><td><a href="#d-sheriff">Details</a></td></tr>
+<tr><td>4. Community Center Fund loan</td><td class="n">$825,000</td><td><a href="#d-cc">Details</a></td></tr>
+<tr><td>5. General Fund cuts</td><td class="n">$151,000</td><td><a href="#d-cuts">Details</a></td></tr>
+<tr><td>6. Downtown Development Authority pays other downtown costs</td><td class="n">TBD</td><td><a href="#d-dda">Details</a></td></tr>
+<tr><td>7. Visitor Center goes to the Downtown Development Authority</td><td class="n">$27,000</td><td><a href="#d-dda">Details</a></td></tr>
+<tr><td>8. Land sales</td><td class="n">TBD</td><td><a href="#d-land">Details</a></td></tr>
+<tr><td>9. Sewer loan, up to the amount that keeps its operating reserve</td><td class="n">$400,000</td><td><a href="#d-sewer">Details</a></td></tr>
+<tr><td>10. Water loan at year-end, for the amount still needed</td><td class="n">$523,000</td><td><a href="#d-water">Details</a></td></tr>
+<tr class="total"><td>Total from these sources</td><td class="n">$2,628,000</td><td></td></tr>
+<tr><td>General Fund balance at the end of 2027: the amount needed minus the total from these sources</td><td class="n">$0</td><td></td></tr>
+</tbody></table></div>
+
+<div class="box">
+<h3>What would lower the Water loan</h3>
+<p>TBD means to be determined: the amount isn't known yet, so the table counts $0. Each dollar from the items below lowers the Water loan by a dollar.</p>
+<ul>
+<li><strong>Larger settlement savings</strong> than the planning figure.</li>
+<li><strong>Land sales.</strong> Sales of Town lots that are free to sell.</li>
+<li><strong>More County cost sharing.</strong> A County share above half of the co-responder, or a share of the substation and dispatch costs.</li>
+<li><strong>Costs charged to the right fund, and other downtown costs.</strong> The amounts aren't known until staff list them.</li>
+</ul>
+<h3>What the figures assume</h3>
+<p>The settlement savings are a planning figure, not an offer. The Sheriff savings assume the County bills the Town as this plan proposes, and the co-responder figure assumes the County pays at least half, as it did for 2026. Staff's balance figures are the available balance, after the emergency reserve that TABOR requires: 3% of operating spending, about $102,000 in staff's 2027 budget. So a balance of $0 keeps that reserve. The plan's spending is lower than staff's, so the reserve it needs is smaller, and it stays below that amount through 2031 even if spending grows 3% a year.</p>
+<h3>What would raise the Water loan</h3>
+<ul>
+<li><strong>The Community Center money can't be used.</strong> Water would have to lend about $1.35 million, nearly the $1.4 million staff gave as the most available.</li>
+<li><strong>The auditor won't count a Water loan toward the budget.</strong> The Board would need about $523,000 from the TBD items and further cuts before adopting the budget, because Water's money can't be transferred.</li>
+<li><strong>The Sheriff notice goes out after Dec. 1.</strong> Each month of delay costs about $42,000 of 2027 savings.</li>
+</ul>
+</div>
+
+<h2 id="steps">4. The plan, step by step</h2>
+<p>Each step says what the Board or staff would do. Links lead to the reasons and the records behind it.</p>
+<figure class="fig tl">
+<figcaption><strong>Timeline, November 2026 to December 2027</strong></figcaption>
+<a href="plan-timeline.png" target="_blank" rel="noopener"><img src="plan-timeline.png" alt="Timeline drawn to scale. Nov. 20, stop-work letters due. Dec. 1, the Board holds payments and sends the Sheriff notice. Dec. 8, budget hearing. Dec. 15, budget adoption and mill levy deadline. By Dec. 31, approve the co-responder's 2027 budget so the service continues. Early January, settlements and land sales begin. Jan. 31, budget filed with the state. Feb. 15, term-sheet milestone. June 1, Sheriff savings begin. By July 31, the 2026 audit. December 2027, loans made for the amount still needed."></a>
+<p class="big"><a href="plan-timeline.png" target="_blank" rel="noopener">Open the timeline at full size</a></p>
+<p class="note">Drawn to scale.</p>
+</figure>
+
+<p class="phase">Phase 1</p>
+<h3 id="p1">By the Dec. 1, 2026, Board meeting</h3>
+
+<div class="step"><h4>1. Hold acquisition payments and protect the other funds</h4>
+<p>Adopt a resolution that adds to Resolution 2026-31 and repeals nothing in it. It would:</p>
+<ul>
+<li>hold payment of every acquisition invoice until the Board approves a settlement at a public meeting;</li>
+<li>take acquisition invoices off the consent agenda and list them separately as "held pending review";</li>
+<li>allow no transfer from another fund in 2026;</li>
+<li>add to the monthly report each fund's cash and the next Water and Sewer loan payments.</li>
+</ul></div>
+
+<div class="step"><h4>2. Dispute the open invoices in writing</h4>
+<p>Staff confirm that the stop-work letters required by Resolution 2026-31 went out. Each firm then gets a notice that disputes each open invoice by number and amount and says the bills are under review.</p></div>
+
+<div class="step"><h4>3. Send the Sheriff notice</h4>
+<p>Give the Boulder County Sheriff's Office six months' notice to reduce the contract to a sergeant and two deputies, with no detective or animal control position. Ask the County to bill the Town for two of the three positions, because the deputies also cover the mountain area outside town. Tell the County that the Town can't afford the Sheriff contract or the co-responder agreement at their current cost. <a class="more" href="#d-sheriff">The evidence</a></p></div>
+
+<div class="step"><h4>4. Keep the co-responder and ask the County to share costs</h4>
+<p>This plan keeps the co-responder. Approve its 2027 budget before Dec. 31, with the County paying at least half, as it did for 2026. The agreement requires an approved budget for each year, so approving it by then keeps the service running. Ask the County to share the substation rent and to explain the dispatch fee. <a class="more" href="#d-sheriff">Details</a></p></div>
+
+<div class="step"><h4>5. Ask counsel and finance staff for written answers before Dec. 15</h4>
+<p>The Town Attorney answers the legal questions the budget depends on. The Town Manager and finance staff report in writing on each loan: what it does to the lending fund's reserve, capital work, and debt payments, and how the General Fund would repay it. The Town Attorney's firm is one of the seven firms owed money, so the Town hires temporary outside counsel for the matters where the firm has a conflict of interest. No step in this plan waits for a legal opinion. Each rests on records the Town already has. The Town Attorney should read the state water and sewer loan agreements before the Sewer and Water loans are made at the end of 2027. <a class="more" href="#d-legal">The questions</a></p></div>
+
+<div class="step"><h4>6. Freeze discretionary spending for the rest of 2026</h4>
+<p>The saving is small, about $20,000 to $50,000, but it helps keep 2026 spending below the amount the Board approved. <a class="more" href="#d-cuts">Details</a></p></div>
+
+<div class="step"><h4>7. Start charging each fund its own costs</h4>
+<p>Staff list each cost now charged to the General Fund that belongs to another fund, with the reason for the charge and the amount for 2026 and 2027. <a class="more" href="#d-costs">Details</a></p></div>
+
+<div class="step"><h4>8. Take the steps staff can take without a Board vote</h4>
+<ul>
+<li>Keep all acquisition records and suspend routine deletion.</li>
+<li>Notify the Town's insurer of possible claims by the firms.</li>
+<li>Confirm that cash is available for the next state water and sewer loan payments, about $428,000 a year.</li>
+<li>Ask each firm to confirm in writing that no retainer or monthly fee accrues while work is stopped. This doesn't end any agreement.</li>
+<li>Ask the state Division of Local Government for free technical help on the 2027 budget.</li>
+<li>Have the Town Attorney check the expired purchase agreement and term sheet for any expense reimbursement or deposit owed to the Town.</li>
+<li>Order appraisals for Town land that is free to sell.</li>
+<li>Give the Board the <a href="#d-ask">figures listed below</a>.</li>
+</ul></div>
+
+<div class="step"><h4>9. Fill the open Board seat as soon as possible</h4>
+<p>The Town is <a href="index.html#open-seat">taking applications</a> through Dec. 28. State law sets no deadline for an appointment, and the Town set the application period itself. The Board can amend its announcement to say it will appoint as soon as possible, so that a full Board votes on the 2027 budget.</p></div>
+
+<div class="step"><h4>10. Direct staff to prepare a 2027 budget that follows this plan</h4>
+<p>For the Board and the public to compare the two budgets at the Dec. 8 hearing, staff need the Board's direction on Dec. 1. The Board directs staff to bring a 2027 budget with this plan's changes to the hearing, next to the Town's own proposal, and to report what Water's and Sewer's cash is made of and which costs belong to other funds. The specific budget changes are in a <a href="citizen-plan-budget-requests.pdf">list of 2027 budget requests</a> (PDF).</p></div>
+
+<div class="step"><h4>11. Ask the Downtown Development Authority to put the Visitor Center on its next agenda</h4>
+<p>An agreement for the Authority to take on the Visitor Center needs its board's approval at a public meeting. Starting now allows the agreement to be ready for the 2027 budget. <a class="more" href="#d-dda">Details</a></p></div>
+
+<p class="phase">Phase 2</p>
+<h3 id="p2">Dec. 8 hearing and Dec. 15 adoption: the 2027 budget</h3>
+
+<div class="step"><h4>1. Adopt a balanced 2027 budget built from the sources in section 3</h4>
+<p>The budget would include:</p>
+<ul>
+<li>The Sheriff contract at the reduced level from June 1, the co-responder, and the traffic shifts.</li>
+<li>The 3% raise for employees, and General Fund cuts of $151,000, from a review of the fund's spending and an organizational review. <a class="more" href="#d-cuts">Details</a></li>
+<li>A Community Center Fund loan of up to $825,000, made at year-end, with the center's operations fully funded. <a class="more" href="#d-cc">Conditions</a></li>
+<li>A Sewer loan of up to $400,000, made at year-end. <a class="more" href="#d-sewer">Conditions</a></li>
+<li>A Water loan of "up to" the amount still needed, made at year-end. <a class="more" href="#d-water">Conditions</a></li>
+<li>A line for land-sale money, which can be spent only after a sale is completed. <a class="more" href="#d-land">Details</a></li>
+<li>An agreement with the Downtown Development Authority to take on the Visitor Center. <a class="more" href="#d-dda">Details</a></li>
+</ul>
+<p><strong>The Board adopts the three loan resolutions with the budget.</strong> Each resolution authorizes a loan of up to the stated amount, sets the interest rate, the repayment schedule, and the conditions, and says the money moves at the end of 2027, only for the amount still needed. The money doesn't have to move before the budget is adopted. A budget is a plan for the year, and it has to show enough resources for the year as a whole. <a class="more" href="#qa-timing">Why</a></p></div>
+
+<div class="step"><h4>2. Add a separate line for acquisition settlements</h4>
+<p>It can be spent only on a settlement the Board approves at a public meeting.</p></div>
+
+<div class="step"><h4>3. Put in writing any cash the General Fund has used from other funds</h4>
+<p>The Town's funds <a href="index.html#cash-accounts">share one cash account</a>. When the General Fund pays bills with a negative balance, it uses other funds' cash. Once staff report how much of the shared cash belongs to each fund, the Board should record any amount the General Fund has used as a loan with repayment terms. If it isn't recorded, the auditor may report it as a transfer the Board never voted on.</p></div>
+
+<div class="step"><h4>4. Hold the hearing, adopt the budget, and file it with the state</h4>
+<p>Consider every written objection residents file before adoption, as state law requires (C.R.S. 29-1-107 and 29-1-108). Certify the mill levy by Dec. 15. File the budget with the state by Jan. 31. Brief the new auditor on how the acquisition costs and the cash owed between funds will be reported.</p></div>
+
+<p class="phase">Phase 3</p>
+<h3 id="p3">January to April 2027</h3>
+
+<div class="step"><h4>1. Negotiate settlements</h4>
+<p>Outside counsel negotiates with the firms. The Board approves each settlement at a public meeting. <a class="more" href="#d-settle">Rules</a></p></div>
+
+<div class="step"><h4>2. Sell Town land that is free to sell</h4>
+<p>Sell by ordinance, with an appraisal and a survey. Each completed sale reduces the Water loan. <a class="more" href="#d-land">Details</a></p></div>
+
+<div class="step"><h4>3. Seek Town Attorney services</h4>
+<p>Ask for proposals, including a flat monthly fee for routine work. Have the new attorney review the advice the Town received on the acquisition.</p></div>
+
+<div class="step"><h4>4. Feb. 15 and April 15: the milestones in Resolution 2026-31</h4>
+<p>This plan asks only that the Town spend no new money on the acquisition. The General Fund's balance is already about $2.2 million below zero, and any new acquisition spending in 2026 would need a supplemental appropriation.</p></div>
+
+<div class="step"><h4>5. Start the long-term policing study</h4>
+<p>The Sheriff contract is the General Fund's largest single cost. Study how the Town should provide policing from 2028 on.</p></div>
+
+<div class="step"><h4>6. Review fees and other revenue</h4>
+<p>Study whether fees recover their full cost, starting with building permits. Review franchise fees.</p></div>
+
+<p class="phase">Phase 4</p>
+<h3 id="p4">May through December 2027</h3>
+<dl class="when">
+<dt>June 1</dt><dd>The reduced Sheriff contract takes effect, six months after notice.</dd>
+<dt>Every quarter</dt><dd>A public report on cuts, settlements, land sales, and how much the Town still expects to borrow from Water.</dd>
+<dt>Midyear</dt><dd>The 2026 audit is completed. If it reports the negative balance as a finding, the Town responds with the 2027 budget and this plan.</dd>
+<dt>December</dt><dd>Make the Community Center Fund, Sewer, and Water loans, only for the amount still needed.</dd>
+</dl>
+<p>During 2027 the Board should also adopt financial policies: a balanced-budget policy, under which recurring spending is no more than recurring revenue and any excess goes to reserves; no consultant work before the Board approves the money for it; a dollar limit on the payments and contracts staff can approve without the Board; a General Fund reserve target; and a rule that one-time money, such as land sales, never pays for recurring costs.</p>
+
+<h2 id="after">5. The yearly budget from 2028 through 2031, and repaying the loans</h2>
+<p>From 2028 the plan lowers yearly spending by about $667,000: the Sheriff reduction ($507,000), General Fund cuts ($168,000), and the Visitor Center ($27,000), less the 3% raise (about $35,000). The co-responder stays. The Town's half is $65,000 a year.</p>
+
+<p>The first column is how much General Fund spending would exceed revenue each year with no changes. It starts from the $497,155 in staff's 2027 budget and grows 3% a year. The second column adds this plan's $667,000 of savings and subtracts the $65,000 for the co-responder. For 2028: −$512,000 + $667,000 − $65,000 = +$90,000.</p>
+<div class="tw"><table>
+<thead><tr><th>Year</th><th class="n">Yearly shortfall if nothing changes</th><th class="n">Yearly result with this plan</th></tr></thead>
+<tbody>
+<tr><td>2028</td><td class="n">−$512,000</td><td class="n">+$90,000</td></tr>
+<tr><td>2029</td><td class="n">−$527,000</td><td class="n">+$75,000</td></tr>
+<tr><td>2030</td><td class="n">−$543,000</td><td class="n">+$59,000</td></tr>
+<tr><td>2031</td><td class="n">−$559,000</td><td class="n">+$43,000</td></tr>
+<tr class="total"><td>Four years</td><td class="n">−$2,141,000</td><td class="n">+$267,000</td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>The yearly surplus doesn't cover repayment.</strong> The three funds are owed about $1.75 million in all. Repaying that over 10 years takes about $175,000 a year. The yearly surplus covers $40,000 to $90,000 of that. The rest would come from:
+<ul>
+<li>sales of Town land that is free to sell;</li>
+<li>settlement savings larger than the planning figure;</li>
+<li>costs charged to the funds they belong to;</li>
+<li>payments by the Downtown Development Authority for downtown costs;</li>
+<li>more County cost sharing;</li>
+<li>the review of fees, franchise fees, and other revenue in Phase 3.</li>
+</ul>
+<h3 id="loan-terms">Loan terms</h3>
+<ul>
+<li><strong>Amounts:</strong> up to $825,000 from the Community Center Fund, up to $400,000 from Sewer, and up to $523,000 from Water, each lent at the end of 2027 only for the amount still needed.</li>
+<li><strong>Term:</strong> 10 years, with equal yearly payments of principal from 2028 through 2037, about $175,000 a year in all. Early repayment is allowed.</li>
+<li><strong>Interest:</strong> a rate the Board sets in each loan resolution, on staff's recommendation. One option is the yield the Town earns on its pooled investments, so the lending fund earns what it would have earned. The 2012 Water loans used the prime rate.</li>
+<li><strong>Where repayment comes from:</strong> the General Fund's yearly surplus, about $40,000 to $90,000, and the sources listed below. Proceeds of land sales go to early repayment.</li>
+<li><strong>Each payment is subject to annual appropriation.</strong> Each year's proposed budget includes the payment due. If the Board doesn't appropriate a payment, it says so by resolution and states the reason, and the unpaid amount, with interest, is added to the balance. The Board reports the unpaid balance in public each year.</li>
+</ul>
+The amount from each is TBD.</li>
+<li><strong>The yearly shortfall may be smaller.</strong> Staff's tables show two different figures for the 2027 shortfall. This plan uses the larger one. <a class="more" href="#d-fund">Details</a></li>
+<li><strong>The Sheriff savings use 2026 contract rates.</strong> The yearly shortfall is assumed to grow 3% a year.</li>
+</ul>
+
+<h2 id="support">6. How to support this plan</h2>
+<p>The Board decides the 2027 budget in three meetings: Dec. 1, the Dec. 8 public hearing, and adoption on Dec. 15. Trustees hear from few residents on a budget, so a short email counts.</p>
+<ol>
+<li><strong>Send an email before Dec. 1.</strong> Address it to the Board of Trustees at <a href="mailto:BOT@nederlandco.org">BOT@nederlandco.org</a>, and copy Town administration at <a href="mailto:townadmin@nederlandco.org">townadmin@nederlandco.org</a> and the Town Clerk at <a href="mailto:townclerk@nederlandco.org">townclerk@nederlandco.org</a>. Copying the Clerk puts it in the public record.</li>
+<li><strong>Use your own words if you can.</strong> The text below is a start. Say what matters to you: the Community Center, your water and sewer rates, or the Town's services.</li>
+<li><strong>Speak at a meeting.</strong> Public comment is open at the Dec. 1 meeting and at the Dec. 8 budget hearing, in person at the Nederland Community Center or online. Each agenda has the link.</li>
+<li><strong>Share the <a href="citizen-plan-summary.html">one-page summary</a></strong> with neighbors.</li>
+</ol>
+<p><a class="more" href="mailto:BOT@nederlandco.org?cc=townadmin%40nederlandco.org%2Ctownclerk%40nederlandco.org&amp;subject=Please%20adopt%20the%20Citizen%20Plan%20for%20the%202027%20budget&amp;body=Mayor%20and%20Trustees%2C%0A%0AI%20am%20a%20Nederland%20resident%2C%20and%20I%20ask%20you%20to%20adopt%20the%20Citizen%20Plan%20for%20Nederland%27s%20Budget%20Crisis%20%28eldorarecord.org/citizen-plan.html%29%20for%20the%202027%20budget.%0A%0APlease%20include%20this%20email%20as%20public%20comment%20for%20the%20Dec.%201%20meeting.%0A%0A%5BYour%20name%5D%0A%5BYour%20street%20address%20or%20neighborhood%5D"><strong>Open this email in your mail program</strong></a>, or copy the text:</p>
+<div class="letter"><p><strong>To:</strong> BOT@nederlandco.org<br><strong>Cc:</strong> townadmin@nederlandco.org, townclerk@nederlandco.org<br><strong>Subject:</strong> Please adopt the Citizen Plan for the 2027 budget</p>
+<p>Mayor and Trustees,</p><p>I am a Nederland resident, and I ask you to adopt the Citizen Plan for Nederland&#x27;s Budget Crisis (eldorarecord.org/citizen-plan.html) for the 2027 budget.</p><p>Please include this email as public comment for the Dec. 1 meeting.</p><p>[Your name]<br>[Your street address or neighborhood]</p></div>
+<p class="note">These are the Town's published addresses. Emails to the Board are public records.</p>
+
+<h2 id="qa">7. Questions and answers</h2>
+
+<h3>Doesn't a negative balance at the end of 2026 break the law?</h3>
+<p>No. The budget law limits what a budget may provide for, and 2026 spending is forecast below the amount the Board approved. The 2027 budget is the one that has to cover the negative balance. Expect the 2026 audit to report the negative balance whichever approach the Board takes. <a class="more" href="#d-law">Details</a></p>
+
+<h3>Does the 2026 budget need a supplemental appropriation or an amendment?</h3>
+<p>No. Staff forecast 2026 General Fund spending at $5,493,955, which is $180,221 less than the Board approved. <a class="more" href="#d-2026">Details</a></p>
+
+<h3>Does this plan end the Eldora purchase?</h3>
+<p>No. The plan doesn't decide that. Resolution 2026-31 still controls. The plan asks only that the Town spend no new money on the acquisition, because the General Fund's balance is already about $2.2 million below zero and it has no money to pay for more work.</p>
+
+<h3>Why not adopt the Town's proposed transfers?</h3>
+<p>They are permanent, they come in 2026 before any cut can reduce them, and spending stays about the same, so by the end of 2031 the General Fund would be about $2.1 million below zero again. They are also hard to return. Water and Sewer are TABOR enterprises. If money is transferred out and the General Fund later sends it back, the money sent back could count as a grant to the enterprise, and grants are limited to 10% of each fund's yearly revenue, about $100,000 for Water and $120,000 for Sewer. A loan is different: repaying a loan isn't a grant, so that limit doesn't apply. <a class="more" href="#compare">Comparison</a></p>
+
+<h3>Can a loan count toward a balanced budget?</h3>
+<p>That isn't settled. Staff say a loan between funds doesn't count. The Town's 2016 audit counted a Water loan as a resource of the fund that borrowed it. The Town's auditor decides, and the plan asks the Board to put the question in writing now, along with whether a loan the Board has approved but not yet made can be budgeted. If the answer is no, the Community Center Fund's and Sewer's loans can be made as transfers that are returned, and the Board has to find about $523,000 in place of the Water loan. <a class="more" href="#d-law">Details</a></p>
+
+<h3 id="qa-timing">Do the loans have to be made before the 2027 budget is adopted?</h3>
+<p>No. The budget law says a budget may not provide for spending above the revenue and balances available for the year. It is a plan for the whole year, so money in it doesn't have to be in hand on the day it is adopted. The 2027 budget would show the three loans as money coming in, and the Board would adopt the loan resolutions the same night, so the loans are a commitment and not only a budget line. The money moves at the end of 2027, so that settlements and land sales reduce the amount first. Until then the General Fund's bills are paid from the Town's shared cash account, as they are now. Whether a loan that is approved but not yet made can be budgeted is part of the written question for the auditor. <a class="more" href="#d-law">Details</a></p>
+
+<h3>Is the Community Center Fund's money restricted?</h3>
+<p>Voters restricted the fund's sales tax. Nothing found restricts its fees, rentals, or interest. The audit says the Town spends restricted money first, and the fund has spent more on the center than the sales tax brought in. The audits also label the whole balance restricted, so the auditor confirms the amount before the loan is made. <a class="more" href="#d-cc">Details</a></p>
+
+<h3>Why borrow from Sewer before Water?</h3>
+<p>Sewer's fees cover its operating costs, and its sales tax all goes to its debt payments, so the money it has beyond its costs is fee money. Water's fees are below its operating costs, and most of its cash is sales tax that voters dedicated to water debt. That money can be lent, but not transferred. <a class="more" href="#d-sewer">Sewer</a> <a class="more" href="#d-water">Water</a></p>
+
+<h3>Why borrow only $400,000 from Sewer, when staff say up to $900,000 is available?</h3>
+<p>The $400,000 is the amount Sewer's own draft plan shows it can lend and still keep its operating reserve in every year through 2034. Sewer's debt coverage is close to the minimum its loans require, and about $2.5 million of sewer work is planned for 2033. <a class="more" href="#d-sewer">Details</a></p>
+
+<h3>How do the loans get repaid?</h3>
+<p>Under the plan, revenue exceeds spending by about $40,000 to $90,000 each year from 2028. Repaying $1.75 million over 10 years takes about $175,000 a year. The rest would come from land sales, larger settlement savings, costs charged to the right fund, payments by the Downtown Development Authority, more County cost sharing, and a review of fees and other revenue. The amount from each is TBD. <a class="more" href="#after">Details</a></p>
+
+<h3>What if the County doesn't agree to bill for two positions?</h3>
+<p>The Town's position is strong. Deputies assigned to the Town spend about half of their uncommitted patrol time in town and also cover the area outside it, yet the Town pays their full cost and the substation rent. About a third of the co-responder team's 2025 contacts were outside town, and residents also pay about $1.79 million a year in County taxes. The notice to reduce the contract to a sergeant and two deputies doesn't depend on the County's answer, so it can go out on Dec. 1. <a class="more" href="#d-sheriff">The evidence</a></p>
+
+<h3>Is a smaller Sheriff contract safe?</h3>
+<p>The Town would still have a sergeant and two deputies assigned to it. In the hours those positions don't cover, the Town would receive the service the Sheriff's Office already provides to the unincorporated areas next to it, such as Ridge Road and Magnolia Road. The Board should ask the Sheriff's Office in writing what hours the three positions would cover. The reduction takes six months to take effect, so there is time to get answers. <a class="more" href="#d-sheriff">Details</a></p>
+
+<h3>What if a firm sues over a held bill?</h3>
+<p>The Town tells each firm in writing that its bills are under review, which is accurate. Outside counsel handles the disputes, because the Town Attorney's firm is one of the seven firms owed. Staff notify the Town's insurer now. <a class="more" href="#d-settle">Details</a></p>
+
+<h3>What are the General Fund cuts?</h3>
+<p>$151,000 in 2027, from a review of every General Fund department and line and an organizational review. About $35,000 of that pays for the 3% raise for employees, which the plan keeps. $63,000 is listed: Board goodwill, travel and training, dues, and professional services. <a class="more" href="#d-cuts">Details</a></p>
+
+<h2 id="detail">8. Supporting detail: the reasons and records behind each step</h2>
+<p>These sections hold the reasons and the records behind the steps above.</p>
+<ul class="toc">
+<li><a href="#d-terms">Terms used in this plan</a></li>
+<li><a href="#d-fund">Where the General Fund stands</a></li>
+<li><a href="#d-law">What the budget law requires</a></li>
+<li><a href="#d-2026">Why the 2026 budget needs no supplemental appropriation or transfer</a></li>
+<li><a href="#d-cc">The Community Center Fund loan</a></li>
+<li><a href="#d-sheriff">The Sheriff contract and County costs</a></li>
+<li><a href="#d-sewer">The Sewer loan</a></li>
+<li><a href="#d-water">The Water loan</a></li>
+<li><a href="#d-cuts">General Fund cuts</a></li>
+<li><a href="#d-costs">Charging each fund its own costs</a></li>
+<li><a href="#d-settle">Settling with the firms</a></li>
+<li><a href="#d-dda">The Downtown Development Authority</a></li>
+<li><a href="#d-land">Selling Town land</a></li>
+<li><a href="#d-ask">Figures to ask staff for</a></li>
+<li><a href="#d-legal">Questions for the Town Attorney and outside counsel</a></li>
+<li><a href="#d-sources">Sources</a></li>
+</ul>
+
+<h3 id="d-terms">Terms used in this plan</h3>
+<dl class="when">
+<dt>General Fund</dt><dd>The Town's main fund. It pays for administration, the Sheriff contract, parks, and most other services.</dd>
+<dt>Loan</dt><dd>Money one Town fund lends another by Board resolution, with an interest rate and a schedule for paying it back.</dd>
+<dt>Transfer</dt><dd>Money moved from one fund to another with no requirement to pay it back.</dd>
+<dt>Fee money</dt><dd>Money a fund collects in fees, rentals, and service charges. It is different from sales tax that voters set aside for one purpose.</dd>
+<dt>Dedicated sales tax</dt><dd>A share of the sales tax that voters approved for a stated purpose, such as paying water debt.</dd>
+<dt>Supplemental appropriation</dt><dd>A Board vote during the year to spend more than the budget it approved.</dd>
+<dt>TBD</dt><dd>To be determined. The amount isn't known yet, so the plan counts $0.</dd>
+<dt>Planning figure</dt><dd>An amount used to make the budget add up. It is not an offer or a prediction.</dd>
+<dt>Co-responder</dt><dd>A behavioral health responder who works with deputies, under a separate agreement with Boulder County.</dd>
+<dt>TABOR enterprise</dt><dd>Under Colorado's Taxpayer's Bill of Rights, a government-owned business, such as a water utility, that can issue its own bonds and gets less than 10% of its yearly revenue in grants from state and local governments.</dd>
+<dt>Tap fees</dt><dd>One-time fees paid when a property connects to the water or sewer system.</dd>
+<dt>Operating reserve</dt><dd>Cash a fund keeps on hand to cover its operating costs.</dd>
+<dt>Debt coverage</dt><dd>A fund's yearly revenue left after operating costs, divided by its yearly debt payments. The state loans to Water and Sewer require at least 1.10.</dd>
+<dt>Net position</dt><dd>What a fund owns minus what it owes. The audit labels part of it "unrestricted."</dd>
+<dt>Warrant list</dt><dd>The list of payments the Board approves at each meeting.</dd>
+<dt>Consent agenda</dt><dd>Routine items the Board approves in one vote without discussion.</dd>
+<dt>Mill levy</dt><dd>The property tax rate, which the Board certifies each December.</dd>
+</dl>
+
+<h3 id="d-fund">Where the General Fund stands</h3>
+<div class="tw"><table>
+<thead><tr><th>Item</th><th class="n">Amount</th></tr></thead>
+<tbody>
+<tr><td>2026 General Fund budget (<a href="https://nederlandco.civicweb.net/document/126174/" target="_blank" rel="noopener">Resolution 2025-28</a>)</td><td class="n">$5,674,176</td></tr>
+<tr><td>2026 spending forecast, including acquisition costs (<a href="https://nederlandco.civicweb.net/document/133496/" target="_blank" rel="noopener">staff's tables</a>)</td><td class="n">$5,493,955</td></tr>
+<tr><td>Available balance, end of 2026 (staff forecast)</td><td class="n">−$2,180,816</td></tr>
+<tr><td>2027 revenue minus spending, with no changes</td><td class="n">−$497,155</td></tr>
+<tr><td>Available balance, end of 2027, with no changes</td><td class="n">−$2,528,102</td></tr>
+<tr><td>Acquisition costs paid through the <a href="https://nederlandco.civicweb.net/document/133064/" target="_blank" rel="noopener">Nov. 9 warrant list</a></td><td class="n">$1,254,931</td></tr>
+<tr><td>Acquisition costs owed, confirmed by the firms as of Oct. 16</td><td class="n">$1,623,777</td></tr>
+<tr><td>Of that, Brownstein Hyatt Farber Schreck</td><td class="n">$1,174,083</td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>The money owed is already in the forecast.</strong> The Treasurer's September report shows $2,758,586 of acquisition costs paid or incurred through Oct. 15. Less the $1,195,949 paid through the Oct. 20 warrant list, about $1.56 million was recorded but unpaid. So nearly all of the $1,623,777 owed is already counted in the −$2,180,816, and settling for less improves the balance. About $100,000 appears not yet recorded.</li>
+<li><strong>Why 2026 spending is under budget.</strong> Grant-funded projects budgeted at $2,250,000 mostly didn't happen in 2026, so neither the spending nor the grant revenue came. The acquisition costs took the place of that unspent amount. Forecast spending is about $70,000 to $180,000 under the budget. That difference is an estimate. If large grant bills arrive in December, spending could reach the approved amount.</li>
+<li><strong>The costs still aren't funded.</strong> A budget is a spending limit, not a source of money. The acquisition costs are why the balance is negative, and the 2027 budget has to cover that balance.</li>
+<li><strong>2025 also stays under its budget.</strong> The Town has said it will move $622,925 of 2025 acquisition payments from receivables to 2025 spending. The 2025 audit shows spending of $3,375,863 against a budget of $5,919,598, so the correction doesn't put 2025 spending over its budget. It lowers the 2025 ending balance from $1,030,078 to $407,153. This plan assumes the correction is made in the 2026 audit, which the Town's auditor decides.</li>
+<li><strong>Two figures for the 2027 shortfall.</strong> Staff's tables show 2027 spending exceeding revenue by $497,155, but the available balance falling by only $347,286. Of the $149,869 difference, $61,446 is a smaller restricted balance. The other $88,423 isn't explained. This plan sizes the 2027 loans from staff's ending balance, so they don't depend on the answer. For later years it uses the larger figure. If the smaller figure is right, each later year is about $150,000 better.</li>
+<li><strong>Administrative charges already exist.</strong> In the 2026 budget, Water and Sewer pay the General Fund $95,816 and $105,814 for administration and finance, and the Community Center Fund pays it $34,716. These are charges for services, not transfers, and this plan doesn't change them.</li>
+</ul>
+
+<h3 id="d-law">What the budget law requires</h3>
+<ul>
+<li><strong>The 2027 budget must balance.</strong> No budget "shall provide for expenditures in excess of available revenues and beginning fund balances" (C.R.S. 29-1-103(2)). With a beginning balance of about −$2.18 million, 2027 resources must exceed 2027 spending by that much.</li>
+<li><strong>Ending 2026 with a negative balance is not itself a violation.</strong> The auditor will likely report it. A deficit that is reported openly, with a plan to eliminate it, is better than a rushed transfer.</li>
+<li><strong>Cuts, settlement savings, land sales, and transfers count toward balancing.</strong></li>
+<li><strong>Loans between funds are this plan's default.</strong> The Town <a href="index.html#utility-loan">has made them before</a>. The Water and Sewer funds lent the Downtown Development Authority $842,500 from 2012 through 2016. The later ones were approved by Board resolution with an interest rate, a deadline, and a finding that the lending fund could provide the money "without hampering the operations or replacement schedules" (Resolutions 2014-33, 2015-06, and 2016-20).</li>
+<li><strong>Whether a loan counts toward balancing isn't settled.</strong> The usual accounting treatment, and staff's Oct. 30 analysis, is that a loan between funds adds cash and an equal amount owed, so the General Fund's balance doesn't rise. But the 2016 audit reported Water's $340,000 loan in the Downtown Development Authority's fund as "Proceeds from Issuance of Debt," which raised that fund's balance, and the auditor gave a clean opinion. The Town's auditor decides.</li>
+<li><strong>If a loan can't be counted.</strong> The Community Center Fund's and Sewer's loans can each be made as a transfer instead, with a Board resolution that sets a written schedule for returning it, with each payment subject to annual appropriation. A transfer counts toward balancing. Water's money can't be transferred (<a href="#d-water">Water</a>), so the Board would have to find that amount, about $523,000, elsewhere before adopting the budget.</li>
+</ul>
+
+<h3 id="d-2026">Why the 2026 budget needs no supplemental appropriation or transfer</h3>
+<p><a href="https://nederlandco.civicweb.net/document/133495/" target="_blank" rel="noopener">Staff's Nov. 16 memo</a> recommends recording the transfers in an amended 2026 budget, "rather than carrying that deficit forward into FY27." This plan doesn't, for three reasons. Staff's <a href="https://nederlandco.civicweb.net/document/133768/" target="_blank" rel="noopener">Dec. 1 memo</a> says they won't present an amended 2026 budget, because "the General Fund is likely not to exceed the budgeted 2026 appropriations," and are still evaluating the legal and audit considerations.</p>
+<ul>
+<li><strong>A 2026 budget change isn't required.</strong> Staff forecast 2026 General Fund spending, including the acquisition costs, at $5,493,955. The Board approved $5,674,176 (Resolution 2025-28). Spending under the approved amount needs no supplemental appropriation, amendment, or transfer.</li>
+<li><strong>Resolution 2026-31 doesn't require one either.</strong> It asks staff to present a transfer, supplemental appropriation, or revised appropriation for the 2026 acquisition costs. It doesn't require the Board to adopt one.</li>
+<li><strong>A 2026 transfer would take the most money.</strong> A 2026 transfer must cover the whole deficit, about $2.0 to $2.2 million, before any 2027 cut, settlement, or land sale can reduce it.</li>
+<li><strong>A transfer is hard to reverse.</strong> If money is transferred out of Water and the General Fund later sends it back, the money sent back could count as a grant, which is limited to about $100,000 a year. Repaying a loan isn't a grant, so a loan doesn't have that problem (see <a href="#d-water">Water</a>).</li>
+<li><strong>What could change the 2026 forecast.</strong> The $180,221 is an estimate of how far spending will be below the approved amount. If large bills arrive in December, or the Town spends more on the acquisition, spending could reach that amount. The term-sheet work that Resolution 2026-31 allows would need a supplemental appropriation, which is one reason this plan asks for no new acquisition spending.</li>
+</ul>
+
+<h3 id="d-cc">The Community Center Fund loan</h3>
+<p><strong>Why it comes before Water.</strong> The fund has no state loan and isn't a TABOR enterprise, so repaying it raises none of the questions that Water does.</p>
+<p><strong>What voters restricted.</strong> The <a href="index.html#fund-dedications">2002 and 2022 ballot questions</a> restrict the Community Center's sales tax. No ordinance, ballot question, or bond document found restricts the fund's fees, rentals, or interest. From 2016 through 2025 the fund spent $4,139,743 on the Community Center and took in $3,479,962 of sales tax, and the 2025 audit says the Town's practice is "to use restricted resources first." On that practice, the sales tax has all been spent on the center, and the balance is other revenue.</p>
+<p><strong>How the audits label the balance.</strong> The audits label the whole balance "Restricted for Community Center." Under the Town's stated practice, that balance isn't unspent sales tax. The Town's auditor confirms the amount when the loan is made.</p>
+<div class="tw"><table>
+<thead><tr><th>Step</th><th class="n">Amount</th></tr></thead>
+<tbody>
+<tr><td>Fund balance forecast for the end of 2026 (staff's Nov. 17 tables)</td><td class="n">$980,700</td></tr>
+<tr><td>Less a reserve of three months of operating costs</td><td class="n">−$156,000</td></tr>
+<tr><td>Less the amount staff held back for capital work, including life-safety work</td><td class="n">−$100,000</td></tr>
+<tr><td>Plus 2027 revenue above operating costs, with other capital work deferred</td><td class="n">+$100,000</td></tr>
+<tr class="total"><td>Available to lend</td><td class="n">about $825,000</td></tr>
+</tbody></table></div>
+<p class="note">The $980,700 is staff's Nov. 17, 2026, forecast: $967,702 available plus $12,959 restricted. The adopted 2026 budget projected $771,804. The forecast is higher because the fund's 2026 spending is running below its budget. The reserve here is three months of operating costs, which is larger than the 3% reserve of $14,430 in the 2026 budget summary.</p>
+<p><strong>Conditions.</strong></p>
+<ul>
+<li>The center's 2027 operations are fully funded, and the fund keeps the three-month reserve.</li>
+<li>Life-safety work goes ahead. Other capital work is deferred to a stated year in a written schedule, not canceled.</li>
+<li>The sales tax keeps going to the Community Center, as voters approved.</li>
+<li>The loan is repaid on a written schedule. No money is lent in 2026.</li>
+</ul>
+<p><strong>Budget the fund for 2027 so the most is available.</strong> Staff's 2027 budget for the fund spends $622,851. That is about $191,000 more than forecast 2026 spending and about $40,000 more than the fund's 2027 revenue, and the tables don't itemize it. The Board should ask for the line items and review them as it does the General Fund's.</p>
+<p><strong>Keep the fund separate.</strong> Merging it into the General Fund isn't needed, and it would end the loan, because a loan needs a lender fund that is owed the money. Town Code Sec. 4-57 sends the Community Center's share of the sales tax to this fund, and Sec. 4-58 bars changing that use without a vote. The Board can state by resolution that the sales tax is spent first on the center, and require the fund's reports to show the tax and the other revenue separately.</p>
+<p class="note">Staff's figure for the Community Center Fund is $800,000: about $900,000 identified, less $100,000 held back for capital projects. Interest is counted here as unrestricted. Interest earned on the sales tax could carry the tax's restriction, and was about $50,000 over the last three years.</p>
+
+<h3 id="d-sheriff">The Sheriff contract and County costs</h3>
+<p><strong>What the plan proposes.</strong> A sergeant and two deputies, with no half-time detective or animal control position, billed to the Town as two positions. At 2026 rates that lowers the contract from $931,629 to about $424,400.</p>
+<p>That saves about $296,000 in 2027, from June 1, and about $507,000 a year after.</p>
+<figure class="fig">
+<figcaption><strong>Sheriff contract cost per resident</strong></figcaption>
+<div class="hb" role="img" aria-label="Bar chart of Sheriff contract cost per resident: Nederland in 2026, 657 dollars; Lyons, 357 dollars; Nederland under this plan, 299 dollars; Superior, 222 dollars.">
+<div><span>Nederland, 2026</span><b class="hot" style="width:100%">$657</b></div>
+<div><span>Lyons</span><b class="cool" style="width:54.3%">$357</b></div>
+<div><span>Nederland, this plan</span><b class="planb" style="width:45.5%">$299</b></div>
+<div><span>Superior</span><b class="cool" style="width:33.8%">$222</b></div>
+</div>
+<p class="note">Each town's 2026 contract with the Boulder County Sheriff's Office, divided by its population. "This plan" is the proposed contract of about $424,400 at 2026 rates, divided by Nederland's population.</p>
+</figure>
+<p><strong>Evidence that the Town pays for policing outside its limits.</strong></p>
+<ul>
+<li>Under the contract's <a href="https://nederlandco.civicweb.net/document/118140/" target="_blank" rel="noopener">Second Amendment</a>, the day deputy and the night deputy each spend about half of their uncommitted patrol time in town. The base agreement makes them responsible for calls in the unincorporated mountain area. The Town pays the full cost of each position.</li>
+<li>The deputies work from a substation the Town pays for, with $21,660 budgeted for rent.</li>
+<li>About a third of the mountain co-responder team's 2025 contacts were outside Nederland.</li>
+<li>Property owners and shoppers in town pay about $1.79 million a year in County property and sales taxes. In proportion to the County's budget, about $208,000 of the property tax supports the Sheriff's Office, before the contract.</li>
+</ul>
+<p><strong>The notice period is six months.</strong> The Second Amendment (Resolution 2025-04) says a reduction of positions takes effect six months after written notice. A Sept. 15, 2026, staff memo refers to one year, which was the earlier term.</p>
+<p><strong>What three positions would cover.</strong> Three positions can't staff every shift. In the other hours the Town would receive the service the Sheriff's Office provides to the unincorporated areas next to it, such as Ridge Road and Magnolia Road. The Sheriff has a countywide duty to keep the peace (C.R.S. 30-10-516), and in January 2023, when the Town had no marshal, the Town reported that the Sheriff's Office was responding to all priority 1 calls and providing nighttime coverage. The Board should ask the Sheriff's Office in writing what hours the positions would cover and what service continues in the other hours.</p>
+<p><strong>Keep the traffic shifts.</strong> They cost $124,000 and are budgeted to bring in $230,000 in fines.</p>
+<p><strong>Keep the co-responder.</strong> This plan asks the Board to approve its 2027 budget before Dec. 31, so the service continues. It has <a href="https://nederlandco.civicweb.net/document/127188/" target="_blank" rel="noopener">its own agreement</a> with Boulder County Community Services, which says "no services shall be provided, and no payment shall be due, for any contract year for which a budget has not been approved." The full cost is $130,461 a year. The County paid half of 2026, and this plan assumes it pays at least half in 2027. The lodging tax, about $45,000 to $53,000 a year, could pay part of it, because voters approved that tax for health and human services and law enforcement.</p>
+<p><strong>Other County costs.</strong> The Town pays $56,514 for dispatch under a separate agreement and budgets $21,660 for the substation's rent. This plan asks the County to share the cost of the co-responder and the substation and to explain how the dispatch fee is set. The amount is TBD.</p>
+
+<h3 id="d-sewer">The Sewer loan</h3>
+<p><strong>The plan borrows from Sewer.</strong> It doesn't transfer Sewer's money. The Sewer Fund has lent before: $13,000 to the Downtown Development Authority in 2015, by Board resolution, with an interest rate, a deadline, and a finding that the fund could provide the money "without hampering the operations or replacement schedules" (Resolution 2015-06). A loan is also better for Sewer than a transfer, because repaying a loan isn't limited by TABOR.</p>
+<p><strong>Why Sewer comes before Water.</strong> The money Sewer has beyond its costs is fee money. Water's is mostly dedicated sales tax. The 2026 budget shows Sewer's charges for services above its operating costs in each year from 2023 through 2026, by about $119,000 to $192,000 a year. Sewer's dedicated sales tax, $1,090,638 over those years, was less than its debt payments of $1,144,847, so none of that tax remains after the debt payments. The 2025 audit labels $839,238 of Sewer's net position unrestricted.</p>
+<p><strong>The amount.</strong> Up to about $400,000. The Town's draft 10-year utility plan shows Sewer's cash staying at least $399,409 above its operating reserve in every year through 2034. Staff's memo put the amount available at up to $900,000.</p>
+<p><strong>Conditions.</strong></p>
+<ul>
+<li>It is budgeted "up to" a stated amount and made at year-end only for the amount the earlier sources don't cover.</li>
+<li>Sewer stays above its operating reserve and its required debt coverage in every year of its plan, and no capital work or debt payment is delayed.</li>
+<li>It is approved by resolution as a loan, with an interest rate and a repayment schedule. Only if the Town's auditor won't count a loan toward the budget does it become a transfer, with a written schedule for returning it.</li>
+<li>Before the loan is made, the Town Attorney reads the state sewer loan agreements and the 2018 debt vote and reports anything that limits it.</li>
+</ul>
+<p><strong>Limits on the Sewer loan.</strong> Sewer's debt coverage is close to the minimum: 1.12 in 2026, and its loans require 1.10. About $2.5 million of sewer work is planned for 2033. Sewer is a TABOR enterprise, so if a transfer were used instead of a loan, the money returned to Sewer would be limited to about $120,000 a year. Tap fees (plant investment fees) were budgeted at $136,235 a year for 2025 and 2026. Sewer received $26,976 in 2023, $7,608 in 2024, $114,780 in 2025, and $8,008 through September 2026. In October, the Board let TEENS pay $361,582 of water and sewer tap fees over five years instead of at once (Resolution 2026-28). Staff count tap fees toward Sewer's debt coverage, so staff should confirm the tap fees expected in 2026 and 2027 and how much fee money Sewer holds.</p>
+
+<h3 id="d-water">The Water loan</h3>
+<p><strong>Water's money can be lent, but not transferred.</strong> Most of Water's cash is sales tax that voters dedicated to water debt, and Town Code Sec. 4-58 bars changing the use of that tax without a vote. A transfer would change its use. A loan doesn't, because the money is repaid to Water. The precedent is Water's own loans to the Downtown Development Authority, $482,500 in 2012 and $340,000 in 2016, made by Board resolution after voters dedicated the tax, and repaid.</p>
+<p><strong>What Water's money is.</strong> Staff's memo says the transfers would use user fees. The 2026 budget shows Water's user fees below its operating costs in each year from 2023 through 2026, by about $43,000 to $76,000 a year. Over the same years Water received $1,090,638 of dedicated sales tax and paid $573,033 on its debt. So Water's cash is mostly sales tax left after debt payments, tap fees, and older savings, not fee surplus. The 2025 audit labels $1,958,661 of Water's net position unrestricted. This is why Water comes last, why the amount should be as small as possible, and why the money has to be repaid.</p>
+<p><strong>Conditions.</strong></p>
+<ul>
+<li>It is budgeted "up to" a stated amount and made at year-end only for the amount the other sources don't cover.</li>
+<li>It doesn't delay Water's capital plan or debt payments.</li>
+<li>It is approved by resolution, with an interest rate, a repayment schedule, and a yearly public report.</li>
+<li>Before the loan is made, the Town Attorney reads the state water loan agreements and the 1998 and 2012 sales tax votes and reports anything that limits the loan.</li>
+</ul>
+<p><strong>If the loan can't be counted toward the budget.</strong> The 2016 audit reported Water's $340,000 loan as a resource of the fund that borrowed it. Staff's Oct. 30 analysis says a loan to the General Fund wouldn't count. The Town's auditor decides, and the Board should ask in writing now, with the 2016 audit pages attached. If the answer is no, Water's $523,000 has to come from somewhere else: larger settlement savings, land sales, a larger Community Center Fund loan, more County cost sharing, and more cuts.</p>
+<p><strong>The TABOR limit on grants.</strong> Water is a TABOR enterprise, and it loses that status if grants reach 10% of its yearly revenue, about $100,000. Repaying a loan isn't a grant.</p>
+<p><strong>Why Water is last.</strong> Its fees don't cover its operations, most of its cash is dedicated sales tax, and it can only lend.</p>
+<p><strong>What the Town Attorney should check.</strong> The state loans are secured by utility revenues and sales tax. Voters <a href="index.html#fund-dedications">dedicated sales tax to utility debt</a> in 1998 and 2012, and Ordinance 710 (2012) says "to amend the purposes for which tax revenue is used, voter approval is required."</p>
+
+<h3 id="d-cuts">General Fund cuts</h3>
+<p>The plan counts $151,000 of General Fund cuts in 2027 and $168,000 a year after. The Board and staff would reach that through a review of all General Fund spending and an organizational review.</p>
+<p><strong>The spending freeze for the rest of 2026.</strong> About $33,000 remained in discretionary lines by the Nov. 9 warrant list, and another $47,000 was budgeted in lines with no payments shown. A realistic 2026 saving is $20,000 to $50,000. The Big Springs grant match ($38,244) should not be frozen, because cutting it could cause the Town to lose the grant.</p>
+<p><strong>Lines the review should start with, $63,000:</strong></p>
+<ul>
+<li>Board goodwill, $10,000;</li>
+<li>travel, training, lodging, and meals in all departments, up to $29,000;</li>
+<li>memberships and dues, up to $11,600;</li>
+<li>administrative professional services, $11,600.</li>
+</ul>
+<p><strong>Smaller budget lines.</strong> A line-by-line review found up to about $47,000 more in smaller lines; and substation rent, up to $21,660, if the County shares it.</p>
+<p><strong>The 3% raise.</strong> The plan keeps the 3% raise for employees. Staff's tables put its cost to the General Fund at about $35,000 in 2027: the available balance at the end of 2027 is −$2,563,003 with the raise and −$2,528,102 without it. The plan pays for the raise with General Fund cuts of the same amount, so the raise adds nothing to the loans.</p>
+<p><strong>The rest of the review, $88,000 in 2027 and $105,000 a year after.</strong> The review covers every General Fund department and line, including the smaller lines listed above. It includes an organizational review: how the Town's work is organized, and which fund each part of it belongs to. Its changes take effect by April 1. A saving found in the Community Center Fund or a utility fund stays in that fund.</p>
+<p><strong>One budget line staff should explain.</strong> Administrative professional services was budgeted at $11,600 for 2026, and about $101,600 had been charged to it by Nov. 9, mostly monthly invoices from P&amp;M Holding Group. Staff should say what the work is and when it ends.</p>
+
+<h3 id="d-costs">Charging each fund its own costs</h3>
+<ul>
+<li>The Interim Town Manager has said she wants costs that are charged to the General Fund but belong to other funds corrected. Each cost moved lowers the deficit by the same amount.</li>
+<li>This is a correction, not a transfer. The other fund pays for a service it received, so nothing is repaid later.</li>
+<li>Each charge needs a documented reason, such as staff time, billing, insurance, or audit work. A charge with no documented reason is in effect a transfer.</li>
+<li>The current charges rose by the same percentage for every fund in 2025 and 2026, and the Budget Book shows no calculation behind them. Staff should explain how they are set.</li>
+<li>The acquisition costs can't be moved this way. The other funds didn't receive those services.</li>
+<li>If a 2026 amendment combines corrections with transfers, the Board should vote on them separately.</li>
+<li>This plan assumes the amount is small, because Water and Sewer already pay the General Fund about $200,000 a year for administration.</li>
+</ul>
+
+<h3 id="d-settle">Settling with the firms</h3>
+<ul>
+<li>The Town disputes each open invoice in writing and says the bills are under review.</li>
+<li>Outside counsel negotiates, because the Town Attorney's firm is one of the firms owed.</li>
+<li>Each settlement is a new agreement, approved at a public meeting, with the money approved before signing.</li>
+<li>Payments after 2027 are subject to each year's budget.</li>
+<li>The $406,000 in this plan is a planning figure. The amounts are set in negotiation.</li>
+</ul>
+
+<h3 id="d-dda">The Downtown Development Authority</h3>
+<ul>
+<li><strong>The Visitor Center.</strong> It costs $44,921 against $17,950 of revenue in the <a href="https://nederlandco.civicweb.net/document/127543/" target="_blank" rel="noopener">2026 budget</a>, a net cost of about $27,000. The budget says the Board may evaluate "lease or partnership options for the space."</li>
+<li><strong>Other downtown costs.</strong> The Authority may be able to pay General Fund costs inside its district and within its plan, such as the public restrooms, street maintenance, and snow removal. Each needs the Authority board's approval at a public meeting. The amount is TBD.</li>
+<li><strong>The Authority has money available.</strong> Its fund balance was $1,695,723 at the end of 2025, restricted to downtown development, and it takes in about $400,000 a year.</li>
+<li><strong>What the Authority can't pay for.</strong> A loan or general transfer to cover the deficit is likely outside its purposes.</li>
+</ul>
+
+<h3 id="d-land">Selling Town land</h3>
+<ul>
+<li>Budget only land that is free to sell, with no grant or easement limits. Count it only after a sale is completed.</li>
+<li>Money from land sales goes to closing the 2027 shortfall and rebuilding reserves, never to operating costs.</li>
+<li>Resolution 2011-30 requires an appraisal less than three months old at the time of sale.</li>
+<li>Some land may earn more leased than sold.</li>
+</ul>
+
+<h3 id="d-ask">Figures to ask staff for</h3>
+<ul>
+<li>Projected 2026 General Fund spending against the $5,674,176 budget, by line, and any grant-funded bills expected before Dec. 31.</li>
+<li>Amounts owed by firm, any acquisition payments since Oct. 16, and how much of the $1,623,777 is already in the 2026 forecast.</li>
+<li>Each fund's share of the shared cash account, now and projected at Dec. 31. On Sept. 30 the General Fund's share was −$105,870.</li>
+<li>The terms of the Stifel and Plante Moran agreements, including any retainer or monthly fee.</li>
+<li>The state water and sewer loan agreements, and the 2027 Water and Sewer capital plans.</li>
+<li>Whether the cash in the draft utility plans is counted before or after what each fund owes the General Fund. At the end of 2025 Sewer owed it $608,255 and Water $509,933.</li>
+<li>The Community Center Fund's 2027 line items and its capital project list with costs.</li>
+<li>An inventory of Town land that is free to sell, with any grant or easement limits.</li>
+<li>General Fund costs inside the Downtown Development Authority's district, with the amount for each.</li>
+<li>General Fund spending by department and line, budget against actual, for the spending review.</li>
+</ul>
+
+<h3 id="d-legal">Questions for the Town Attorney and outside counsel</h3>
+<p><strong>For the Town Attorney, before Dec. 15:</strong></p>
+<ul>
+<li>How the loans to the General Fund should be documented, and whether a multi-year repayment needs a vote.</li>
+<li>How any amount the General Fund owes other funds should be recorded.</li>
+<li>Which costs the Downtown Development Authority may pay.</li>
+<li>Whether the expired purchase agreement or term sheet gives the Town any reimbursement.</li>
+<li>Whether a lease-purchase of a Town building could lawfully fund part of the 2027 shortfall without a vote, and what it would cost.</li>
+</ul>
+<p><strong>For the Town Attorney, before the Sewer and Water loans are made at the end of 2027:</strong></p>
+<ul>
+<li>Whether the state water loan agreements or the 1998 and 2012 sales tax votes limit a loan from Water, and whether the agreements require Water to remain an enterprise.</li>
+<li>Whether the state sewer loan agreements or the 2018 debt vote limit a loan from Sewer, or a returned transfer if the loan can't be counted.</li>
+</ul>
+<p><strong>For temporary outside counsel, because the Town Attorney's firm is one of the firms owed:</strong></p>
+<ul>
+<li>Review of the acquisition invoices, including the firm's own ($293,931 billed, by the Town's count).</li>
+<li>How settlements should be structured.</li>
+<li>Review of the advice the Town received on the acquisition, until a new Town Attorney can do it.</li>
+</ul>
+
+<h3 id="d-sources">Sources</h3>
+<p>The Town's records are indexed, with links, at <a href="index.html">The Eldora Record</a>. The documents this plan relies on most:</p>
+<ul>
+<li><a href="https://nederlandco.civicweb.net/document/133495/" target="_blank" rel="noopener">Staff's budget memo</a> and <a href="https://nederlandco.civicweb.net/document/133496/" target="_blank" rel="noopener">"2027 Budget Update" tables</a> of Nov. 16 and 17, 2026, and staff's Oct. 30, 2026, budget scenarios (records response).</li>
+<li><a href="https://nederlandco.civicweb.net/document/126174/" target="_blank" rel="noopener">Resolution 2025-28</a> (the 2026 budget) and <a href="resolution.html">Resolution 2026-31</a>.</li>
+<li>The 2025 audit (Town website) and the <a href="https://nederlandco.civicweb.net/document/30607/" target="_blank" rel="noopener">2016 audit</a>.</li>
+<li>The <a href="https://nederlandco.civicweb.net/document/127543/" target="_blank" rel="noopener">2026 Budget Book</a>.</li>
+<li>The <a href="https://nederlandco.civicweb.net/document/132740/" target="_blank" rel="noopener">Oct. 20</a> and <a href="https://nederlandco.civicweb.net/document/133064/" target="_blank" rel="noopener">Nov. 9, 2026,</a> warrant lists, and the <a href="https://nederlandco.civicweb.net/document/133492/" target="_blank" rel="noopener">September 2026 financial report</a>.</li>
+<li>The Sheriff agreement's <a href="https://nederlandco.civicweb.net/document/127162/" target="_blank" rel="noopener">2026 exhibit</a> and <a href="https://nederlandco.civicweb.net/document/127161/" target="_blank" rel="noopener">cost sheet</a>, its <a href="https://nederlandco.civicweb.net/document/118140/" target="_blank" rel="noopener">Second Amendment</a>, and the co-responder agreement (<a href="https://nederlandco.civicweb.net/document/127188/" target="_blank" rel="noopener">127188</a> and <a href="https://nederlandco.civicweb.net/document/127159/" target="_blank" rel="noopener">127159</a>).</li>
+<li>The firms' confirmations of amounts owed, in the Town's Oct. 29, 2026, records response (<a href="index.html#owed-confirmed">summary</a>).</li>
+<li>The Town Code, the 2002, 2012, and 2022 ballot questions, and Ordinances 710, <a href="https://nederlandco.civicweb.net/document/114624/" target="_blank" rel="noopener">711</a>, and 831 (<a href="index.html#fund-dedications">summary</a>).</li>
+</ul>
+
+<footer><a href="index.html">The Eldora Record</a><a href="cliffs-notes.html">Cliffs Notes</a><a href="resolution.html">Resolution 2026-31</a><a href="opinion.html">Opinion</a><br>The Eldora Record is drawn from Town records and official sources. This plan is a proposal from residents and is kept separate from it. </footer>
+</main>
