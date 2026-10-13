@@ -1,0 +1,215 @@
+{
+ "text": {
+  "w_avail": "$1,697,857",
+  "s_avail": "$550,108",
+  "u_avail": "$2,247,965",
+  "u_avail_m": "$2.25 million",
+  "w_avail_m": "$1.70 million",
+  "s_avail_m": "$0.55 million",
+  "gf_short": "\u2212$126,357",
+  "conf_inv2": "$296,239",
+  "need_lo": "$1.80 million",
+  "need_hi": "$2.14 million",
+  "left_hi": "$0.45 million",
+  "left_lo": "$0.11 million",
+  "hh_paid": "$1,746",
+  "hh_est": "$4,189",
+  "hh_town": "$4,029",
+  "owed": "$2,869,571",
+  "owed_m": "$2.9 million",
+  "owed_short": "$2.9M",
+  "neg_owed": "\u2212$2,869,571",
+  "wo_m": "about $1.8 million",
+  "cap_yrs": "14",
+  "res_est": "$1,951",
+  "avg_rep": "$199,000",
+  "avg_op": "$126,000",
+  "yrs_est": "14 to 23",
+  "yrs_paid": "6 to 9",
+  "cash_after": "$698,751",
+  "unpaid_x": "$1,673,621",
+  "cash_end": "\u2212$1,799,978",
+  "fb_end": "\u2212$2,285,841",
+  "fb_end_m": "about $2.3 million",
+  "bud_change": "\u2212$446,348",
+  "yrs_def": "11 to 18",
+  "ufb_2026": "\u22120.75",
+  "pct_paid": "37%",
+  "pct_est": "89%",
+  "x_comp": "6",
+  "hogan": "$148,795",
+  "powdr": "$184,721",
+  "pct_unpaid": "52%",
+  "unpaid_4": "$418,000",
+  "unpaid": "$1.7 million",
+  "unpaid_short": "$1.7M",
+  "dt_fire": "$97,000 to $107,000",
+  "dt_lib": "$29,000 to $32,000",
+  "dt_fire_pct": "about 6%",
+  "dt_lib_pct": "about 5%",
+  "dt_total": "about $568,000",
+  "dt_fire_one": "$100,000",
+  "dt_lib_one": "$30,000",
+  "dt_eco": "$10,000 to $11,000",
+  "cov_from": "Jan 3, 2023",
+  "cov_through": "Nov 9, 2026",
+  "cov_updated": "Nov 7, 2026",
+  "first_es": "Sep 3, 2024",
+  "balance": "$1,195,949",
+  "balance_c": "$1,195,949",
+  "since_2025": "$825,108",
+  "bal_2025": "$370,841",
+  "listed": "$1,089,206",
+  "unlisted": "$106,743",
+  "unlisted_about": "about $107,000",
+  "moved": "$56,743",
+  "site": "https://eldorarecord.org/",
+  "subscribe": "eldora-record-updates+subscribe@googlegroups.com",
+  "rec_ledger": "https://eldorarecord.org/records/2026-09-25-eldora-reimbursable-expenses.xls",
+  "rec_reply": "https://eldorarecord.org/records/2026-09-25-town-cora-response.txt",
+  "rec_reply2": "https://eldorarecord.org/records/2026-10-22-town-cora-response.txt",
+  "rec_reply3": "https://eldorarecord.org/records/2026-10-20-town-cora-response.txt",
+  "rec_ind": "https://eldorarecord.org/records/2026-05-12-indenture-of-trust-draft-v14.doc",
+  "rec_ikon": "https://eldorarecord.org/records/2026-01-06-powdr-ikon-cost-sharing-letter.pdf",
+  "rec_kav": "https://eldorarecord.org/records/2025-08-01-kline-alvarado-veio-engagement-letter.pdf",
+  "rec_qoe": "https://eldorarecord.org/records/2025-08-12-plante-moran-qoe-engagement-letter.pdf",
+  "rec_farn": "https://eldorarecord.org/records/2025-08-28-farnsworth-survey-agreement.pdf",
+  "rec_bolder": "https://eldorarecord.org/records/2025-10-06-bolder-hr-agreement.pdf",
+  "rec_bba": "https://eldorarecord.org/records/2025-10-08-bba-water-engagement-letter.pdf",
+  "rec_datasite": "https://eldorarecord.org/records/2025-11-datasite-statement-of-work.pdf",
+  "rec_stifel": "https://eldorarecord.org/records/2025-05-23-stifel-municipal-advisory-agreement.pdf",
+  "rec_reply4": "https://eldorarecord.org/records/2026-10-29-town-cora-response.txt",
+  "rec_c_bhfs": "https://eldorarecord.org/records/2026-10-20-brownstein-outstanding-confirmation.pdf",
+  "rec_c_kav": "https://eldorarecord.org/records/2026-10-19-kline-alvarado-veio-outstanding-confirmation.pdf",
+  "rec_c_wwpf": "https://eldorarecord.org/records/2026-10-19-williams-weese-outstanding-confirmation.pdf",
+  "rec_wwpf_stmt": "https://eldorarecord.org/records/2026-09-09-williams-weese-statement.pdf",
+  "rec_c_dw": "https://eldorarecord.org/records/2026-10-23-dickinson-wright-outstanding-confirmation.pdf",
+  "rec_c_taft": "https://eldorarecord.org/records/2026-10-19-taft-outstanding-confirmation.pdf",
+  "rec_c_seg": "https://eldorarecord.org/records/2026-10-19-se-group-outstanding-confirmation.pdf",
+  "rec_c_stifel": "https://eldorarecord.org/records/2026-10-19-stifel-outstanding-confirmation.pdf",
+  "rec_c_dwc": "https://eldorarecord.org/records/2026-10-19-dinatale-outstanding-confirmation.pdf",
+  "rec_c_jva": "https://eldorarecord.org/records/2026-10-22-jva-outstanding-confirmation.pdf",
+  "rec_wj_ar": "https://eldorarecord.org/records/2026-10-16-widner-juran-ar-aging.pdf",
+  "rec_bhfs": "https://eldorarecord.org/records/2025-01-03-brownstein-engagement-agreement.pdf",
+  "rec_butler": "https://eldorarecord.org/records/2025-08-13-butler-snow-engagement-letter.pdf",
+  "rec_seg_amend": "https://eldorarecord.org/records/2025-se-group-first-amendment.pdf",
+  "rec_dw_emails": "https://eldorarecord.org/records/2026-09-16-dickinson-wright-payment-emails-redacted.pdf",
+  "kline": "$50,000",
+  "top": "Widner Juran LLP ($287,307), POWDR Corp ($184,721), Plante Moran ($161,656), Hogan Lovells ($148,795), and SE Group ($134,231)",
+  "asof": "Oct 20, 2026",
+  "conf": "$1,673,621",
+  "conf_m": "$1.7 million",
+  "conf_inv": "$296,239",
+  "conf_unb": "$1,377,383",
+  "conf_short": "$1.7M",
+  "conf_all": "$2,869,571",
+  "conf_all_m": "$2.9 million",
+  "disc_total": "about $2.75 million",
+  "named": "$593,837",
+  "coding": "$331,765",
+  "none": "$270,348",
+  "top_payees": "Widner Juran LLP ($287,307), POWDR Corp ($184,721), Plante Moran ($161,656), Hogan Lovells ($148,795), and SE Group ($134,231)",
+  "n_actions": "17",
+  "n_sessions": "30"
+ },
+ "raw": {
+  "balance": 1195949,
+  "owed": 1673621,
+  "total": 2869571,
+  "town_estimate": 2760000,
+  "gf_bal_2025": 1030078,
+  "bud_change": -446348,
+  "fb_end": -2285841,
+  "gf_ops": 3236824,
+  "points": [
+   [
+    "2025-10-07",
+    67492
+   ],
+   [
+    "2025-10-21",
+    167130
+   ],
+   [
+    "2025-11-05",
+    236212
+   ],
+   [
+    "2025-11-18",
+    274416
+   ],
+   [
+    "2025-12-02",
+    364567
+   ],
+   [
+    "2025-12-16",
+    370841
+   ],
+   [
+    "2026-01-20",
+    469493
+   ],
+   [
+    "2026-02-03",
+    497805
+   ],
+   [
+    "2026-02-17",
+    536295
+   ],
+   [
+    "2026-03-03",
+    710295
+   ],
+   [
+    "2026-03-31",
+    756622
+   ],
+   [
+    "2026-04-21",
+    756822
+   ],
+   [
+    "2026-05-05",
+    796470
+   ],
+   [
+    "2026-05-19",
+    807391
+   ],
+   [
+    "2026-06-02",
+    826180
+   ],
+   [
+    "2026-06-16",
+    830221
+   ],
+   [
+    "2026-07-07",
+    915922
+   ],
+   [
+    "2026-07-21",
+    1143083
+   ],
+   [
+    "2026-08-18",
+    1143563
+   ],
+   [
+    "2026-09-15",
+    1149904
+   ],
+   [
+    "2026-10-06",
+    1195749
+   ],
+   [
+    "2026-10-20",
+    1195949
+   ]
+  ]
+ }
+}
