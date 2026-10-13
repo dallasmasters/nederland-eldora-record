@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Nederland Eldora Record: corrections and updates</title>
+  <subtitle>Corrections and updates to https://eldorarecord.org/, an independent compilation of Town of Nederland records on the Eldora Mountain Resort acquisition.</subtitle>
+  <link rel="alternate" type="text/html" href="https://eldorarecord.org/"/>
+  <link rel="self" type="application/atom+xml" href="https://eldorarecord.org/feed.xml"/>
+  <id>https://eldorarecord.org/feed.xml</id>
+  <updated>2026-10-30T00:00:00Z</updated>
+  <author><name>Dallas Masters</name><uri>https://eldorarecord.org/</uri></author>
+  <entry>
+    <title>Update: A new summary finding reports that $296,239 of what firms confirmed owed had already been invoiced and not paid as of Oct.</title>
+    <id>https://eldorarecord.org/#change-2026-10-30-1</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-30T00:00:00Z</updated>
+    <content type="html">A new &lt;a href=&quot;https://eldorarecord.org/#overdue&quot;&gt;summary finding&lt;/a&gt; reports that $296,239 of what firms confirmed owed had already been invoiced and not paid as of Oct. 16, 2026, including Williams Weese Pepple &amp; Ferguson invoices dating to August 2025, $84,457 of them more than 90 days past due on its Sept. 9 statement, and Dickinson Wright invoices dating to October 2025, with the recipients of the firm&#x27;s emails about them: the Mayor from November 2025, and from May 2026 also the Town Manager and accounts payable. Those emails are now posted with email addresses and phone numbers blacked out. The opening paragraph, the figures at the top, and &lt;a href=&quot;https://eldorarecord.org/#bottom-line&quot;&gt;the bottom line&lt;/a&gt; now separate what has been invoiced but not paid from work done but not yet invoiced.</content>
+  </entry>
+  <entry>
+    <title>Update: Added records the Town released Oct. 29, 2026: firms confirmed about $1.7 million owed as of Oct. 16, which with the $1.2 million already paid comes to about $2.9 million. The page&#x27;s calculations now use that itemized total.</title>
+    <id>https://eldorarecord.org/#change-2026-10-29-1</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-29T00:00:00Z</updated>
+    <content type="html">Added records the Town released Oct. 29, 2026, in response to a request for the records behind its $2.5 million estimate. &lt;a href=&quot;https://eldorarecord.org/#payees&quot;&gt;Who was paid&lt;/a&gt; is now &lt;a href=&quot;https://eldorarecord.org/#payees&quot;&gt;Who was paid and who is owed&lt;/a&gt;: next to each firm&#x27;s payments, it shows the amount the firm confirmed to the Town as owed as of Oct. 16, 2026, with a bar for each, and adds the firms not yet paid. The amounts owed total about $1.7 million, most of it real estate counsel Brownstein Hyatt Farber Schreck&#x27;s unbilled fees; with what has been paid, that comes to about $2.9 million. This page&#x27;s calculations now use that itemized total of about $2.9 million in place of the Town&#x27;s unitemized $2.5 million estimate, which the page still reports: by this page&#x27;s calculation, if the sale fails in 2026, the General Fund would end the year about $2.3 million below zero, rather than about $1.9 million. The opening paragraph, the figures at the top, the &lt;a href=&quot;https://eldorarecord.org/#findings-h&quot;&gt;summary&lt;/a&gt;, &lt;a href=&quot;https://eldorarecord.org/#bottom-line&quot;&gt;the bottom line&lt;/a&gt;, and the comparisons with the Town&#x27;s finances are updated to match. The page adds the engagement letters released for Brownstein and Butler Snow, an SE Group amendment, bond counsel&#x27;s $200,000 not yet invoiced, and the Town&#x27;s statement that no written cost-estimate updates under Res. 2025-03 exist.</content>
+  </entry>
+  <entry>
+    <title>Update: The page now quotes the Town&#x27;s statement that the $2.5 million it estimates it would owe if the sale fails &quot;would be paid through our…</title>
+    <id>https://eldorarecord.org/#change-2026-10-28-1</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-28T00:00:00Z</updated>
+    <content type="html">The page now quotes the Town&#x27;s statement that the $2.5 million it estimates it would owe if the sale fails &quot;would be paid through our CSAFE investments,&quot; and the &lt;a href=&quot;https://eldorarecord.org/#findings-h&quot;&gt;summary&lt;/a&gt; adds that the costs are charged to the General Fund, that CSAFE and the Town&#x27;s other accounts hold pooled cash belonging to all Town funds, and that by this page&#x27;s calculation paying the rest would likely draw on other funds&#x27; cash. &lt;a href=&quot;https://eldorarecord.org/#enterprise-fund&quot;&gt;Where the money comes from&lt;/a&gt; now notes that the Mountain Recreation Fund created by Ordinance 873 isn&#x27;t in the 2026 budget or the 2025 audit&#x27;s fund statements, and that the records searched don&#x27;t say why the acquisition costs were charged to the General Fund instead.</content>
+  </entry>
+  <entry>
+    <title>Update: In Why I made this page, the researcher&#x27;s recommendation now says the sale is &quot;still more likely to fail than close,&quot; matching a revised…</title>
+    <id>https://eldorarecord.org/#change-2026-10-27-6</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <content type="html">In &lt;a href=&quot;https://eldorarecord.org/#statement&quot;&gt;Why I made this page&lt;/a&gt;, the researcher&#x27;s recommendation now says the sale is &quot;still more likely to fail than close,&quot; matching a revised estimate on the &lt;a href=&quot;https://eldorarecord.org/opinion.html&quot;&gt;opinion page&lt;/a&gt;, which now weighs the chance that Eldora&#x27;s revenue is higher than published.</content>
+  </entry>
+  <entry>
+    <title>Update: About these figures now notes that the Town moved the earlier legal invoices into the account in one journal entry dated Sept.</title>
+    <id>https://eldorarecord.org/#change-2026-10-27-5</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <content type="html">&lt;a href=&quot;https://eldorarecord.org/#figures&quot;&gt;About these figures&lt;/a&gt; now notes that the Town moved the earlier legal invoices into the account in one journal entry dated Sept. 30, 2025, eight weeks after Res. 2025-17 declared the Town&#x27;s intent to reimburse acquisition costs from bond proceeds, and that the entry includes an invoice first paid on the Oct. 7, 2025, warrant list. It also notes that three invoices dated in 2025, from Plante Moran ($69,000) and Partner Assessment Corporation ($43,000), appear only in the Town&#x27;s 2026 ledger and were paid in July and October 2026. A new &lt;a href=&quot;https://eldorarecord.org/#open-questions&quot;&gt;open question&lt;/a&gt; asks why those invoices were paid when they were and what a $2,427 Vadim Municipal Software invoice was for.</content>
+  </entry>
+  <entry>
+    <title>Update: Property taxes on the resort now notes that under the sale-leaseback the Town described in October 2026, a bond trustee, not the Town,…</title>
+    <id>https://eldorarecord.org/#change-2026-10-27-4</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <content type="html">&lt;a href=&quot;https://eldorarecord.org/#district-taxes&quot;&gt;Property taxes on the resort&lt;/a&gt; now notes that under the sale-leaseback the Town described in October 2026, a bond trustee, not the Town, would hold legal title to the land and buildings until the bonds are repaid. Whether that affects the property&#x27;s tax status is for the County Assessor to decide; if the property remained taxable, the districts would keep collecting these taxes. The &lt;a href=&quot;https://eldorarecord.org/#open-questions&quot;&gt;open question&lt;/a&gt; about the Town&#x27;s review with the Assessor now asks about the property&#x27;s tax status under that structure.</content>
+  </entry>
+  <entry>
+    <title>Update: Under Get involved, added the Town&#x27;s 2012 public review process for Town projects (Resolution 2012-12), which the Board may invoke for…</title>
+    <id>https://eldorarecord.org/#change-2026-10-27-3</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <content type="html">Under &lt;a href=&quot;https://eldorarecord.org/#get-involved&quot;&gt;Get involved&lt;/a&gt;, added the Town&#x27;s 2012 public review process for Town projects (Resolution 2012-12), which the Board may invoke for projects it chooses; no record found shows it was invoked for the Eldora purchase, and in July 2025 the Sustainability Advisory Board listed the purchase among projects its Scorecard could evaluate. &lt;a href=&quot;https://eldorarecord.org/#method-ai&quot;&gt;How this research was done&lt;/a&gt; now says the archive includes the agendas, packets, and minutes of the Town&#x27;s other boards and commissions from January 2024 on, with updated document and page counts; the description of sources at the top says so too.</content>
+  </entry>
+  <entry>
+    <title>Update: Added the Town&#x27;s Oct.</title>
+    <id>https://eldorarecord.org/#change-2026-10-27-2</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <content type="html">Added the Town&#x27;s Oct. 27, 2026, notice moving the Board&#x27;s Nov. 3 meeting, first moved to Nov. 5, to Monday, Nov. 9, at 7 p.m. The Board will begin FY2027 budget discussions and &quot;will consider adopting a resolution related to the future of Eldora Mountain Resort.&quot; The summary, &lt;a href=&quot;https://eldorarecord.org/#get-involved&quot;&gt;Decisions to watch&lt;/a&gt;, and &lt;a href=&quot;https://eldorarecord.org/#town-statements&quot;&gt;What the Town told the public&lt;/a&gt; now mention the meeting and the resolution, and the references to the Nov. 5 budget work session note the new date.</content>
+  </entry>
+  <entry>
+    <title>Update: Added a section on the property taxes the Nederland fire and library districts collect from the resort, with an estimate of what they would stop collecting if it became Town property.</title>
+    <id>https://eldorarecord.org/#change-2026-10-27-1</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <content type="html">Added &lt;a href=&quot;https://eldorarecord.org/#district-taxes&quot;&gt;Property taxes on the resort&lt;/a&gt;, the first section to use Boulder County Assessor and Treasurer records. It quotes the Town&#x27;s FAQ 6.0 answer that Town-owned parcels &quot;may no longer be subject to property taxes&quot; and that the Town was working with the County Assessor; FAQ 7.0 does not include the question. A table gives the assessed value and property tax of the property the county records under two of the sellers, about $568,000 a year to all taxing authorities on 2025 values,. By this page&#x27;s estimate, if the property became tax-exempt Town property, the Nederland Fire Protection District would stop collecting about $97,000 to $107,000 a year (about 6% of its property tax) and the Nederland Community Library District about $29,000 to $32,000 (about 5%), part of which repays bonds and would likely shift to other property owners. The summary, the findings, and the description of sources now mention the section. The summary no longer repeats the draft bond terms for POWDR or the transition services agreement; the agreement is now also described in &lt;a href=&quot;https://eldorarecord.org/#in-brief&quot;&gt;The acquisition in brief&lt;/a&gt;. Two new open questions ask for the results of the Town&#x27;s review with the Assessor and the purchase agreement&#x27;s list of parcels.</content>
+  </entry>
+  <entry>
+    <title>Update: Added POWDR&#x27;s draft transition services agreement (Jan.</title>
+    <id>https://eldorarecord.org/#change-2026-10-26-1</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-26T00:00:00Z</updated>
+    <content type="html">Added POWDR&#x27;s draft &lt;a href=&quot;https://eldorarecord.org/#transition-services&quot;&gt;transition services agreement&lt;/a&gt; (Jan. 6, 2026, Board packet) under &lt;a href=&quot;https://eldorarecord.org/#estimates&quot;&gt;Estimates compared with spending&lt;/a&gt;: a two-year agreement, to be signed at closing, with a fixed fee of $1,000,000 a year paid quarterly in advance, plus monthly charges for other applications and reimbursed costs. The summary now mentions it. Two new open questions note that the draft omits the exhibits that list the applications and set the monthly charges, and that no record estimates the cost of replacing POWDR&#x27;s services after the two years. The description of the May 2026 draft bond documents now notes that the draft agreement itself would let the Town end it on 60 days&#x27; notice. Removed the open question about Downtown Development Authority bank accounts.</content>
+  </entry>
+  <entry>
+    <title>Update: Added the Town&#x27;s Oct.</title>
+    <id>https://eldorarecord.org/#change-2026-10-23-2</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-23T00:00:00Z</updated>
+    <content type="html">Added the Town&#x27;s Oct. 20, 2026, response to Melody Baumhover&#x27;s Oct. 7 records request, which came with the agreements added earlier today. Under &lt;a href=&quot;https://eldorarecord.org/#questions&quot;&gt;records requests&lt;/a&gt;, the page now describes what she asked for, the $413.70 deposit the Town requested for the full request, and what the Town provided within the free first hour. Under &lt;a href=&quot;https://eldorarecord.org/#csafe&quot;&gt;CSAFE&lt;/a&gt;, it adds the Town&#x27;s explanation that its cash is pooled in five accounts, two at CSAFE and three at UMB. The open question about Hogan Lovells now notes that its records were requested but not included. Under &lt;a href=&quot;https://eldorarecord.org/#cash-accounts&quot;&gt;the treasurer&#x27;s reports and the audit&lt;/a&gt;, the page notes that the treasurer&#x27;s July 31, 2026, bank balance equals the total of those five accounts, and that the audits count $1.35 million to $1.80 million more in bank deposits each year, close to the Downtown Development Authority&#x27;s cash; a new open question asks whether the DDA keeps separate accounts. The $5,273,959 treasurer figure is now dated July 31, 2025, the date it reports, instead of August 2025.</content>
+  </entry>
+  <entry>
+    <title>Update: Added Town agreements and engagement letters released to resident Melody Baumhover, including a Jan. 6, 2026, letter providing for a $50,000 advance to POWDR toward Ikon negotiation costs.</title>
+    <id>https://eldorarecord.org/#change-2026-10-23-1</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-23T00:00:00Z</updated>
+    <content type="html">Added Town records released to resident Melody Baumhover in response to a records request (files dated Oct. 20, 2026), posted with her consent: agreements and engagement letters for Stifel, Kline Alvarado Veio, Plante Moran, Farnsworth Group, Bolder HR Solutions, BBA Water Consultants, and Datasite, and a Jan. 6, 2026, &lt;a href=&quot;https://eldorarecord.org/#ikon-advance&quot;&gt;Ikon cost-sharing letter&lt;/a&gt; providing for a $50,000 advance to POWDR, with any unused part refunded. The page now gives these firms&#x27; roles and fee terms under &lt;a href=&quot;https://eldorarecord.org/#payees&quot;&gt;Who was paid&lt;/a&gt; and &lt;a href=&quot;https://eldorarecord.org/#estimates&quot;&gt;Estimates compared with spending&lt;/a&gt;, including bond counsel&#x27;s hourly billing if no bonds are issued, which the summary of findings now notes as one cost the Town would owe if the sale fails, and Plante Moran&#x27;s due-diligence fee “not contingent on the successful closing.” Under &lt;a href=&quot;https://eldorarecord.org/#csafe&quot;&gt;CSAFE&lt;/a&gt;, the page adds the July 31, 2026, balance and notes that the statements provided show no deposits or withdrawals. Ms. Baumhover also made the September 2026 request whose records, including the Town&#x27;s ledger, this page already used; she is now named as its requester.</content>
+  </entry>
+  <entry>
+    <title>Update: The May 2026 draft Indenture of Trust released by the Town on Oct.</title>
+    <id>https://eldorarecord.org/#change-2026-10-22-4</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-22T00:00:00Z</updated>
+    <content type="html">The May 2026 draft Indenture of Trust released by the Town on Oct. 22 is now posted as received, and the page links to it where it cites the draft.</content>
+  </entry>
+  <entry>
+    <title>Correction: Two quotations were paraphrases.</title>
+    <id>https://eldorarecord.org/#change-2026-10-22-3</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-22T00:00:00Z</updated>
+    <content type="html">Two quotations were paraphrases. The utility plans&#x27; reserve target now reads &quot;180 days or 50% of O&amp;amp;M,&quot; and the treasurer&#x27;s report figure now reads &quot;combined year-to-date bank balance,&quot; which &quot;includes CSAFE investments,&quot; as in the sources.</content>
+  </entry>
+  <entry>
+    <title>Update: Under Profit, the page no longer says only that it found no provision releasing money to the Town.</title>
+    <id>https://eldorarecord.org/#change-2026-10-22-2</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-22T00:00:00Z</updated>
+    <content type="html">Under &lt;a href=&quot;https://eldorarecord.org/#profit&quot;&gt;Profit&lt;/a&gt;, the page no longer says only that it found no provision releasing money to the Town. That remains true of the January 2026 draft, but the May 2026 draft says Surplus Fund money &quot;may be used for any lawful purpose by the Town.&quot; A new paragraph describes other May draft terms, including subordinate bonds to be delivered to the seller for part of the price, the open questions now give its reserve requirements, and the summary, the summary of findings, and &lt;a href=&quot;https://eldorarecord.org/#in-brief&quot;&gt;The acquisition in brief&lt;/a&gt; note that part of the price would have been paid in bonds to POWDR.</content>
+  </entry>
+  <entry>
+    <title>Update: Added the Town’s Oct. 22 response to a public records request, with the newest draft bond indenture the Town has, dated May 2026, and the Town’s statement that the lease for the proposed sale-leaseback “has not been drafted.”</title>
+    <id>https://eldorarecord.org/#change-2026-10-22-1</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-22T00:00:00Z</updated>
+    <content type="html">Added the Town&#x27;s Oct. 22, 2026, response to a records request: the newest draft Indenture of Trust it has, dated as of May 1, 2026, and its statement that the sale-leaseback lease &quot;has not been drafted.&quot; Under &lt;a href=&quot;https://eldorarecord.org/#revised-plan&quot;&gt;Where things stand&lt;/a&gt;, the summary, the summary of findings, the open questions, and the records-request timeline now say so; the draft is in this site&#x27;s records but is not posted.</content>
+  </entry>
+  <entry>
+    <title>Update: Under How the Board voted, added who is on the Board now: which current members took part in the decisions through January 2026, which…</title>
+    <id>https://eldorarecord.org/#change-2026-10-20-4</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-20T00:00:00Z</updated>
+    <content type="html">Under &lt;a href=&quot;https://eldorarecord.org/#board-votes&quot;&gt;How the Board voted&lt;/a&gt;, added who is on the Board now: which current members took part in the decisions through January 2026, which joined later, and which members have since left.</content>
+  </entry>
+  <entry>
+    <title>Update: Above the Payment ledger, added a note that the earliest invoices, from January to July 2025, were paid from the Legal budget and moved…</title>
+    <id>https://eldorarecord.org/#change-2026-10-20-3</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-20T00:00:00Z</updated>
+    <content type="html">Above the &lt;a href=&quot;https://eldorarecord.org/#ledger&quot;&gt;Payment ledger&lt;/a&gt;, added a note that the earliest invoices, from January to July 2025, were paid from the Legal budget and moved into the account on Sept. 30, 2025, and that they are listed under Nov. 5, 2025.</content>
+  </entry>
+  <entry>
+    <title>Update: Under The acquisition in brief, the timeline now starts in November 2024, when the Town said it was pursuing the purchase and the Board…</title>
+    <id>https://eldorarecord.org/#change-2026-10-20-2</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-20T00:00:00Z</updated>
+    <content type="html">Under &lt;a href=&quot;https://eldorarecord.org/#in-brief&quot;&gt;The acquisition in brief&lt;/a&gt;, the timeline now starts in November 2024, when the Town said it was pursuing the purchase and the Board first discussed it in open session (Nov. 19), and notes that closed sessions on purchasing property for recreational activities began Sept. 3, 2024.</content>
+  </entry>
+  <entry>
+    <title>Update: Under Questions and records requests from the public, added the July 2025 town hall, where residents asked how much had been spent on due…</title>
+    <id>https://eldorarecord.org/#change-2026-10-20-1</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-20T00:00:00Z</updated>
+    <content type="html">Under &lt;a href=&quot;https://eldorarecord.org/#questions&quot;&gt;Questions and records requests from the public&lt;/a&gt;, added the July 2025 town hall, where residents asked how much had been spent on due diligence and whether the purchase would cost the Town money, and noted that FAQ 4.0 didn’t say how much had been spent.</content>
+  </entry>
+  <entry>
+    <title>Update: Under The running total was in the meeting packets, added that the minutes searched, from October 2025 through Oct.</title>
+    <id>https://eldorarecord.org/#change-2026-10-19-3</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-19T00:00:00Z</updated>
+    <content type="html">Under &lt;a href=&quot;https://eldorarecord.org/#running-total&quot;&gt;The running total was in the meeting packets&lt;/a&gt;, added that the minutes searched, from October 2025 through Oct. 6, 2026, record no discussion of the warrant lists or the “Due From” entries, each list having been approved with the consent agenda.</content>
+  </entry>
+  <entry>
+    <title>Update: Under Estimates compared with spending, the row for Res.</title>
+    <id>https://eldorarecord.org/#change-2026-10-19-2</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-19T00:00:00Z</updated>
+    <content type="html">Under &lt;a href=&quot;https://eldorarecord.org/#estimates&quot;&gt;Estimates compared with spending&lt;/a&gt;, the row for Res. 2025-03 now quotes what the Board was told at the Jan. 7, 2025, meeting, from the Town’s video, naming Trustee Luke Miller, who asked, and Town Administrator Jon Cain and Town Attorney Jennifer Madsen, who answered: that the Town would owe special counsel’s fees if no bonds were issued, that staff had “done some risk analysis,” and that bond counsel would also need to be paid if the deal didn’t close. &lt;a href=&quot;https://eldorarecord.org/#open-questions&quot;&gt;Not in the records searched&lt;/a&gt; adds that risk analysis and the promised cost-estimate updates.</content>
+  </entry>
+  <entry>
+    <title>Update: Under Can the Town absorb it?, added Could the utility funds lend to the General Fund?.</title>
+    <id>https://eldorarecord.org/#change-2026-10-19-1</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-19T00:00:00Z</updated>
+    <content type="html">Under &lt;a href=&quot;https://eldorarecord.org/#afford&quot;&gt;Can the Town absorb it?&lt;/a&gt;, added &lt;a href=&quot;https://eldorarecord.org/#utility-loan&quot;&gt;Could the utility funds lend to the General Fund?&lt;/a&gt;. It covers the utility funds’ past loans to the Downtown Development Authority, the cash the Town’s draft utility plans leave available, the questions the records leave open about voter approval, the sales tax set aside for the utilities, and the utilities’ loan terms, what would happen if no fund can lend (including staff or service cuts and sales of Town property), and what Colorado law says about municipal bankruptcy and dissolving a town. The funds table, the summary (which also points to the bankruptcy and dissolution paragraph), the opening paragraph, and the gaps table now point to it, and the deficit section adds the costs’ share of the General Fund’s 2026 operating budget. The note under the General Fund tables now explains that the balance result assumes the costs already paid are written off and the rest counted as 2026 spending, whenever the cash goes out, while the cash table assumes payment in 2026.</content>
+  </entry>
+  <entry>
+    <title>Update: Under Not in the records searched, noted that the only indenture posted is the January 2026 draft, which predates the sale-leaseback, and…</title>
+    <id>https://eldorarecord.org/#change-2026-10-18-2</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-18T00:00:00Z</updated>
+    <content type="html">Under &lt;a href=&quot;https://eldorarecord.org/#open-questions&quot;&gt;Not in the records searched&lt;/a&gt;, noted that the only indenture posted is the January 2026 draft, which predates the sale-leaseback, and that Ordinance 885 said substantially final forms of the bond documents would be on file with the Town Clerk.</content>
+  </entry>
+  <entry>
+    <title>Update: Under Not in the records searched, added the amounts the bonds would have set aside at closing for capital projects, reserves, and early…</title>
+    <id>https://eldorarecord.org/#change-2026-10-18-1</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-18T00:00:00Z</updated>
+    <content type="html">Under &lt;a href=&quot;https://eldorarecord.org/#open-questions&quot;&gt;Not in the records searched&lt;/a&gt;, added the amounts the bonds would have set aside at closing for capital projects, reserves, and early interest, which the draft Indenture of Trust leaves blank, and the sources and uses of funds that could show them.</content>
+  </entry>
+  <entry>
+    <title>Update: Added more from the Oct.</title>
+    <id>https://eldorarecord.org/#change-2026-10-17-5</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-17T00:00:00Z</updated>
+    <content type="html">Added more from the Oct. 20, 2026, Board packet. Under &lt;a href=&quot;https://eldorarecord.org/#questions&quot;&gt;Questions and records requests&lt;/a&gt;, the four requests about the acquisition listed in the Town Clerk’s report. Under &lt;a href=&quot;https://eldorarecord.org/#revised-plan&quot;&gt;Where things stand&lt;/a&gt;, the Town Manager’s August 2026 resignation, the return of the Town’s previous Town Manager as interim manager, her contract term, and the timing of the permanent search. Under &lt;a href=&quot;https://eldorarecord.org/#get-involved&quot;&gt;Decisions to watch&lt;/a&gt;, the interim manager’s stated budget priorities.</content>
+  </entry>
+  <entry>
+    <title>Update: Added a separate page with the researcher’s opinions, linked from the statement at the top.</title>
+    <id>https://eldorarecord.org/#change-2026-10-17-4</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-17T00:00:00Z</updated>
+    <content type="html">Added &lt;a href=&quot;https://eldorarecord.org/opinion.html&quot;&gt;a separate page with the researcher’s opinions&lt;/a&gt;, linked from the statement at the top. The opinions are kept off this page, which remains drawn only from Town records and official sources.</content>
+  </entry>
+  <entry>
+    <title>Update: Added this page’s calculation that if the Eldora sale fails in 2026, the Town’s General Fund would end the year about $1.9 million below zero, with the state budget and TABOR rules that a deficit would face.</title>
+    <id>https://eldorarecord.org/#change-2026-10-17-3</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-17T00:00:00Z</updated>
+    <content type="html">Under &lt;a href=&quot;https://eldorarecord.org/#pay-rest&quot;&gt;Could the Town pay the rest?&lt;/a&gt;, added two tables: the General Fund’s cash and its fund balance if the sale fails and the rest of the Town’s estimate is paid in 2026 (this page’s calculations, about −$1.4 million in cash before other 2026 activity and about −$1.9 million in fund balance at year-end). Added an &lt;a href=&quot;https://eldorarecord.org/#receivable&quot;&gt;explanation of why the fund balance can look healthier than the cash&lt;/a&gt;, and a new section, &lt;a href=&quot;https://eldorarecord.org/#gf-deficit&quot;&gt;If the General Fund ends in deficit&lt;/a&gt;, quoting the Colorado budget law and TABOR provisions that would apply, the State Auditor’s fiscal-health benchmark for General Fund reserves, and the General Fund’s history in the audits as a lender to other funds, not a borrower. The opening paragraph and the findings now include the year-end figure, and the gaps table adds whether other funds could lend to the General Fund. The receivables explanation was moved, and the earlier −$1.5 million figure now points to the tables.</content>
+  </entry>
+  <entry>
+    <title>Update: Under Can the Town absorb it?, added Could the Town pay the rest?, which brings together what the records show, and don’t show, about…</title>
+    <id>https://eldorarecord.org/#change-2026-10-17-2</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-17T00:00:00Z</updated>
+    <content type="html">Under &lt;a href=&quot;https://eldorarecord.org/#afford&quot;&gt;Can the Town absorb it?&lt;/a&gt;, added &lt;a href=&quot;https://eldorarecord.org/#pay-rest&quot;&gt;Could the Town pay the rest?&lt;/a&gt;, which brings together what the records show, and don’t show, about whether the Town could pay the roughly $1.3 million it would still owe if the sale fails. Passages it brings together were shortened in the findings and the CSAFE section. No figures changed.</content>
+  </entry>
+  <entry>
+    <title>Update: Shortened the page by removing repeated explanations.</title>
+    <id>https://eldorarecord.org/#change-2026-10-17-1</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-17T00:00:00Z</updated>
+    <content type="html">Shortened the page by removing repeated explanations. The opening paragraph now summarizes the whole page, and the findings no longer repeat one another. The coverage dates now appear in the independence note at the top; the researcher’s contact line moved under the statement; the gaps in the records and the records that could fill them are now one table; and explanations of the “Due From” account, the amounts added between warrant lists, and the audit’s receivables now appear once, with links. No facts or figures changed.</content>
+  </entry>
+  <entry>
+    <title>Update: Added the Oct. 20, 2026, Board packet’s Eldora update, which describes the proposed sale-leaseback, refers to outstanding obligations without listing them, and says staff will review Eldora costs at the Nov. 5 budget work session.</title>
+    <id>https://eldorarecord.org/#change-2026-10-16-1</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-16T00:00:00Z</updated>
+    <content type="html">Added records from the Oct. 20, 2026, Board packet. The &lt;a href=&quot;https://eldorarecord.org/#revised-plan&quot;&gt;revised plan&lt;/a&gt; now describes the proposed sale-leaseback from the Town’s Oct. 16 overview, and quotes a staff memo saying the Town is pursuing the purchase at $120 million and isn’t paying outside consultants for the current financing work. The &lt;a href=&quot;https://eldorarecord.org/#findings-h&quot;&gt;findings&lt;/a&gt; and &lt;a href=&quot;https://eldorarecord.org/#town-statements&quot;&gt;the Town’s statements&lt;/a&gt; now note that the memo refers to “outstanding financial obligations,” including contingent costs, without listing them, and that staff will review Eldora-related expenditures at the Nov. 5, 2026, budget work session. The packet also posts the 2026 ledger for account 10-00-1150, which matches the ledger released under CORA; it is now cited as a second source. The Oct. 20 warrant list adds a $200 Datasite invoice, bringing the total to $1,195,949.</content>
+  </entry>
+  <entry>
+    <title>Update: Added a statement from the researcher at the top of the page explaining why the page was made.</title>
+    <id>https://eldorarecord.org/#change-2026-10-15-1</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-15T00:00:00Z</updated>
+    <content type="html">Added &lt;a href=&quot;https://eldorarecord.org/#statement&quot;&gt;a statement from the researcher&lt;/a&gt; at the top of the page explaining why the page was made. No figures or findings changed.</content>
+  </entry>
+  <entry>
+    <title>Update: The opening paragraph now says the Town expects to repay itself from revenue bonds if the purchase closes, that the purchase agreement…</title>
+    <id>https://eldorarecord.org/#change-2026-10-14-3</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-14T00:00:00Z</updated>
+    <content type="html">The opening paragraph now says the Town expects to repay itself from revenue bonds if the purchase closes, that the purchase agreement expired in April 2026 with no bonds sold and the Town pursuing a restructured deal, and that the Town estimates it would owe about $2.5 million if the sale doesn’t close, paid from CSAFE investments, without itemizing that estimate. It previously said only that no closing or bond sale appeared in the records searched. No figures changed.</content>
+  </entry>
+  <entry>
+    <title>Update: Added links to the Town’s video recordings of Board meetings.</title>
+    <id>https://eldorarecord.org/#change-2026-10-14-2</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-14T00:00:00Z</updated>
+    <content type="html">Added links to the Town’s video recordings of Board meetings. Each decision under &lt;a href=&quot;https://eldorarecord.org/#votes&quot;&gt;How the Board voted&lt;/a&gt; now links to the moment it comes up in the recording, and a new list, &lt;a href=&quot;https://eldorarecord.org/#cost-videos&quot;&gt;Meetings where the acquisition’s costs came up&lt;/a&gt;, links to seven meetings where the acquisition’s costs were discussed. The descriptions name each agenda item; the recordings show what was said, and the minutes remain the official record. The times were found using machine transcripts and checked by viewing the recordings; the transcripts are not used as a source.</content>
+  </entry>
+  <entry>
+    <title>Update: The summary now notes that the Town hasn’t itemized its estimate of about $2.5 million owed if the sale doesn’t close, and the page now links to the Town’s meeting videos for each Board decision and for the meetings where the acquisition’s costs came up.</title>
+    <id>https://eldorarecord.org/#change-2026-10-14-1</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-14T00:00:00Z</updated>
+    <content type="html">The &lt;a href=&quot;https://eldorarecord.org/#findings-h&quot;&gt;summary of findings&lt;/a&gt; now states that the Town hasn’t itemized its estimate of about $2.5 million owed if the sale doesn’t close: the Sept. 30, 2026, update gives no breakdown and doesn’t say whether the total includes what has already been paid, and the records searched don’t show which firms or contracts the remaining amount covers. The finding quotes FAQ 7.0 on contracts contingent on closing. The estimate’s breakdown was added to &lt;a href=&quot;https://eldorarecord.org/#open-questions&quot;&gt;Not in the records searched&lt;/a&gt; and to the records request list. No figures changed.</content>
+  </entry>
+  <entry>
+    <title>Correction: The page said the 2025 audit carries the Eldora acquisition costs as a receivable and that they are not in the General Fund’s 2025 result.</title>
+    <id>https://eldorarecord.org/#change-2026-10-13-3</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-13T00:00:00Z</updated>
+    <content type="html">The page said the 2025 audit carries the Eldora acquisition costs as a receivable and that they are not in the General Fund’s 2025 result. No document searched says so: the audit mentions Eldora only as a planned bond financing and doesn’t itemize the General Fund’s $520,055 in “other receivables.” The page now says what the records show, that the Town records the costs in account 10-00-1150, “Due From,” which its ledger titles “Eldora - reimbursable expenses,” and labels the receivable treatment as this page’s reading under &lt;a href=&quot;https://eldorarecord.org/#no-limits&quot;&gt;No budget and no dollar limits&lt;/a&gt;, &lt;a href=&quot;https://eldorarecord.org/#csafe&quot;&gt;The CSAFE investments and the Town’s funds&lt;/a&gt;, and &lt;a href=&quot;https://eldorarecord.org/#gf-recovery&quot;&gt;The General Fund year by year&lt;/a&gt;. The summary no longer says the General Fund’s 2024 and 2025 results exclude the costs. How the audit reports them was added to &lt;a href=&quot;https://eldorarecord.org/#open-questions&quot;&gt;Not in the records searched&lt;/a&gt;, and the 2025 trial balance to the records request list. Thanks to a reader for pointing this out.</content>
+  </entry>
+  <entry>
+    <title>Update: A review of the page for accuracy and sourcing.</title>
+    <id>https://eldorarecord.org/#change-2026-10-13-2</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-13T00:00:00Z</updated>
+    <content type="html">A review of the page for accuracy and sourcing. The summary now says residents asked for a breakdown of what is still owed in July 2026; the September 2026 comment asked for an update. Under &lt;a href=&quot;https://eldorarecord.org/#gf-recovery&quot;&gt;The General Fund year by year&lt;/a&gt;, “operating deficits since 2023,” which relied on this page’s adjustment of the 2023 result, now reads that the balance fell in 2024 and 2025, and “would likely” was removed from this page’s write-off estimate. An unsourced statement that visitors pay part of the sales tax was replaced with sales tax’s share of budgeted General Fund revenue, from the budget summary. The capital-spending comparison now names the years it covers and links the budget summary, and the trustee appointment, the Great Outdoors Colorado letter, and the recall provision now have sources. The page’s description of its sources now includes records released in response to a public records request. Under &lt;a href=&quot;https://eldorarecord.org/#no-sale&quot;&gt;If the sale doesn’t go through&lt;/a&gt;, “which never happened” now reads that the records searched don’t show the Town failing to close after every condition was met. Also added a proposed bond payment schedule to &lt;a href=&quot;https://eldorarecord.org/#open-questions&quot;&gt;Not in the records searched&lt;/a&gt;, and SE Group’s pro forma and the bond payment schedule to the &lt;a href=&quot;https://eldorarecord.org/#records-needed&quot;&gt;records request list&lt;/a&gt;. No figures changed.</content>
+  </entry>
+  <entry>
+    <title>Update: Added the Town’s ledger for the “Due From” account, released in response to a public records (CORA) request, which identifies the $106,743 the page had described as posted between warrant lists.</title>
+    <id>https://eldorarecord.org/#change-2026-10-13-1</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-13T00:00:00Z</updated>
+    <content type="html">Added the Town’s ledger for account 10-00-1150, “Due From,” released in its Sept. 25, 2026, response to a public records request and shared by the requester (&lt;a href=&quot;https://eldorarecord.org/records/2026-09-25-eldora-reimbursable-expenses.xls&quot;&gt;ledger&lt;/a&gt;). It names the $106,743 that the page had described as posted between warrant lists, with payees not in the records searched: $56,743 in Widner Juran, Dickinson Wright, and Plante Moran invoices first paid from the Legal and Professional Services budget lines and later moved into the account, and a $50,000 POWDR invoice dated Jan. 6, 2026, that is on no warrant list. Those amounts are now in each firm’s total under &lt;a href=&quot;https://eldorarecord.org/#payees&quot;&gt;Who was paid&lt;/a&gt;; POWDR’s total is $184,721. The request and the Town’s response are listed under &lt;a href=&quot;https://eldorarecord.org/#questions&quot;&gt;Questions and records requests from the public&lt;/a&gt;.</content>
+  </entry>
+  <entry>
+    <title>Update: The fund table under The CSAFE investments and the Town’s funds now shows each fund’s cash and investments and the money owed between…</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-21</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">The fund table under &lt;a href=&quot;https://eldorarecord.org/#csafe&quot;&gt;The CSAFE investments and the Town’s funds&lt;/a&gt; now shows each fund’s cash and investments and the money owed between funds exactly as the 2025 audit reports them, with totals. It had shown rounded figures and a General Fund figure netted by this page, so its rows didn’t add up. The General Fund’s position if those balances were settled, about $698,751, is now a separate note labeled as this page’s calculation, with the Eldora acquisition costs paid since year end. The summary of findings uses the same wording.</content>
+  </entry>
+  <entry>
+    <title>Update: The page now uses only the Town’s own records and website, and no longer relies on a BusinessDen article.</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-20</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">The page now uses only the Town’s own records and website, and no longer relies on a BusinessDen article. That article was the only source attributing to POWDR a $50,000 posting between the Feb. 17 and March 3, 2026, warrant lists. No Town record names that payee, so the $50,000 is now counted with the other amounts posted between lists. POWDR’s total is now $134,721, its two warrant-list invoices; the amount posted between lists with no payee in the records searched is now $106,743; and firms named in Board documents total $533,304. The Ikon entry under &lt;a href=&quot;https://eldorarecord.org/#no-sale&quot;&gt;If the sale doesn’t go through&lt;/a&gt; now describes only the draft agreement’s cost-sharing terms. The Town’s FAQ 7.0 still refers to the article, and that reference is quoted as the Town wrote it.</content>
+  </entry>
+  <entry>
+    <title>Update: The summary of findings now states only what the records show.</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-19</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">The &lt;a href=&quot;https://eldorarecord.org/#findings-h&quot;&gt;summary of findings&lt;/a&gt; now states only what the records show. It says the General Fund&#x27;s balance fell in 2024 and 2025 (the audits) instead of describing operating deficits since 2023, which relied on this page&#x27;s adjustment of the 2023 result; it states the budget and dollar-limit facts directly; it notes that the running balance on the warrant lists also included about $107,000 posted between lists; it notes that the delegation resolutions let the Town Manager engage counsel and consultants; it adds that CSAFE holds pooled cash for all Town funds, with the General Fund&#x27;s net share at the end of 2025; and it no longer repeats POWDR&#x27;s total. No figures changed.</content>
+  </entry>
+  <entry>
+    <title>Update: Removed repeated text.</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-18</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">Removed repeated text. The separate Votes and Underwriters sections repeated the summary and &lt;a href=&quot;https://eldorarecord.org/#payees&quot;&gt;Who was paid&lt;/a&gt;, and an Estimates row repeated the fees owed only if the sale closes; all three were removed. Shorter passages that restated nearby text were trimmed under CSAFE, Cost information in Board documents, What the Town told the public, Questions and records requests, Get involved, and About these figures, and the Who was paid roles no longer repeat what the evidence label says. The same review removed wording that went beyond the documents: a sentence speculating about what makes up the difference between the Town’s $2.5 million estimate and the payments, a note that the minutes record no answer to residents’ July 2026 requests, a bare comparison of the estimate with the whole CSAFE investment, and this page’s interpretation of the Town’s statements about general funds, which now quotes FAQ 4.0 and FAQ 6.0 instead. No figures changed.</content>
+  </entry>
+  <entry>
+    <title>Update: The account where the Town records the acquisition costs is now identified by its number as well as its name, 10-00-1150, “Due From,” at…</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-17</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">The account where the Town records the acquisition costs is now identified by its number as well as its name, 10-00-1150, “Due From,” at its first mention in each section and in the records request list. No figures changed.</content>
+  </entry>
+  <entry>
+    <title>Correction: A completeness check of the archive found that minutes for three special meetings were never posted as separate adopted minutes but appear…</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-16</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">A completeness check of the archive found that minutes for three special meetings were never posted as separate adopted minutes but appear as drafts in the next meeting’s packet. The Oct. 21 and Oct. 30, 2025, drafts, which the Board approved on Nov. 5, 2025, and the Sept. 15, 2026, draft each record a unanimous vote to meet in executive session on the purchase. The &lt;a href=&quot;https://eldorarecord.org/#sessions&quot;&gt;closed-session count&lt;/a&gt; is now 30, not 27, and those dates moved off the list of noticed sessions without minutes. The list also wrongly included March 17, 2026; that special meeting’s agenda is marked canceled, and the page now says so. The remaining noticed sessions with no minutes found are Dec. 23, 2024; May 30, July 21, and July 29, 2025; and Oct. 6, 2026, whose minutes aren’t yet available. The line under the title now gives the date range of the records searched.</content>
+  </entry>
+  <entry>
+    <title>Update: Other wording made more neutral: removed a question about whether the accounting was proper and a reference to a routine “spending…</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-15</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">Other wording made more neutral: removed a question about whether the accounting was proper and a reference to a routine “spending limitations” option in a staff memo; noted that cost updates or briefings given aloud or in executive session would not appear in the records searched; described Plante Moran’s and Bolder HR’s engagement by what Res. 2025-22 covers instead of “likely”; added that the costs charged to the General Fund are recorded as money owed back to the Town; labeled the write-off as this page’s reading; moved the Town’s “recurring budget shortfalls” statement to The acquisition in brief; and scoped three more statements to the records searched. No figures changed.</content>
+  </entry>
+  <entry>
+    <title>Correction: A further review for subjective or implying language.</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-14</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">A further review for subjective or implying language. The summary said the Town had published no itemized accounting and that residents had asked for one since 2024; FAQ 7.0 points readers to the warrant lists for individual payments, and the earliest request for a breakdown in the records searched is from July 2026. The summary now says the Town hasn’t published a breakdown of what is still owed. A sentence saying the minutes recorded no answer to “any of these questions” was removed, since several items were records requests.</content>
+  </entry>
+  <entry>
+    <title>Update: Wording changes for clarity: “Eldora costs” and similar phrases now read “Eldora acquisition costs,” and “the Eldora account” now reads…</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-13</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">Wording changes for clarity: “Eldora costs” and similar phrases now read “Eldora acquisition costs,” and “the Eldora account” now reads “the ‘Due From’ account.” The &lt;a href=&quot;https://eldorarecord.org/#csafe&quot;&gt;CSAFE&lt;/a&gt; heading now reads “The CSAFE investments and the Town’s funds.” Comparisons of SE Group’s and Plante Moran’s payments with their estimates were removed, along with the related items under Not in the records searched, because the proposals allowed changes to be authorized by Town staff, whose records weren’t searched. The Plante Moran entry now notes that Res. 2025-22 authorized the Town Manager to engage HR and finance consultants. The spreadsheet was updated to match, and its Estimates sheet no longer computes differences.</content>
+  </entry>
+  <entry>
+    <title>Update: Statements throughout the page that something isn’t in the records, or isn’t public, now say “in the records searched.” The summary of…</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-12</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">Statements throughout the page that something isn’t in the records, or isn’t public, now say “in the records searched.” The &lt;a href=&quot;https://eldorarecord.org/#findings-h&quot;&gt;summary of findings&lt;/a&gt; is now titled “Summary of findings based on records searched” and names Hogan Lovells once, among the largest payees. The spreadsheet notes were updated to match.</content>
+  </entry>
+  <entry>
+    <title>Update: The page now states that a statement that something isn&#x27;t in the records refers only to the records searched, and that the information may…</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-11</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">The page now states that a statement that something isn&#x27;t in the records refers only to the records searched, and that the information may be documented elsewhere, including in earlier records. &quot;Not in the public record&quot; is renamed &lt;a href=&quot;https://eldorarecord.org/#open-questions&quot;&gt;Not in the records searched&lt;/a&gt;, the &quot;No other record&quot; rating is scoped to the Board documents searched, a note was added under the title, and How this research was done now gives the date range searched.</content>
+  </entry>
+  <entry>
+    <title>Update: In Who was paid, &quot;no engagement record found&quot; now reads &quot;no engagement record in the Board documents searched,&quot; to state what was checked.</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-10</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">In Who was paid, &quot;no engagement record found&quot; now reads &quot;no engagement record in the Board documents searched,&quot; to state what was checked. A firm may have been engaged by staff under delegated authority without a Board document. Hogan Lovells&#x27; row now says its role is &quot;not stated in the records searched.&quot;</content>
+  </entry>
+  <entry>
+    <title>Update: The summary of findings no longer singles out SE Group&#x27;s payments or the Res.</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-9</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">The summary of findings no longer singles out SE Group&#x27;s payments or the Res. 2025-03 memo&#x27;s statement about cost updates. Both remain, with their context, under Cost information in Board documents. The finding now states what the documents show directly: no budget line and no dollar limits in the delegations.</content>
+  </entry>
+  <entry>
+    <title>Update: A full-text search of the archive, the search index, and every CivicWeb document title confirmed that Hogan Lovells appears in the Town&#x27;s…</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-8</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">A full-text search of the archive, the search index, and every CivicWeb document title confirmed that Hogan Lovells appears in the Town&#x27;s records only on the July 21 and Aug. 18, 2026, warrant lists. Its row in Who was paid and its entry under Not in the public record now name those two lists.</content>
+  </entry>
+  <entry>
+    <title>Update: A sentence-by-sentence review for subjective or implying language.</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-7</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">A sentence-by-sentence review for subjective or implying language. Calculations and projections are now labeled as this page&#x27;s (the years to rebuild $2.5 million, the effect of a write-off); the $1.3 million still owed is stated as depending on whether the Town&#x27;s estimate includes what&#x27;s paid; BusinessDen is named as the source for POWDR&#x27;s $50,000 Ikon advance, and the purpose of POWDR&#x27;s two invoices is described as not stated; &quot;restricted&quot; and &quot;only unrestricted&quot; fund descriptions now give the audit&#x27;s allocations instead; underwriter fees are no longer listed as owed only at closing, since the current underwriters&#x27; terms aren&#x27;t public; and phrases such as &quot;small,&quot; &quot;never,&quot; and &quot;but&quot; were removed. The time between invoices and payment was removed from Not in the public record and replaced with a note in About these figures. No figures changed.</content>
+  </entry>
+  <entry>
+    <title>Correction: A wording review of the reference sections found two inaccuracies.</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-6</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">A wording review of the reference sections found two inaccuracies. The vote record said nine noticed executive sessions had no motion in any posted minutes; the draft Sept. 15, 2026, minutes do record one, so the list now refers to adopted minutes. The method section said the purpose of the POWDR payments came from BusinessDen; BusinessDen is the source only for the $50,000 advance and POWDR&#x27;s January 6, 2026, letter, and the section now also notes the state statutes cited. Other wording was made more neutral: the Town&#x27;s water-court filing is named as a statement of opposition, the executive-session motions are described rather than characterized, and &quot;exposed&quot; is now &quot;found.&quot;</content>
+  </entry>
+  <entry>
+    <title>Update: Clarified the evidence ratings: &quot;Named in Board documents&quot; means a Board document states the firm&#x27;s role in the Eldora acquisition, not…</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-5</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">Clarified the evidence ratings: &quot;Named in Board documents&quot; means a Board document states the firm&#x27;s role in the Eldora acquisition, not that it refers to the payments themselves. The summary of findings now says so.</content>
+  </entry>
+  <entry>
+    <title>Update: Removed all flag markers and highlighting, since choosing what to flag is subjective.</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-4</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">Removed all flag markers and highlighting, since choosing what to flag is subjective. The Open questions box is now &lt;a href=&quot;https://eldorarecord.org/#open-questions&quot;&gt;Not in the public record&lt;/a&gt;, a plain list of what the reviewed records don&#x27;t show, followed by the records that could fill each gap. The questions about the revised plan, which came from how such deals generally work rather than from Town records, were removed. Other wording was made more conservative, and the spreadsheet&#x27;s flag columns were removed. No figures changed. A further review replaced characterizing or speculative phrases (for example &quot;probably,&quot; &quot;likely,&quot; &quot;very likely,&quot; &quot;no backup plan,&quot; &quot;point in different directions&quot;) with what the documents state, and renamed the &quot;Accountability&quot; and &quot;What the Board was told&quot; sections to neutral titles.</content>
+  </entry>
+  <entry>
+    <title>Correction: Several statements went further than the documents.</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-3</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">Several statements went further than the documents. The summary said engagements were &quot;ratified after they started&quot;; the documents show agreements signed before Board ratification, which the Northland memo says follows the Town&#x27;s purchasing policy, but not when work started, so the point was removed along with the list of routine ratification clauses. &quot;Promised cost updates&quot; referred to one sentence in a staff memo (Res. 2025-03), and &quot;never appear in the public record&quot; could not account for executive sessions; both now say what the memo states and what Board documents and minutes show. The underwriter paragraph now notes that Res. 2025-11 authorized the Town Administrator to engage underwriters. The running-total paragraph no longer suggests a conclusion about the trustees, and two phrases (&quot;failed to close,&quot; &quot;promised&quot; meeting) now follow the documents&#x27; wording.</content>
+  </entry>
+  <entry>
+    <title>Update: Reviewed every statement about a vendor or payee so the page states only what the records show.</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-2</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">Reviewed every statement about a vendor or payee so the page states only what the records show. The &quot;Unexplained&quot; markers now read &quot;Open question,&quot; the open questions note that they concern the Town&#x27;s records rather than the conduct of any firm, purposes are described as not stated &quot;in the records,&quot; late payments are described by their dates, and two legal charges are described as the Town&#x27;s account coding rather than the firms&#x27; billing. No figures changed.</content>
+  </entry>
+  <entry>
+    <title>Update: The Plante Moran item in Open questions now covers only the billing: all $160,804 in Eldora charges predate its April 21, 2026, contract,…</title>
+    <id>https://eldorarecord.org/#change-2026-10-12-1</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-12T00:00:00Z</updated>
+    <content type="html">The Plante Moran item in &lt;a href=&quot;https://eldorarecord.org/#open-questions&quot;&gt;Open questions&lt;/a&gt; now covers only the billing: all $160,804 in Eldora charges predate its April 21, 2026, contract, which estimated $90,000 to $110,000, and the earlier work was likely under Res. 2025-22, which names no firm. Its role signing the Treasurer reports remains in Who was paid.</content>
+  </entry>
+  <entry>
+    <title>Update: Smaller wording fixes from the same check: the Sept.</title>
+    <id>https://eldorarecord.org/#change-2026-10-11-15</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-11T00:00:00Z</updated>
+    <content type="html">Smaller wording fixes from the same check: the Sept. 30 update gives no revenue or profit figures (not no figures); whether any of POWDR&#x27;s advance could be returned depends on a letter that isn&#x27;t public; Res. 2025-22 likely covered Plante Moran&#x27;s and Bolder HR&#x27;s earlier work but names no firm; no public record shows a breach claim; the Town&#x27;s &quot;no general funds&quot; statements appear to refer to the purchase itself; and Northland&#x27;s engagement was non-binding. FAQ Round 2 now links to its copy in the Board packet.</content>
+  </entry>
+  <entry>
+    <title>Correction: A check of the page&#x27;s &quot;no record&quot; claims and paraphrases found four that were wrong or went too far.</title>
+    <id>https://eldorarecord.org/#change-2026-10-11-14</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-11T00:00:00Z</updated>
+    <content type="html">A check of the page&#x27;s &quot;no record&quot; claims and paraphrases found four that were wrong or went too far. FAQ Round 2 was in the Jan. 7, 2025, Board packet, not only on the Town website. SE Group&#x27;s proposal said fee increases and specialty experts would be submitted for written authorization; the page had stated this as a requirement and said no approval was &quot;on record,&quot; when only the public records can be checked. The new underwriters were approved by the Board in Ordinance 885, which the page&#x27;s wording contradicted. And Dickinson Wright&#x27;s engagement letter gives no estimate; the page had quoted its boilerplate as if one existed.</content>
+  </entry>
+  <entry>
+    <title>Update: Who was paid now gives each firm&#x27;s role as stated in Town records, how it was engaged, and when it last billed, and lists firms named in…</title>
+    <id>https://eldorarecord.org/#change-2026-10-11-13</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-11T00:00:00Z</updated>
+    <content type="html">&lt;a href=&quot;https://eldorarecord.org/#payees&quot;&gt;Who was paid&lt;/a&gt; now gives each firm&#x27;s role as stated in Town records, how it was engaged, and when it last billed, and lists firms named in the records but not paid, separating fees owed only if the sale closes from those whose terms aren&#x27;t public. The underwriter discussion under What the Board was told was shortened to match, and current engagement letters were added to the records request list.</content>
+  </entry>
+  <entry>
+    <title>Update: Added the history of the Town&#x27;s underwriters (Northland, J.P.</title>
+    <id>https://eldorarecord.org/#change-2026-10-11-12</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-11T00:00:00Z</updated>
+    <content type="html">Added the history of the Town&#x27;s underwriters (Northland, J.P. Morgan, then RBC Capital Markets and Bank of America, approved in Ordinance 885) and Stifel&#x27;s role as the Town&#x27;s municipal advisor (&lt;a href=&quot;https://eldorarecord.org/#payees&quot;&gt;Who was paid&lt;/a&gt;); that Stifel&#x27;s agreement covers municipal leases; and the Town&#x27;s statements about 303 Ski in FAQ 3.0 and FAQ 6.0.</content>
+  </entry>
+  <entry>
+    <title>Update: Added from the adopted resolutions and ordinances: underwriter and advisor fees contingent on a bond issue; the blanket ratifications of…</title>
+    <id>https://eldorarecord.org/#change-2026-10-11-11</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-11T00:00:00Z</updated>
+    <content type="html">Added from the adopted resolutions and ordinances: underwriter and advisor fees contingent on a bond issue; the blanket ratifications of prior actions in Res. 2025-17 and Ordinances 882 and 885; that Res. 2025-19 and 2025-22 name no firm or amount; SE Group&#x27;s approved terms, including written approval for specialty experts; that Res. 2026-13 covered operating costs after a closing; Res. 2026-08 and 2026-09 and the Alterra confidentiality agreement in the vote record; the Ordinance 873 memo on surplus revenue; Stifel&#x27;s extension; and the General Fund balance through July 2026. Thanks to a reader for several of these.</content>
+  </entry>
+  <entry>
+    <title>Correction: A reader&#x27;s review and a full reading of the adopted resolutions found three errors.</title>
+    <id>https://eldorarecord.org/#change-2026-10-11-10</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-11T00:00:00Z</updated>
+    <content type="html">A reader&#x27;s review and a full reading of the adopted resolutions found three errors. Res. 2025-16 does name a firm, Kline Alvarado Veio, which an earlier correction today had missed. Plante Moran&#x27;s Eldora work (December 2025 to April 2026) predates its role signing the Town&#x27;s Treasurer reports, which began in July 2026. And Ordinance 885 allows further Board authorization, so selling bonds would need a new or amended bond ordinance, not necessarily a new one.</content>
+  </entry>
+  <entry>
+    <title>Correction: A consistency review found statements that overreached.</title>
+    <id>https://eldorarecord.org/#change-2026-10-11-9</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-11T00:00:00Z</updated>
+    <content type="html">A consistency review found statements that overreached. The page said Hogan Lovells had no authorizing resolution; Res. 2025-16 gave general authority to hire acquisition counsel, which may cover it (&lt;a href=&quot;https://eldorarecord.org/#open-questions&quot;&gt;Open questions&lt;/a&gt;). It said the Board approved each payment on a warrant list; about $107,000 was posted between lists (&lt;a href=&quot;https://eldorarecord.org/#board-knowledge&quot;&gt;What the Board was told&lt;/a&gt;). It said the account balance matched the listed invoices exactly apart from the off-list postings; one invoice reached the balance a list early (About these figures). Smaller fixes: the bond authority is shown as lapsed rather than possibly lapsed, repayment from bonds is described as intended, and the March 17, 2026, approval was added to the running-total table.</content>
+  </entry>
+  <entry>
+    <title>Update: Reorganized the page into five parts (overview, the money, accountability, getting involved, and reference) and combined overlapping…</title>
+    <id>https://eldorarecord.org/#change-2026-10-11-8</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-11T00:00:00Z</updated>
+    <content type="html">Reorganized the page into five parts (overview, the money, accountability, getting involved, and reference) and combined overlapping sections. No figures changed.</content>
+  </entry>
+  <entry>
+    <title>Update: Added Get involved: decisions to watch, Board meetings and public comment, open records requests, and the petition and election rules,…</title>
+    <id>https://eldorarecord.org/#change-2026-10-11-7</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-11T00:00:00Z</updated>
+    <content type="html">Added &lt;a href=&quot;https://eldorarecord.org/#get-involved&quot;&gt;Get involved&lt;/a&gt;: decisions to watch, Board meetings and public comment, open records requests, and the petition and election rules, with sources.</content>
+  </entry>
+  <entry>
+    <title>Update: Added the cost per household and whether the General Fund could absorb the costs, using the 2017–2025 audits (For scale); what the Town…</title>
+    <id>https://eldorarecord.org/#change-2026-10-11-6</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-11T00:00:00Z</updated>
+    <content type="html">Added the cost per household and whether the General Fund could absorb the costs, using the 2017–2025 audits (&lt;a href=&quot;https://eldorarecord.org/#gf-recovery&quot;&gt;For scale&lt;/a&gt;); what the Town has projected about profit compared with the draft bond terms (&lt;a href=&quot;https://eldorarecord.org/#profit&quot;&gt;Profit&lt;/a&gt;); and the Town&#x27;s revised plan, with what isn&#x27;t yet public (&lt;a href=&quot;https://eldorarecord.org/#revised-plan&quot;&gt;In brief&lt;/a&gt;). Also added a summary finding and two items to the records request list.</content>
+  </entry>
+  <entry>
+    <title>Correction: In For scale, the 2023 street equipment financing was shown as $600,000, the amount staff requested from lenders.</title>
+    <id>https://eldorarecord.org/#change-2026-10-11-5</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-11T00:00:00Z</updated>
+    <content type="html">In &lt;a href=&quot;https://eldorarecord.org/#scale&quot;&gt;For scale&lt;/a&gt;, the 2023 street equipment financing was shown as $600,000, the amount staff requested from lenders. The lease-purchase agreement the Board approved (Ordinance 839, April 4, 2023) was for $511,000, as the July 2023 supplemental budget and the 2023 audit confirm. The chart now shows $511,000 and links to Ordinance 839.</content>
+  </entry>
+  <entry>
+    <title>Update: Added the page’s data as a spreadsheet (payments, payees, running balance, estimates, commitments, fund balances, comparisons, and Board…</title>
+    <id>https://eldorarecord.org/#change-2026-10-11-4</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-11T00:00:00Z</updated>
+    <content type="html">Added the page’s data as a spreadsheet (payments, payees, running balance, estimates, commitments, fund balances, comparisons, and Board votes) and a CSV of the payment ledger. Links are under &lt;a href=&quot;https://eldorarecord.org/#ledger&quot;&gt;Payment ledger&lt;/a&gt; and About these figures.</content>
+  </entry>
+  <entry>
+    <title>Update: Under Questions and records requests from the public, added the open records requests about the acquisition listed in the Town Clerk’s…</title>
+    <id>https://eldorarecord.org/#change-2026-10-11-3</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-11T00:00:00Z</updated>
+    <content type="html">Under &lt;a href=&quot;https://eldorarecord.org/#questions&quot;&gt;Questions and records requests from the public&lt;/a&gt;, added the open records requests about the acquisition listed in the Town Clerk’s reports: three for emails and records (December 2024 to February 2025), one for bond-offering documents (May 2026), and one for contracts and payments (June 2026).</content>
+  </entry>
+  <entry>
+    <title>Update: Under If the sale doesn’t go through, added that selling bonds would require a new purchase agreement and a new bond ordinance, because…</title>
+    <id>https://eldorarecord.org/#change-2026-10-11-2</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-11T00:00:00Z</updated>
+    <content type="html">Under &lt;a href=&quot;https://eldorarecord.org/#no-sale&quot;&gt;If the sale doesn’t go through&lt;/a&gt;, added that selling bonds would require a new purchase agreement and a new bond ordinance, because Ordinance 885’s authority to sell bonds lapsed on July 19, 2026. This clarifies the Town’s Sept. 30, 2026, statement that it expects to negotiate updated agreements “if the financing proceeds.”</content>
+  </entry>
+  <entry>
+    <title>Correction: Under If the sale doesn’t go through, the page said, in the present tense, that the Town could owe the seller’s costs.</title>
+    <id>https://eldorarecord.org/#change-2026-10-11-1</id>
+    <link rel="alternate" type="text/html" href="https://eldorarecord.org/#changes"/>
+    <updated>2026-10-11T00:00:00Z</updated>
+    <content type="html">Under &lt;a href=&quot;https://eldorarecord.org/#no-sale&quot;&gt;If the sale doesn’t go through&lt;/a&gt;, the page said, in the present tense, that the Town could owe the seller’s costs. That risk applied only while the purchase agreement was in force and ended when the agreement expired. The entry now says so, and it notes the terms that remain in effect.</content>
+  </entry>
+</feed>
