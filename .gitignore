@@ -1,0 +1,12 @@
+# Large or regenerable research data: rebuilt by ./update.sh, not published
+pdf/
+text/
+tmp/
+archive.db
+*.log
+catalog/tree.json
+__pycache__/
+web/raw/*.pdf
+video/
+private/
+transcripts/

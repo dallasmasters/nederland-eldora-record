@@ -1,0 +1,308 @@
+<title>Eldora Resolution Amendments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: same reading column, palette, and type as the opinion page; the resolution text sits on a white sheet */
+:root {
+  --bg: #f6f8f8; --surface: #ffffff; --fg: #17242a; --muted: #5a6b72; --line: #d7e0e2;
+  --accent: #1f6b5c; --accent-soft: #e2f0ec; --warn: #9a4a1c;
+  --body: "Public Sans", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11191c; --surface: #172226; --fg: #e3ecee; --muted: #93a6ad; --line: #2b3a40;
+  --accent: #6cc7b1; --accent-soft: #1b3832; --warn: #f0a774; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11191c; --surface: #172226; --fg: #e3ecee; --muted: #93a6ad; --line: #2b3a40;
+  --accent: #6cc7b1; --accent-soft: #1b3832; --warn: #f0a774; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 15px/1.55 var(--body); margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 64px; display: grid; gap: 20px; }
+.wrap > * { min-width: 0; }
+/* Text keeps a readable measure; tables use the full width, as on the record page */
+p, ul, ol, blockquote { max-width: 80ch; }
+.wrap > details.history { max-width: none; }
+details.history > :not(.cmp) { max-width: 80ch; }
+.eyebrow { font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--accent); }
+h1 { font: 800 clamp(28px, 4.5vw, 42px)/1.1 var(--body); margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+h2 { font-size: 20px; margin: 8px 0 0; }
+.byline { color: var(--muted); margin: 0; }
+.note { background: var(--accent-soft); border-left: 4px solid var(--accent); padding: 12px 16px; margin: 0; border-radius: 0 6px 6px 0; }
+.sheet { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 24px clamp(16px, 4vw, 32px); display: grid; gap: 12px; min-width: 0; }
+.sheet p, .sheet ol { margin: 0; }
+.sheet ol { padding-left: 24px; display: grid; gap: 4px; }
+.caption { text-align: center; font-weight: 600; text-wrap: balance; }
+.caption.title { font-weight: 800; }
+.sig { display: grid; gap: 14px; margin-top: 8px; }
+.sig p { margin: 0; }
+.line { display: inline-block; width: min(260px, 60%); border-bottom: 1px solid var(--fg); margin-right: 6px; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+th { font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+td.num { white-space: nowrap; font-variant-numeric: tabular-nums; }
+ul.src { margin: 0; padding-left: 20px; display: grid; gap: 4px; font-size: 14px; }
+a { color: var(--accent); }
+.back { font-weight: 600; }
+.muted { color: var(--muted); }
+footer { border-top: 1px solid var(--line); padding-top: 14px; font-size: 14px; color: var(--muted); }
+
+.sheet ins { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; background: var(--accent-soft); color: inherit; }
+.sheet del { text-decoration: line-through; color: var(--warn); }
+.sheet p.item { padding-left: 24px; }
+a.nref { font: 600 11px var(--mono); vertical-align: super; margin-left: 2px; text-decoration: none; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 14px; color: var(--muted); margin: 0; }
+.legend ins { text-decoration: underline; text-decoration-thickness: 2px; background: var(--accent-soft); color: var(--fg); }
+.legend del { color: var(--warn); }
+ol.notes { margin: 0; padding-left: 22px; display: grid; gap: 8px; font-size: 15px; }
+ol.notes li:target { background: var(--accent-soft); }
+details { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 10px 14px; }
+details > summary { cursor: pointer; font-weight: 600; }
+details[open] > summary { margin-bottom: 12px; }
+details .sheet { border: 0; padding: 0; }
+details.history h3 { font-size: 17px; margin: 22px 0 8px; }
+details.history h3:first-of-type { margin-top: 4px; }
+.cmp table { min-width: 760px; }
+.cmp td.sec { font: 600 13px var(--mono); white-space: nowrap; color: var(--accent); }
+.tag { display: inline-block; font: 500 11px var(--mono); text-transform: uppercase; letter-spacing: .05em; padding: 1px 6px; border-radius: 4px; margin-bottom: 4px; background: var(--line); color: var(--fg); }
+.tag.weaker, .tag.issue { background: var(--warn); color: var(--surface); }
+.tag.new { background: var(--accent-soft); color: var(--accent); }
+tr.same td { color: var(--muted); }
+.sheet p.chg { border-left: 3px solid var(--line); margin-left: -13px; padding-left: 10px; }
+.sheet p.chg.rev { border-left-color: var(--accent); }
+.sheet p.item.chg { padding-left: 34px; }
+.legend .bar { display: inline-block; width: 3px; height: 1em; vertical-align: -2px; margin-right: 6px; background: var(--line); }
+.legend .bar.rev { background: var(--accent); }
+.viewbar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0; }
+.viewbar button { font: 600 14px var(--body); color: var(--accent); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+.viewbar button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.sheet.v-clean del, .sheet.v-town ins, .sheet.v-clean a.nref, .sheet.v-town a.nref { display: none; }
+.sheet.v-clean ins { text-decoration: none; background: none; }
+.sheet.v-town del { text-decoration: none; color: inherit; }
+.sheet.v-clean p.chg, .sheet.v-town p.chg { border-left-color: transparent; }
+.sheet ins[data-n]:hover, .sheet del[data-n]:hover { outline: 1px dotted var(--accent); }
+ol.notes li.rev { border-left: 3px solid var(--accent); padding-left: 8px; }
+a.seeref { font-size: 13px; white-space: nowrap; }
+.downloads { display: grid; gap: 6px; }
+.downloads p { margin: 0; }
+.btn { display: inline-block; font-weight: 600; padding: 8px 14px; border: 1px solid var(--accent); border-radius: 6px; text-decoration: none; }
+</style>
+
+<main class="wrap">
+  <div class="eyebrow">Opinion · not part of the record</div>
+  <h1>Resolution 2026-31, with my proposed amendments</h1>
+  <p class="byline">Dallas Masters, Nederland resident · Amendments Nov. 7, 2026; revised Nov. 10, 2026 · Original draft Oct. 18, 2026; revised Oct. 27, 2026</p>
+  <p class="note">The Board discussed <a href="https://nederlandco.civicweb.net/document/133099/" target="_blank" rel="noopener">Resolution 2026-31</a>, the Town Attorney&rsquo;s revision of the resolution I submitted in October, at its Nov. 9, 2026, meeting and plans to vote on it Nov. 17. Below is the Town&rsquo;s text with the amendments I recommend; after the Nov. 9 discussion, I narrowed two of them, the review before a bond vote (<a href="#am-6">note 6</a>) and legal advice before using other funds (<a href="#am-7">note 7</a>), and sent this version to the Board on Nov. 10. My reasons are on <a href="https://eldorarecord.org/opinion.html#recommendation">my opinion page</a>.</p>
+  <div class="downloads">
+    <p><a class="btn" href="https://eldorarecord.org/resolution-2026-31-amendments-2026-11-10.docx">Download the Word file with tracked changes</a> <span class="muted">Nov. 10, 2026, version, sent to the Board for Nov. 17</span></p>
+    <p class="muted">Earlier version: <a href="https://eldorarecord.org/resolution-2026-31-proposed-amendments.docx">Nov. 7, 2026</a>, sent to the Board before the Nov. 9 meeting.</p>
+  </div>
+  <div class="viewbar" role="group" aria-label="How to show the amendments">
+    <span class="muted">Show:</span>
+    <button type="button" data-view="redline" aria-pressed="true">Tracked changes</button>
+    <button type="button" data-view="clean" aria-pressed="false">Current recommended version</button>
+    <button type="button" data-view="town" aria-pressed="false">Town&rsquo;s draft</button>
+  </div>
+  <p class="legend" id="legend"><span><ins>Underlined</ins>: text I would add</span><span><del>Struck through</del>: text I would remove</span><span><span class="bar"></span>Changed paragraph</span><span><span class="bar rev"></span>Revised Nov. 10</span><span>Numbers link to the reason for each amendment</span></p>
+
+  <section class="sheet" aria-label="Resolution 2026-31 with proposed amendments">
+    <p class="caption">TOWN OF NEDERLAND</p>
+    <p class="caption">Boulder County, Colorado</p>
+    <p class="caption">RESOLUTION 2026-31</p>
+    <p class="caption title">A RESOLUTION LIMITING FURTHER ELDORA ACQUISITION SPENDING, REQUIRING A FINAL ACCOUNTING AND BOARD APPROVAL OF RELATED ENGAGEMENTS, AND PROVIDING FOR CONTINUED UPDATES ON THE PROPOSED ACQUISITION OF ELDORA MOUNTAIN RESORT</p>
+    <p>WHEREAS, the Board of Trustees has pursued the potential acquisition of Eldora Mountain Resort ("Resort") and, by Resolutions 2025-03, 2025-11, 2025-16, 2025-19, and 2025-22, authorized or ratified the engagement of legal counsel, underwriters, financial advisors, and other consultants for that purpose without stating a dollar limit; and</p>
+    <p>WHEREAS, by Resolution 2025-17, the Board declared its intent to reimburse acquisition costs from the proceeds of future revenue bonds; and</p>
+    <p>WHEREAS, as of the Oct. 20, 2026, warrant list, the Town had paid $1,195,949 in acquisition costs, charged to the General Fund; and</p>
+    <p>WHEREAS, the Purchase and Sale Agreement with POWDR expired, as its closing deadline of April 30, 2026, passed without a closing; the authority to sell bonds under Ordinance 885, Section 5(c), lapsed on July 19, 2026; and the Town has stated that it continues to pursue the acquisition, that discussions with POWDR remain active, and that it expects to negotiate updated agreements if the financing proceeds as anticipated; and</p>
+    <p>WHEREAS, in response to feedback from prospective bondholders, the Town has been restructuring the transaction to provide stronger security tied to the asset, including a sale-leaseback structure, to reduce the overall amount of debt, to model interest rates and poor snow years more conservatively using the most recent season’s actual results, to separate discretionary capital improvements from the order of payments under the bond documents, and to explore philanthropic and other outside funding for those improvements; and</p>
+    <p>WHEREAS, the acquisition costs paid to date have been recorded as recoverable from bond proceeds and the Town has stated that, once a transaction closes, those costs are reimbursable from bond proceeds, but no bonds have been issued, the authority to issue them has lapsed, and their repayment depends on agreements and a bond ordinance that do not yet exist; and</p>
+    <p>WHEREAS, Ordinance 873 established the Mountain Recreation Fund as an enterprise to be kept separate from the Town’s General Fund and other funds, but that fund is not among the funds appropriated in the 2026 budget, and the acquisition costs have been charged to the General Fund; and</p>
+    <p>WHEREAS, the Town’s Sept. 30, 2026, updated estimates show that the Town has incurred about $2.76 million in transaction-related costs that would not be reimbursed if the transaction does not close; and</p>
+    <p>WHEREAS, the 2026 budget does not include appropriations for these costs, and C.R.S.§ 29-1-110 provides that no officer or employee may spend or contract to spend in excess of the amounts appropriated; and</p>
+    <p>WHEREAS, the Board is preparing the 2027 budget and finds that limiting further spending, firm milestones, and regular public reporting will protect the General Fund while the Board continues its work to finalize the transaction;</p>
+    <p>NOW, THEREFORE, BE IT RESOLVED BY THE BOARD OF TRUSTEES OF THE TOWN OF NEDERLAND, COLORADO:</p>
+    <p>Section 1. Definition. “Acquisition costs” means fees and expenses for legal, financial, advisory, due-diligence, transition, and other services related to the potential acquisition, financing, or operation of Eldora Mountain Resort that the Town would owe whether or not a closing occurs. It does not include amounts payable only from bond proceeds at a closing.</p>
+    <p class="chg">Section 2. Spending halt; limited work toward a term sheet. The Board continues to pursue the acquisition and recognizes that the restructured transaction, including a sale-leaseback structure, reduced debt, stronger security for bondholders, updated financial modeling, possible philanthropic and other outside funding, and continued discussions with POWDR, requires additional work before a term sheet can be presented to the Board. Accordingly, the Town shall incur no acquisition costs for work performed after the effective date of this resolution, except (a) work the Town Manager requests under Section 4, and (b) work by firms already engaged for the acquisition that the Town Manager, in consultation with the Town Attorney, determines is reasonably necessary to develop a term sheet for presentation to the Board, not to exceed $150,000 in total without further Board authorization by resolution. <ins data-n="1" title="Added in amendment 1, Nov. 7, 2026">No amount under clause (b) shall be incurred until the Board adopts a supplemental appropriation for it under C.R.S. § 29-1-109. In addition, if a report under Section 4 or Section 8 shows total acquisition costs, paid and owed, above $3,000,000, the Town shall incur no further acquisition costs until the Board approves continuing by resolution. </ins><a class="nref" id="ref-1" href="#am-1" aria-label="Amendment note 1">1</a>Any such work shall be within amounts appropriated, consistent with C.R.S.§ 29-1-110, and reported to the Board under Section 8. The term sheet is not a public document and shall be presented to the Board in executive session to the extent permitted by law. Within three business days, the Town Manager shall direct each firm engaged for the acquisition, in writing, to stop billable work for the Town other than the work described in this section. This section does not affect amounts the Town already owes for work performed before the effective date.</p>
+    <p>Section 3. Board approval of engagements. No new engagement, contract amendment, or expansion of scope that would incur acquisition costs may be made without prior approval of the Board by resolution. To the extent Resolutions 2025-03, 2025-11, 2025-16, 2025-19, and 2025-22 authorize the Town Manager to engage counsel, advisors, or “additional consultants, as necessary,” that authority is limited by this section.</p>
+    <p class="chg">Section 4. Final accounting. The Town Manager shall ask each firm engaged for the acquisition for (a) fees paid, billed, and unbilled for work performed through October 16, 2026<ins data-n="2" title="Added in amendment 2, Nov. 7, 2026">, and through the effective date of this resolution</ins><a class="nref" id="ref-2" href="#am-2" aria-label="Amendment note 2">2</a>, and (b) any amount the Town would owe under the engagement’s terms if the acquisition does not close. At the <del data-n="2" title="Removed in amendment 2, Nov. 7, 2026">next regular meeting after that period</del><ins data-n="2" title="Added in amendment 2, Nov. 7, 2026">December 1, 2026, regular meeting</ins>, the Town Manager shall present a written report, included in the meeting packet, itemizing those amounts by firm and comparing the total with the Town’s Sept. 30, 2026, estimate of approximately $2,500,000<ins data-n="3" title="Added in amendment 3, Nov. 7, 2026"> and with the updated estimates of about $2.76 million cited above, explaining any difference</ins><a class="nref" id="ref-3" href="#am-3" aria-label="Amendment note 3">3</a>.</p>
+    <p class="chg">Section 5. <ins data-n="4" title="Added in amendment 4, Nov. 7, 2026">Milestones. </ins><a class="nref" id="ref-4" href="#am-4" aria-label="Amendment note 4">4</a>The Board of Trustees recognizes the community’s desire for clear milestones and a reliable timeline for the acquisition. The Board is committed to transparency<del data-n="4" title="Removed in amendment 4, Nov. 7, 2026"> and will identify anticipated milestones and timing as information becomes sufficiently developed to provide meaningful and reliable estimates</del>. <ins data-n="4" title="Added in amendment 4, Nov. 7, 2026">The following milestones apply: (1) by January 31, 2027, a term sheet presented to the Board; (2) by March 31, 2027, a purchase agreement approved by the Board and signed by all parties, and written financing commitments sufficient to close; and (3) by June 30, 2027, a closing. If a milestone is not met and the Board has not extended it by resolution adopted before that date, the Town’s pursuit of the acquisition shall end; the Town Manager shall then direct all firms to stop work other than work needed to wind down, and shall present a final accounting at the next regular meeting. </ins>The Board will update the community as <del data-n="4" title="Removed in amendment 4, Nov. 7, 2026">those milestones are established or change</del><ins data-n="4" title="Added in amendment 4, Nov. 7, 2026">each milestone is met or extended</ins>.</p>
+    <p class="chg rev">Section 6. Diligence review. The Board has already incurred costs for independent financial and operational review and due diligence relating to the proposed<ins data-n="5" title="Added in amendment 5, Nov. 7, 2026"> acquisition</ins><a class="nref" id="ref-5" href="#am-5" aria-label="Amendment note 5">5</a>, including analyses prepared by SE Group and Causey Public Finance, LLC. The proposed bond financing has also been reviewed in connection with the underwriting and marketing of the bonds by the Town’s underwriters, RBC Capital Markets and BofA Securities, Inc. The Board intends to continue its financial and operational due diligence as the proposed acquisition progresses, including consideration of whether projected Resort revenues are sufficient to support the acquisition and operation of the Resort and pay debt service under a range of operating conditions. <ins data-n="6" title="Added in amendment 6, Nov. 10, 2026">Before any Board vote on a bond ordinance for the acquisition, the Board shall receive a written summary from an advisor whose compensation does not depend on a closing, such as the accounting firm described in Section 10, addressing whether the Resort’s projected revenue can pay the debt at then-current interest rates and through low-snow seasons, and any obligation the General Fund or other Town funds would bear. Its cost is subject to the limit in Section 2.</ins><a class="nref" id="ref-6" href="#am-6" aria-label="Amendment note 6">6</a></p>
+    <p class="chg rev">Section 7. Town Funds. The Town’s acquisition and operation of the Resort would be undertaken through the Mountain Recreation Enterprise. As an enterprise, the Mountain Recreation Enterprise must comply with applicable Colorado law, including TABOR. In addition, the bond Indenture will require that debt service on the bonds be paid from revenues generated by the Resort, rather than from the Town’s General Fund or other Town funds.<ins data-n="7" title="Added in amendment 7, Nov. 10, 2026"> Before any transfer, loan, or other use of money from the Water Fund, the Sewer Fund, the Community Center Fund, or the Downtown Development Authority to pay acquisition costs or to offset a General Fund deficit resulting from them, (a) the Town Attorney shall advise the Board in writing whether the Town has authority to make it, considering Colo. Const. art. X, § 20, any ballot measure that dedicated the revenue, the Water and Sewer Funds’ loan agreements with the Colorado Water Resources and Power Development Authority, and C.R.S. § 31-25-801 et seq.; and (b) the Board shall approve it by resolution at a public meeting stating the amount, the fund and revenue source, and a finding that the fund can provide it without hampering its operations, capital plans, or loan covenants.</ins><a class="nref" id="ref-7" href="#am-7" aria-label="Amendment note 7">7</a></p>
+    <p class="chg">Section 8. Public reporting. At the first regular meeting of each month, the Town Manager shall provide a written report, included in the meeting packet, showing acquisition costs paid, billed but unpaid, and still owed, by firm; any further spending the Board has authorized under Section 2; total acquisition costs compared with the Town’s Sept. 30, 2026, estimate of about $2,500,000<ins data-n="3" title="Added in amendment 3, Nov. 7, 2026"> and the updated estimates of about $2.76 million</ins><a class="nref" href="#am-3" aria-label="Amendment note 3">3</a>; <del data-n="8" title="Removed in amendment 8, Nov. 7, 2026">and </del><a class="nref" id="ref-8" href="#am-8" aria-label="Amendment note 8">8</a>the status of each milestone in Section 5<ins data-n="8" title="Added in amendment 8, Nov. 7, 2026">; and each fund’s share of the Town’s pooled cash and investments, and the amounts owed between funds, as of the most recent month-end</ins>.</p>
+    <p class="chg">Section 9. Budget. The Town intends to comply with this section through the budget adoption process. The Town Manager shall present to the Board <del data-n="9" title="Removed in amendment 9, Nov. 7, 2026">any or all</del><a class="nref" id="ref-9" href="#am-9" aria-label="Amendment note 9">9</a><ins data-n="9" title="Added in amendment 9, Nov. 7, 2026">all</ins> of the following:</p>
+    <p class="item">1. A transfer, supplemental appropriation, or revised appropriation under C.R.S. § 29-1-109 for acquisition costs incurred by December 31, 2026, shown as a separate line item;</p>
+    <p class="item">2. A separate line item in the proposed 2027 budget for acquisition costs expected to be incurred in 2027; and</p>
+    <p class="item">3. With the proposed 2027 budget, a plan for the General Fund if the acquisition does not close, including how unrecovered acquisition costs would be funded.</p>
+    <p>Section 10. Accounting and budget process. The Board has engaged an accounting firm, not engaged in the acquisition negotiations, that is assisting with the budget process and accounting functions for the Town. The firm has a professional obligation to account for these expenses in accordance with Governmental Accounting Standards Board (GASB) requirements and statutory municipal budgeting requirements. Because that work already covers the matters raised by the resident, no separate report is required. Instead, the Town Manager shall include the following information in the budget materials presented to the Board in a public meeting packet, so that the Board and the public can see how each matter is answered:</p>
+    <p class="item">1. How acquisition costs have been recorded, and whether they remain recoverable. The budget materials shall show how acquisition costs are recorded in the Town’s general ledger, including in the account titled “Eldora - reimbursable expenses,” and the accounting treatment, under GAAP/GASB, of amounts the Town expects to recover from bond proceeds at closing and of amounts it would not recover if no closing occurs;</p>
+    <p class="item">2. Which fund bears the costs. The budget materials shall identify the fund to which acquisition costs have been charged, explain why they were charged to the General Fund rather than the Mountain Recreation Fund established by Ordinance 873, and present any transfer, interfund balance, or appropriation proposed to correct or document that treatment, as described in Section 9;</p>
+    <p class="item">3. Each fund’s share of pooled cash and amounts owed between funds. The budget materials shall present, from the Town’s general ledger as of the most recent month-end, each fund’s share of the Town’s pooled cash and investments and the amounts owed between funds, including any amounts owed to the General Fund for acquisition costs; and</p>
+    <p class="item">4. Whether appropriations were required. The budget materials shall state whether acquisition costs incurred and/or paid in 2025 and 2026 required appropriations under C.R.S. § 29-1-110 and, if so, the supplemental or revised appropriation under C.R.S. § 29-1-109 proposed to address them.</p>
+    <p>The cost of this accounting work is not subject to Section 2.</p>
+    <p class="chg">Section 11. Effect. <ins data-n="4" title="Added in amendment 4, Nov. 7, 2026">Except as provided in Section 5, n</ins><a class="nref" href="#am-4" aria-label="Amendment note 4">4</a><del data-n="4" title="Removed in amendment 4, Nov. 7, 2026">N</del>othing in this resolution requires the Town to end negotiations or terminate any agreement. Where this resolution conflicts with a prior resolution, this resolution controls. This resolution takes effect on adoption.</p>
+    <p class="chg rev">RESOLVED, APPROVED, AND ADOPTED this <del data-n="10" title="Removed in amendment 10, Nov. 10, 2026">9th</del><a class="nref" id="ref-10" href="#am-10" aria-label="Amendment note 10">10</a><ins data-n="10" title="Added in amendment 10, Nov. 10, 2026">17th</ins> day of November, 2026.</p>
+    <div class="sig">
+      <p>TOWN OF NEDERLAND</p>
+      <p><span class="line"></span>Nichole Sterling, Mayor</p>
+      <p>ATTEST:</p>
+      <p><span class="line"></span>Macy Caligaris, Town Clerk</p>
+      <p>APPROVED AS TO FORM:</p>
+      <p><span class="line"></span>Town Attorney</p>
+    </div>
+  </section>
+
+  <h2>Why each amendment</h2>
+  <ol class="notes"><li id="am-1"><strong>A ceiling on spending.</strong> The resolution’s recitals say the 2026 budget has no appropriation for these costs, so the $150,000 would first need one under C.R.S. § 29-1-109. The $3 million trigger caps the whole cost of trying: paid plus owed is about $2.87 million by the firms’ October confirmations, and firms that haven’t confirmed could add to it, so passing $3 million calls for a public vote rather than stopping work outright. <a class="seeref" href="#ref-1">See it in the text</a></li><li id="am-2"><strong>A date for the final accounting.</strong> As drafted, Section 4 asks only for amounts through Oct. 16, 2026, which the firms already confirmed in October, and reports "at the next regular meeting after that period," a period the draft no longer defines. This sets the Dec. 1 meeting, before the 2027 budget is adopted, and covers work through adoption. <a class="seeref" href="#ref-2">See it in the text</a></li><li id="am-3"><strong>One set of figures.</strong> The recitals cite "updated estimates" of about $2.76 million, while Sections 4 and 8 compare with about $2,500,000. The reports should compare with both and explain the difference. <a class="seeref" href="#ref-3">See it in the text</a></li><li id="am-4"><strong>Deadlines the Board can extend.</strong> Dates the Board can extend by a vote before each one passes. A deadline then forces a public decision without ending a deal that is close. March 31 and June 30, 2027, leave the first half of 2027 for a signed agreement and a closing after the 2026–27 ski season. <a class="seeref" href="#ref-4">See it in the text</a></li><li id="am-5"><strong>A missing word.</strong> The draft reads "relating to the proposed,"; "acquisition" appears to be missing. <a class="seeref" href="#ref-5">See it in the text</a></li><li id="am-6" class="rev"><strong>A review before a bond vote.</strong> <span class="tag new">Revised Nov. 10</span> Section 6 describes past diligence, including review by the underwriters, whose pay a 2025 Board memo anticipated would depend on a financing. Narrowed after the Nov. 9 discussion: one written summary, only before a vote on a bond ordinance, from an advisor not paid on closing (the Town’s accounting firm would qualify), paid within the Section 2 limit. <a class="seeref" href="#ref-6">See it in the text</a></li><li id="am-7" class="rev"><strong>Legal advice and a vote before using other funds.</strong> <span class="tag new">Revised Nov. 10</span> On Nov. 9, staff presented options for covering the General Fund: combining the Community Center Fund into it, dissolving the Downtown Development Authority, and a transfer from the Water and Sewer Funds. The 2025 audit reports all of the Community Center Fund ($830,528) and the Authority ($1,695,723) as restricted, and the utilities’ state loans are repaid from their sales tax and net revenue. This replaces the loan requirement with written legal advice and a Board resolution with findings before any such use, whatever its form. <a class="seeref" href="#ref-7">See it in the text</a></li><li id="am-8"><strong>Pooled cash every month.</strong> Section 10(3) asks for each fund’s share of the pooled cash once, in the budget materials. Monthly reporting would show whether utility cash is being used as the costs are paid. <a class="seeref" href="#ref-8">See it in the text</a></li><li id="am-9"><strong>The budget items required.</strong> As drafted, the Town Manager presents "any or all" of the three items, so the plan for the General Fund if the acquisition does not close could be left out. <a class="seeref" href="#ref-9">See it in the text</a></li><li id="am-10" class="rev"><strong>The adoption date.</strong> <span class="tag new">Revised Nov. 10</span> The Board deferred the vote to its Nov. 17, 2026, meeting. <a class="seeref" href="#ref-10">See it in the text</a></li></ol>
+
+  <h2 id="budget-asks">Separately, for the 2027 budget</h2>
+  <p>These belong in the budget work rather than the resolution. I've asked the Board to take them up in its FY2027 budget discussion, which began Nov. 9:</p>
+  <ol class="notes">
+    <li>Record acquisition costs as General Fund spending in the year incurred, including amounts owed at year-end, and record any reimbursement from bond proceeds when received.</li>
+    <li>Explain the new &ldquo;Eldora Expense&rdquo; account on the Nov. 9 warrant list, whose year-to-date balance is shown as $2,188,218.53 (<a href="https://eldorarecord.org/#eldora-expense">the record</a>).</li>
+    <li>Appropriate the 2025 and 2026 acquisition costs at a public hearing before Dec. 31, 2026, and show the costs as a separate line item in the 2027 budget.</li>
+    <li>Present a plan for the General Fund if the acquisition doesn&rsquo;t close: how about $2.9 million would be covered, and over how many years.</li>
+    <li>If Water or Sewer cash is needed, include the amount, the legal basis, and a finding that the utilities can provide it given their fire-flow project and state loan commitments.</li>
+    <li>Ask the auditor selected for the 2026 audit to address how the acquisition costs, the receivable, and any amounts owed between funds are recorded.</li>
+  </ol>
+
+  <details class="history" id="history">
+    <summary>History of this resolution: my original draft, the values I suggested, and how the Town&rsquo;s version differs</summary>
+    <h3>How Resolution 2026-31 differs from my draft</h3>
+    <p class="muted" style="margin:0 0 10px">The Town Attorney&rsquo;s revision compared with the draft I submitted, section by section.</p>
+    <div class="cmp"><div class="scroll">
+      <table>
+        <thead><tr><th scope="col">Section</th><th scope="col">My October draft</th><th scope="col">Resolution 2026-31</th><th scope="col">What changed</th></tr></thead>
+        <tbody>
+          <tr><td class="sec">Title</td><td class="mine">"Halting further Eldora acquisition spending… and establishing milestones"</td><td class="theirs">"Limiting further Eldora acquisition spending… and providing for continued updates"</td><td><span class="tag weaker">Weaker</span><br>"Halting" becomes "limiting"; milestones become updates.</td></tr>
+          <tr class="same"><td class="sec">Recitals 1–3</td><td class="mine">Delegations without dollar limits; Res. 2025-17; $1,195,949 paid through Oct. 20</td><td class="theirs">Same</td><td><span class="tag same">Same</span></td></tr>
+          <tr><td class="sec">Recital 4</td><td class="mine">Closing deadline passed; bond authority lapsed; Town pursuing a restructured deal</td><td class="theirs">Says the agreement "expired"; adds that talks with POWDR "remain active" and updated agreements are expected "if the financing proceeds"</td><td><span class="tag new">Added</span><br>The Town's own description of where things stand.</td></tr>
+          <tr><td class="sec">New recital</td><td class="mine">—</td><td class="theirs">Restructuring "in response to feedback from prospective bondholders": sale-leaseback, less debt, modeling rates and poor snow years "more conservatively using the most recent season's actual results," capital projects separated, philanthropy</td><td><span class="tag new">New</span><br>The first Town record to say the model now uses last season's actual results.</td></tr>
+          <tr><td class="sec">Recital: recovery</td><td class="mine">Costs recorded as recoverable, but no bonds; repayment depends on documents that don't exist</td><td class="theirs">Same, plus "the Town has stated that, once a transaction closes, those costs are reimbursable"</td><td><span class="tag same">Same</span> with one added clause</td></tr>
+          <tr class="same"><td class="sec">Recital: fund</td><td class="mine">Mountain Recreation Fund not appropriated; costs in the General Fund</td><td class="theirs">Same</td><td><span class="tag same">Same</span></td></tr>
+          <tr><td class="sec">Recital: estimate</td><td class="mine">Sept. 30 update: about $2.5 million owed if the sale fails</td><td class="theirs">"Sept. 30, 2026, updated estimates show that the Town has incurred about $2.76 million" not reimbursed if no closing</td><td><span class="tag issue">Check</span><br>New figure; conflicts with the $2,500,000 in Sections 4 and 8.</td></tr>
+          <tr><td class="sec">Recital: purpose</td><td class="mine">Halting spending and firm milestones protect the General Fund "while any further negotiations proceed"</td><td class="theirs">"Limiting further spending, firm milestones, and regular public reporting" protect it "while the Board continues its work to finalize the transaction"</td><td><span class="tag weaker">Changed</span><br>Still says "firm milestones," which the body no longer sets.</td></tr>
+          <tr class="same"><td class="sec">§1 Definition</td><td class="mine">"Acquisition costs" owed whether or not a closing occurs</td><td class="theirs">Same</td><td><span class="tag same">Same</span></td></tr>
+          <tr><td class="sec">§2 Spending</td><td class="mine">No new acquisition costs after adoption except the final accounting, unless the Board authorizes more by resolution. Stop-work letters within 3 business days.</td><td class="theirs">Continues the pursuit. Allows work by firms already engaged that the Town Manager, with the Town Attorney, finds "reasonably necessary to develop a term sheet," up to $150,000 without a further resolution, "within amounts appropriated" and reported monthly. Term sheet to the Board in executive session. Stop-work letters for other work within 3 business days.</td><td><span class="tag weaker">Weaker</span><br>My suggested-values table had $100,000 as the alternative; this is $150,000, decided by staff.</td></tr>
+          <tr class="same"><td class="sec">§3 Engagements</td><td class="mine">Board approval by resolution for any new engagement, amendment, or scope change; limits the 2025 delegations</td><td class="theirs">Same</td><td><span class="tag same">Same</span></td></tr>
+          <tr><td class="sec">§4 Final accounting</td><td class="mine">Within 14 days, through the effective date; Town Attorney identifies what is owed now vs. only at closing; report at the next regular meeting, compared with $2,500,000</td><td class="theirs">Through Oct. 16, 2026; no Town Attorney split; report "at the next regular meeting after that period," compared with about $2,500,000</td><td><span class="tag weaker">Weaker</span><br>No deadline; misses work after Oct. 16; "that period" is undefined.</td></tr>
+          <tr><td class="sec">§5 Milestones</td><td class="mine">Signed agreement and financing commitments by Jan. 31, 2027; closing by April 30, 2027; effort ends if missed unless extended by resolution beforehand</td><td class="theirs">Board "will identify anticipated milestones and timing" when estimates are reliable, and update the community</td><td><span class="tag weaker">Removed</span><br>No dates, no end.</td></tr>
+          <tr><td class="sec">§6 Review</td><td class="mine">Before any vote on a new agreement, bond ordinance, lease, or financing: a written review from an advisor whose pay doesn't depend on a closing, covering debt at current rates, low-snow years, and any burden on Town funds</td><td class="theirs">Lists past diligence (SE Group, Causey Public Finance, underwriters RBC and BofA) and says the Board "intends to continue" diligence, including whether revenue can carry the debt "under a range of operating conditions"</td><td><span class="tag weaker">Removed</span><br>No review is required before a vote. The Res. 2025-11 memo anticipates that the underwriters' pay depends on a financing.</td></tr>
+          <tr><td class="sec">§7 Town funds</td><td class="mine">—</td><td class="theirs">The resort would be run through the Mountain Recreation Enterprise, subject to TABOR; the indenture "will require" debt service from resort revenue, not the General Fund</td><td><span class="tag new">New</span><br>About bond payments, not the acquisition costs already in the General Fund.</td></tr>
+          <tr class="same"><td class="sec">§8 Reporting (my §7)</td><td class="mine">Monthly report: paid, billed, owed by firm; authorized spending; total vs. $2,500,000; milestone status</td><td class="theirs">Same</td><td><span class="tag same">Same</span><br>Its milestone status now has nothing to report.</td></tr>
+          <tr><td class="sec">§9 Budget (my §8)</td><td class="mine">The Town Manager "shall present" all three: a 2026 appropriation line, a 2027 line, and a General Fund plan if the deal fails</td><td class="theirs">The Town "intends to comply… through the budget adoption process"; the Town Manager presents "any or all of the following" (same three items)</td><td><span class="tag weaker">Weaker</span><br>Each item becomes optional.</td></tr>
+          <tr><td class="sec">§10 Accounting (my §9)</td><td class="mine">Independent CPA, approved by the Board, agreed-upon procedures, written report in 45 days, on four questions; fund balances with the final accounting</td><td class="theirs">An accounting firm already assisting, "not engaged in the acquisition negotiations"; the same four questions answered in the budget materials; "no separate report is required"</td><td><span class="tag weaker">Weaker</span><br>No independent firm and no date; the questions still get answered in public.</td></tr>
+          <tr><td class="sec">§11 Effect (my §10)</td><td class="mine">Nothing requires ending talks "except as provided in Section 5"</td><td class="theirs">Nothing requires ending talks; effective on adoption</td><td><span class="tag weaker">Changed</span><br>Follows from removing the deadlines.</td></tr>
+        </tbody>
+      </table>
+    </div></div>
+    <h3>My original draft (October 2026)</h3>
+    <p class="note">This is the draft I submitted in October, which the Town Attorney revised as Resolution 2026-31. It would have halted further Eldora acquisition spending, required a final accounting of what the Town owes and a Board vote for any new engagement or further spending, set firm deadlines that end the effort if missed, and required an independent review before any vote on new deal documents, monthly public reports, and budget planning for the costs. The facts in the recitals come from Town records, linked below.</p>
+  <div class="sheet" aria-label="Original draft text">
+    <p class="caption">TOWN OF NEDERLAND, COLORADO</p>
+    <p class="caption">RESOLUTION NO. 2026-[number]</p>
+    <p class="caption title">A RESOLUTION HALTING FURTHER ELDORA ACQUISITION SPENDING, REQUIRING A FINAL ACCOUNTING AND BOARD APPROVAL OF RELATED ENGAGEMENTS, AND ESTABLISHING MILESTONES FOR THE PROPOSED ACQUISITION OF ELDORA MOUNTAIN RESORT</p>
+    <p>WHEREAS, the Board of Trustees has pursued the potential acquisition of Eldora Mountain Resort and, by Resolutions 2025-03, 2025-11, 2025-16, 2025-19, and 2025-22, authorized or ratified the engagement of legal counsel, underwriters, financial advisors, and other consultants for that purpose without stating a dollar limit; and</p>
+    <p>WHEREAS, by Resolution 2025-17, the Board declared its intent to reimburse acquisition costs from the proceeds of future revenue bonds; and</p>
+    <p>WHEREAS, as of the Oct. 20, 2026, warrant list, the Town had paid $1,195,949 in acquisition costs, charged to the General Fund; and</p>
+    <p>WHEREAS, the closing deadline in the Purchase and Sale Agreement, April 30, 2026, passed without a closing; the authority to sell bonds under Ordinance 885, Section 5(c), lapsed on July 19, 2026; and the Town has stated that it continues to pursue a restructured transaction; and</p>
+    <p>WHEREAS, the acquisition costs paid to date have been recorded as recoverable from bond proceeds, but no bonds have been issued, the authority to issue them has lapsed, and their repayment now depends on agreements and a bond ordinance that do not yet exist; and</p>
+    <p>WHEREAS, Ordinance 873 established the Mountain Recreation Fund as an enterprise to be kept separate from the Town's General Fund and other funds, but that fund is not among the funds appropriated in the 2026 budget, and the acquisition costs have been charged to the General Fund; and</p>
+    <p>WHEREAS, the Town's Sept. 30, 2026, update estimates that the Town would owe about $2.5 million in transaction-related costs if the sale does not close; and</p>
+    <p>WHEREAS, the 2026 budget does not include appropriations for these costs, and C.R.S. 29-1-110 provides that no officer or employee may spend or contract to spend in excess of the amounts appropriated; and</p>
+    <p>WHEREAS, the Board is preparing the 2027 budget and finds that halting further spending, firm milestones, and regular public reporting will protect the General Fund while any further negotiations proceed;</p>
+    <p>NOW, THEREFORE, BE IT RESOLVED BY THE BOARD OF TRUSTEES OF THE TOWN OF NEDERLAND, COLORADO:</p>
+    <p><strong>Section 1. Definition.</strong> "Acquisition costs" means fees and expenses for legal, financial, advisory, due-diligence, transition, and other services related to the potential acquisition, financing, or operation of Eldora Mountain Resort that the Town would owe whether or not a closing occurs. It does not include amounts payable only from bond proceeds at a closing.</p>
+    <p><strong>Section 2. Spending halt.</strong> The Town shall incur no acquisition costs for work performed after the effective date of this resolution, except for work the Town Manager requests under Section 4, unless the Board authorizes them by a further resolution. Within three business days, the Town Manager shall direct each firm engaged for the acquisition, in writing, to stop billable work for the Town other than that requested work. This section does not affect amounts the Town already owes for work performed before the effective date.</p>
+    <p><strong>Section 3. Board approval of engagements.</strong> No new engagement, contract amendment, or expansion of scope that would incur acquisition costs may be made without prior approval of the Board by resolution. To the extent Resolutions 2025-03, 2025-11, 2025-16, 2025-19, and 2025-22 authorize the Town Manager to engage counsel, advisors, or "additional consultants, as necessary," that authority is limited by this section.</p>
+    <p><strong>Section 4. Final accounting.</strong> Within 14 days, the Town Manager shall ask each firm engaged for the acquisition for (a) fees paid, billed, and unbilled for work performed through the effective date of this resolution, and (b) any amount the Town would owe under the engagement's terms if the acquisition does not close. The Town Attorney shall identify which of the Town's obligations are owed now and which would be owed only at a closing. At the next regular meeting after that period, the Town Manager shall present a written report, included in the meeting packet, itemizing those amounts by firm and comparing the total with the Town's Sept. 30, 2026, estimate of about $2,500,000.</p>
+    <p><strong>Section 5. Milestones.</strong> The following milestones apply:</p>
+    <ol>
+      <li>By Jan. 31, 2027, a purchase agreement approved by the Board and signed by all parties, and written financing commitments sufficient to close.</li>
+      <li>By April 30, 2027, a closing.</li>
+    </ol>
+    <p>If a milestone is not met and the Board has not extended it by resolution adopted before that date, the Town's pursuit of the acquisition shall end. The Town Manager shall then direct all firms to stop work other than work needed to wind down, shall incur no further acquisition costs, and shall present a final accounting at the next regular meeting.</p>
+    <p><strong>Section 6. Independent review.</strong> Before any Board vote on a new purchase agreement, bond ordinance, lease, or financing agreement for the acquisition, the Board shall receive a written review from a qualified advisor whose compensation does not depend on a closing. The review shall address whether the resort's revenue can pay the debt at then-current interest rates and through low-snow seasons, and any obligation the General Fund or other Town funds would bear.</p>
+    <p><strong>Section 7. Public reporting.</strong> At the first regular meeting of each month, the Town Manager shall provide a written report, included in the meeting packet, showing acquisition costs paid, billed but unpaid, and still owed, by firm; any further spending the Board has authorized under Section 2; total acquisition costs compared with the Town's Sept. 30, 2026, estimate of about $2,500,000; and the status of each milestone in Section 5.</p>
+    <p><strong>Section 8. Budget.</strong> The Town Manager shall present to the Board:</p>
+    <ol>
+      <li>a transfer, supplemental appropriation, or revised appropriation under C.R.S. 29-1-109 covering acquisition costs paid or owed in 2026, shown as a separate line item;</li>
+      <li>a separate line item in the proposed 2027 budget for acquisition costs still to be paid; and</li>
+      <li>with the proposed 2027 budget, a plan for the General Fund if the acquisition does not close, including how unrecovered acquisition costs would be paid.</li>
+    </ol>
+    <p id="accounting-review"><strong>Section 9. Accounting review.</strong> The Town Manager shall propose, for Board approval by resolution, an independent certified public accounting firm, not otherwise engaged for the acquisition, to perform an agreed-upon procedures review. The firm shall report its findings to the Board in writing, included in a meeting packet, within 45 days of the effective date of this resolution. The review shall address:</p>
+    <ol>
+      <li>how acquisition costs have been recorded, including in the account titled "Eldora - reimbursable expenses," and whether they remain recoverable;</li>
+      <li>why acquisition costs were charged to the General Fund rather than the Mountain Recreation Fund established by Ordinance 873;</li>
+      <li>each fund's share of the Town's pooled cash and investments, and amounts owed between funds, as of the most recent month-end; and</li>
+      <li>whether acquisition costs paid in 2025 and 2026 required appropriations under C.R.S. 29-1-110.</li>
+    </ol>
+    <p>With the report under Section 4, the Town Manager shall present each fund's share of the pooled cash and investments, and amounts owed between funds, from the Town's general ledger as of the most recent month-end. The cost of this review is not subject to Section 2.</p>
+    <p><strong>Section 10. Effect.</strong> Except as provided in Section 5, nothing in this resolution requires the Town to end negotiations or terminate any agreement. Where this resolution conflicts with a prior resolution, this resolution controls. This resolution takes effect on adoption.</p>
+    <div class="sig">
+      <p>ADOPTED on [date], 2026.</p>
+      <p>TOWN OF NEDERLAND, COLORADO</p>
+      <p><span class="line"></span>Mayor</p>
+      <p>ATTEST:</p>
+      <p><span class="line"></span>Town Clerk</p>
+      <p>APPROVED AS TO FORM:</p>
+      <p><span class="line"></span>Town Attorney</p>
+    </div>
+  </div>
+    <h3>The values I suggested</h3>
+    <p>Suggestions for a Nov. 9 adoption, which the Board could change; the amendments above replace them. The reference figures come from Town records.</p>
+  <div class="scroll">
+    <table>
+      <thead><tr><th scope="col">Item</th><th scope="col">Section</th><th scope="col">Suggested</th><th scope="col">Why</th></tr></thead>
+      <tbody>
+        <tr><td>Spending after adoption</td><td>2</td><td>None, except the final accounting, unless the Board authorizes more by resolution</td><td>The deal is unlikely to close, and the Town would owe these costs if it doesn't. <a href="https://eldorarecord.org/eldora-payments.csv">Payments</a> averaged about $85,000 a month from October 2025 through October 2026, but about $53,000 in all from August through October 2026. The <a href="https://nederlandco.civicweb.net/document/132785/" target="_blank" rel="noopener">Oct. 20, 2026, memo</a> says the work is "primarily being performed by the Mayor." Alternative: a limit of $100,000 above the costs for work through the effective date, which would leave room for counsel on new documents.</td></tr>
+        <tr><td>Directions to the firms</td><td>2</td><td class="num">3 business days</td><td>Long enough to send written directions; short enough that little new work is billed.</td></tr>
+        <tr><td>Final accounting</td><td>4</td><td class="num">14 days</td><td>After a Nov. 9 adoption, the 14 days end Nov. 23, so the report would reach the Dec. 1 meeting, before the 2027 budget is final.</td></tr>
+        <tr><td>Comparison figure</td><td>4, 7</td><td class="num">$2,500,000</td><td>The Town's own estimate of what it would owe if the sale fails. The Town hasn't itemized it; the final accounting would.</td></tr>
+        <tr><td>Agreement and financing milestone</td><td>5(1)</td><td class="num">Jan. 31, 2027</td><td>About three months after a Nov. 9 adoption: after the 2027 budget and before the interim Town Manager's contract ends Feb. 28, 2027 (<a href="https://nederlandco.civicweb.net/document/132766/" target="_blank" rel="noopener">her reply to a public comment</a>).</td></tr>
+        <tr><td>Closing milestone</td><td>5(2)</td><td class="num">April 30, 2027</td><td>One year after <a href="https://eldorarecord.org/#no-sale">the original closing deadline</a>.</td></tr>
+        <tr><td>Accounting review report</td><td>9</td><td class="num">45 days</td><td>After a Nov. 9 adoption, Dec. 24, 2026, so the report would reach the first January meeting. A narrow agreed-upon procedures review can fit that time, but probably not before the 2027 budget is adopted in December, so the section also has staff present the fund balances from the general ledger with the final accounting, at the Dec. 1 meeting. Section 8 covers the budget in the meantime. Alternative: 30 days, if the Board can approve the firm at its Nov. 17 meeting. The Town is already seeking proposals for a new auditor (<a href="https://www.nederlandco.gov/m/newsflash/home/detail/20" target="_blank" rel="noopener">request for proposals</a>); the Board could choose that firm or another.</td></tr>
+        <tr><td>Resolution number and date</td><td>Heading, adoption</td><td>Clerk assigns</td><td>The latest number found is Resolution 2026-29, on the Oct. 20, 2026, agenda.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Section 8 directs staff to bring the budget changes; it doesn't appropriate money itself. Under C.R.S. 29-1-109, that takes a separate ordinance or resolution with public notice. Halting spending doesn't reduce what the Town already owes; it keeps the total from growing. "Acquisition costs" covers fees owed to outside firms, not Town staff time.</p>
+  </details>
+
+  <h2>Sources</h2>
+  <ul class="src">
+    <li><a href="https://nederlandco.civicweb.net/document/133099/" target="_blank" rel="noopener">Resolution 2026-31</a> and <a href="https://nederlandco.civicweb.net/document/133098/" target="_blank" rel="noopener">its memo</a> (Nov. 9, 2026, packet): the Town Attorney&rsquo;s revision</li>
+    <li><a href="https://nederlandco.civicweb.net/document/118191/" target="_blank" rel="noopener">Resolutions 2025-03</a>, <a href="https://nederlandco.civicweb.net/document/121635/" target="_blank" rel="noopener">2025-11</a>, <a href="https://nederlandco.civicweb.net/document/124157/" target="_blank" rel="noopener">2025-16</a>, <a href="https://nederlandco.civicweb.net/document/123794/" target="_blank" rel="noopener">2025-19</a>, and <a href="https://nederlandco.civicweb.net/document/125959/" target="_blank" rel="noopener">2025-22</a>: delegations and ratifications with no dollar limit</li>
+    <li><a href="https://nederlandco.civicweb.net/document/123060/" target="_blank" rel="noopener">Resolution 2025-17</a>: intent to reimburse from bond proceeds</li>
+    <li><a href="https://nederlandco.civicweb.net/document/126803/" target="_blank" rel="noopener">Purchase and Sale Agreement</a>, §7.1(d): April 30, 2026, closing deadline</li>
+    <li><a href="https://nederlandco.civicweb.net/document/127180/" target="_blank" rel="noopener">Ordinance 885</a>, §5(c): bond sale authority through July 19, 2026</li>
+    <li><a href="https://nederlandco.civicweb.net/document/118506/" target="_blank" rel="noopener">Ordinance 873</a>: Mountain Recreation Fund, to "be kept separate from the Town's general fund and other funds"; <a href="https://nederlandco.civicweb.net/document/126174/" target="_blank" rel="noopener">Resolution 2025-28</a>: 2026 appropriations by fund</li>
+    <li><a href="https://www.nederlandco.gov/m/newsflash/home/detail/21" target="_blank" rel="noopener">Town update, Sept. 30, 2026</a>: about $2.5 million if the sale fails; restructured plan</li>
+    <li><a href="https://nederlandco.civicweb.net/document/129045/" target="_blank" rel="noopener">April 21, 2026, staff memo</a>: the 2026 budget "does not include sufficient appropriations"</li>
+    <li><a href="https://leg.colorado.gov/sites/default/files/images/olls/crs2024-title-29.pdf" target="_blank" rel="noopener">C.R.S. Title 29</a>, §§ 29-1-109 and 29-1-110: budget changes and the limit on spending beyond appropriations</li>
+    <li><a href="https://eldorarecord.org/#ledger">The Eldora Record</a>: $1,195,949 paid through the Oct. 20, 2026, warrant list</li>
+  </ul>
+
+
+  <p><a class="back" href="https://eldorarecord.org/opinion.html">Back to my opinions</a> · <a class="back" href="https://eldorarecord.org/">The Eldora Record</a></p>
+  <footer>This isn&rsquo;t legal advice. Revised Nov. 10, 2026: amendments 6 and 7 narrowed after the Board&rsquo;s Nov. 9 discussion, and the adoption date changed to Nov. 17; the Nov. 7 version is linked above. I&rsquo;ll note the date here if I revise these amendments again.</footer>
+<script>
+(function () {
+  var sheet = document.querySelector('.sheet[aria-label]'), legend = document.getElementById('legend');
+  var buttons = document.querySelectorAll('.viewbar button');
+  function show(view) {
+    sheet.classList.remove('v-clean', 'v-town');
+    if (view !== 'redline') sheet.classList.add('v-' + view);
+    legend.hidden = view !== 'redline';
+    buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.view === view)); });
+  }
+  buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.view); }); });
+  // a note's "See it in the text" link needs the tracked-changes view to show the change
+  document.querySelectorAll('a.seeref, a.nref').forEach(function (a) { a.addEventListener('click', function () { show('redline'); }); });
+  // open the history box when a link points into it
+  function openFor(h) {
+    var el = h && h.length > 1 && document.getElementById(h.slice(1));
+    for (var p = el; p; p = p.parentElement) if (p.tagName === 'DETAILS') p.open = true;
+  }
+  openFor(location.hash);
+  window.addEventListener('hashchange', function () { openFor(location.hash); });
+})();
+</script>
+</main>
