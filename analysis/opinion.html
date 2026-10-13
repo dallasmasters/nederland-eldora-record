@@ -1,0 +1,171 @@
+<title>My Opinions on the Eldora Purchase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one narrow reading column, same palette and type as the Eldora Record */
+:root {
+  --bg: #f6f8f8; --surface: #ffffff; --fg: #17242a; --muted: #5a6b72; --line: #d7e0e2;
+  --accent: #1f6b5c; --accent-soft: #e2f0ec; --warn: #9a4a1c; --neg: #b42318;
+  --body: "Public Sans", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11191c; --surface: #172226; --fg: #e3ecee; --muted: #93a6ad; --line: #2b3a40;
+  --accent: #6cc7b1; --accent-soft: #1b3832; --warn: #f0a774; --neg: #ff8a80; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11191c; --surface: #172226; --fg: #e3ecee; --muted: #93a6ad; --line: #2b3a40;
+  --accent: #6cc7b1; --accent-soft: #1b3832; --warn: #f0a774; --neg: #ff8a80; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 16px/1.6 var(--body); margin: 0; }
+.wrap { max-width: 72ch; margin: 0 auto; padding-inline: 16px; padding-block: 32px 48px; display: grid; gap: 20px; }
+.eyebrow { font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--accent); }
+h1 { font-size: 30px; line-height: 1.15; margin: 0; text-wrap: balance; }
+.byline { color: var(--muted); margin: 0; }
+.note { background: var(--accent-soft); border-left: 4px solid var(--accent); padding: 12px 16px; margin: 0; border-radius: 0 6px 6px 0; }
+ul.views { margin: 0; padding-left: 20px; display: grid; gap: 14px; }
+ul.views ul { margin: 6px 0 0; padding-left: 18px; display: grid; gap: 4px; }
+a { color: var(--accent); }
+.back { font-weight: 600; }
+h2 { font-size: 23px; line-height: 1.2; margin: 12px 0 0; text-wrap: balance; }
+h3 { font-size: 18px; line-height: 1.3; margin: 4px 0 0; }
+section.check { display: grid; gap: 16px; }
+section.check p, section.check ul { margin: 0; }
+section.check ul { padding-left: 20px; display: grid; gap: 6px; }
+.muted { color: var(--muted); font-size: 15px; }
+.takeaway { font-weight: 600; }
+.summary { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--neg); padding: 12px 16px; border-radius: 0 6px 6px 0; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; font-variant-numeric: tabular-nums; background: var(--surface); }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+thead th { font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+th.num { text-align: right; }
+td.num { text-align: right; white-space: nowrap; }
+@media (max-width: 520px) { th, td { padding: 6px 5px; } table { font-size: 14px; } thead th { font-size: 11px; letter-spacing: .03em; } }
+td.short { color: var(--neg); }
+td.src { white-space: nowrap; }
+details.method { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 10px 14px; }
+details.method summary { cursor: pointer; font-weight: 600; }
+details.method ul { margin-top: 10px; }
+blockquote { margin: 0; padding: 4px 0 4px 14px; border-left: 3px solid var(--line); color: var(--muted); }
+footer { border-top: 1px solid var(--line); padding-top: 14px; font-size: 14px; color: var(--muted); }
+</style>
+
+<main class="wrap">
+  <div class="eyebrow">Opinion · not part of the record</div>
+  <h1>My opinions on the Eldora purchase</h1>
+  <p class="byline">Dallas Masters, Nederland resident · Oct. 17, 2026; revised Oct. 22, 2026</p>
+  <p class="note">Everything else on this site is drawn from Town records and official sources and stands on its own. This page is my opinion. The facts it relies on are linked to <a href="https://eldorarecord.org/">the Eldora Record</a>, where you can check them and reach your own conclusions. With such a low probability that the sale will close, I recommend that the Board halt spending on the acquisition now, keep firm deadlines for ending the effort, and focus on the Town's finances and the 2027 budget. I've drafted <a href="https://eldorarecord.org/resolution.html">a resolution that would do that</a>, and I suggest the Board adopt it at its Nov. 5, 2026, meeting. On <a href="#debt-check">the rough review below</a>, the resort can support a cash price of about $70 million or less, and the proposed sale-leaseback is highly unlikely to make the deal work at $120 million on its own; any future deal should start from that price and include an independent review.</p>
+  <ul class="views">
+    <li>The Town Board did not have bad intentions, but it has put the Town at significant and <a href="https://eldorarecord.org/#gf-deficit">unprecedented</a> financial risk.</li>
+    <li>The idea of owning Eldora is attractive, but it might still be a daunting undertaking and risky even if the deal finalizes. Under the <a href="https://eldorarecord.org/#may-draft" target="_blank" rel="noopener">May 2026 draft</a> of the bond documents, an independent consultant would approve the resort's budgets, the Town couldn't end POWDR's transition agreement early, and money would reach the Town only after the resort earned twice its senior bond payments for three straight years, far more than the 1.25 times the review below finds it can support.</li>
+    <li>We got here by what looks like groupthink about the attractiveness of the idea and <a href="https://eldorarecord.org/#profit">promises of long-term financial gain</a>, without much questioning of the financial costs should the deal not go through. This is evidenced by lots of discussion about the costs being covered by the eventual bond proceeds but very little about what happens if the deal falls through, and about the increasing probability that it won't happen. In the meetings I reviewed, the only time a trustee asked what the Town would owe if the deal didn't close was on Jan. 7, 2025 (<a href="https://www.youtube.com/watch?v=F3Kb-cwTvS8&amp;t=2313s" target="_blank" rel="noopener">video</a>). After that, in the minutes and recordings of the open meetings I reviewed, no trustee asked about the running cost totals, which appeared on the warrant lists they approved with the consent agenda (<a href="https://eldorarecord.org/#running-total">the running total</a>), or about the financial risk if the sale failed. The questions that did come up were about which costs could be reimbursed, and the Town's first estimate of what it would owe came in its <a href="https://www.nederlandco.gov/m/newsflash/home/detail/21" target="_blank" rel="noopener">Sept. 30, 2026, update</a>.</li>
+    <li>The probability that the deal goes through is low and getting lower; my current rough estimate is about a 5% probability that it goes forward. This is due to:
+      <ul>
+        <li>a price gap: on <a href="#viable-price">the rough review below</a>, the resort can support a cash price of about $70 million or less, but, according to the <a href="https://coloradosun.com/2024/11/26/nederland-vying-to-buy-eldora/" target="_blank" rel="noopener">Colorado Sun</a>, which cited a source with that buyer, POWDR rejected another buyer's bid below $100 million in 2024, and the State of Colorado, the first possible contributor the Town named (<a href="https://www.nederlandco.gov/m/newsflash/home/detail/21" target="_blank" rel="noopener">Sept. 30 update</a>), cut programs this year to close a shortfall of roughly $1.5 billion (<a href="https://www.kunc.org/news/2026-04-01/lawmakers-finish-drafting-colorados-budget-with-final-round-of-major-cuts-to-address-roughly-1-5-billion-shortfall" target="_blank" rel="noopener">KUNC</a>)</li>
+        <li>financing getting harder because of rising interest rates, with prospective bondholders already turning down the first deal's terms (<a href="https://eldorarecord.org/#revised-plan">where things stand</a>)</li>
+        <li>staffing issues: the town manager who shepherded the deal left, an interim town manager has taken over, the treasurer position is open, and the current work is "primarily being performed by the Mayor" without paid consultants (<a href="https://nederlandco.civicweb.net/document/132785/" target="_blank" rel="noopener">Oct. 20, 2026, memo</a>)</li>
+        <li>nothing keeping POWDR from selling to another buyer (<a href="https://eldorarecord.org/#no-sale">the purchase agreement has expired</a>)</li>
+        <li>many instruments needing to be redone: a new purchase agreement, a new or amended bond ordinance, and new bond documents, for a sale-leaseback that on its own is unlikely to close the price gap; as of Oct. 22, the Town said the lease "has not been drafted" (<a href="https://eldorarecord.org/records/2026-10-22-town-cora-response.txt" target="_blank" rel="noopener">Town response</a>)</li>
+      </ul>
+      <p>The estimate multiplies my rough odds for each step the deal still needs:</p>
+      <div class="scroll"><table>
+        <thead><tr><th scope="col">Step</th><th scope="col" class="num">Rough odds</th></tr></thead>
+        <tbody>
+          <tr><td>POWDR signs a new purchase agreement at a price it accepts</td><td class="num">50%</td></tr>
+          <tr><td>Outside money fills the gap between that price and what the resort can borrow, with little help from the state (better bond terms alone can&rsquo;t close the gap)</td><td class="num">10%&ndash;20%</td></tr>
+          <tr><td>Bonds sell on those terms and the Board approves</td><td class="num">60%&ndash;70%</td></tr>
+          <tr><td><strong>All three</strong></td><td class="num"><strong>3%&ndash;7%, about 5%</strong></td></tr>
+        </tbody>
+      </table></div>
+    </li>
+    <li>So it is increasingly looking like, if the deal fails, the Town will end 2026 with the General Fund at <a href="https://eldorarecord.org/#gf-tables">about &minus;$1.9 million</a>, a very large deficit for a town whose General Fund spends about $3.2 million a year, against an already bleak financial forecast (<a href="https://eldorarecord.org/#gf-recovery">the Town's own 2026 budget deficit</a>). This will likely result in borrowing from other funds and some combination of cutting non-essential services and staff, selling Town assets, and having little to no discretionary funding for many years.</li>
+    <li>A rough review of the numbers that I made with help from Claude (<a href="#debt-check">below</a>) suggests that in a normal year Eldora's earnings could about cover bonds equal to the $120 million price, but not the larger borrowing the Town planned, and not a run of bad seasons. On that review, the deal would be viable with total borrowing of about $90 million to $95 million, which points to a cash price of about $70 million or less.</li>
+    <li>With such a low probability of the deal closing, the Town Board should halt spending on it now, with firm limits (<a href="https://eldorarecord.org/resolution.html">draft resolution</a>):
+      <ul>
+        <li>no new acquisition costs, and no new engagements, without a Board vote</li>
+        <li>a final accounting from each firm of what the Town owes, separating what is owed now from what would be owed only at a closing</li>
+        <li>a firm deadline: a signed purchase agreement and committed financing by Jan. 31, 2027, and closing by April 30, 2027, one year after <a href="https://eldorarecord.org/#no-sale">the original closing deadline</a>, with the effort ending if either is missed</li>
+        <li>an independent review of the final terms before any vote, testing whether the resort can carry the debt at current interest rates and through bad snow years without help from the Town</li>
+        <li>regular public accounting of the costs and of progress on the deal</li>
+      </ul>
+      Halting spending doesn't reduce what the Town already owes, but it keeps the total from growing and lets the Board and staff put their attention on the budget. In any case, the Board should <a href="https://eldorarecord.org/#gf-deficit">plan the 2027 budget for the deal failing</a>.</li>
+  </ul>
+  <section class="check" id="debt-check" aria-labelledby="debt-check-h">
+    <h2 id="debt-check-h">Can Eldora's earnings pay for the bonds? A rough review</h2>
+    <p class="summary"><strong>In short:</strong> under reasonable assumptions, including bad snow years, Eldora's reported earnings would about cover bonds equal to the $120 million price in a normal year, with nothing to spare. The reserves in the Town's draft bond documents, about $17 million at that price, could carry a few bad winters, but a single year with visits down about 10% would already be a default under those documents, and the $180 million the Town expected to borrow wouldn't be covered at all. The modeled deal becomes viable with total borrowing of about $90 million to $95 million. Because the bonds also pay for reserves, interest, and other costs, that points to a cash price of <strong>about $70 million or less</strong>, and closer to $50 million if about three years of interest is paid from the bonds, as the Town's draft bond documents provide.</p>
+    <p class="muted">I suggested this analysis; Claude, Anthropic's AI assistant, helped prepare it. Karen Blakemore, a reader, supplied an independent ChatGPT analysis that reached similar results. It's a rough review, not a forecast: the Town's model and SE Group's study would be more precise, but neither is public.</p>
+
+    <h3>The starting numbers</h3>
+    <div class="scroll"><table>
+      <tbody>
+        <tr><td>Yearly earnings (EBITDA): about $50M revenue at a 25% margin</td><td class="num">$12.5M</td><td class="src"><a href="https://www.saminfo.com/news/sam-headline-news/special-report-nederlands-eldora-purchase-brave-but-risky-business" target="_blank" rel="noopener">SAM</a></td></tr>
+        <tr><td>Routine capital maintenance</td><td class="num">&minus;$2.0M</td><td class="src"><a href="https://web.archive.org/web/20251112014324/https://townofnederland.colorado.gov/press-release/eldora-mountain-acquisition-faqs-40" target="_blank" rel="noopener">FAQ 4.0</a></td></tr>
+        <tr><td><strong>Available for bond payments</strong></td><td class="num"><strong>$10.5M</strong></td><td></td></tr>
+      </tbody>
+    </table></div>
+    <p>The review assumes bonds at 8.5% interest, which the Town now models (<a href="https://www.nederlandco.gov/m/newsflash/home/detail/21" target="_blank" rel="noopener">Sept. 30 update</a>), with equal payments over 40 years, the longest term the Board allowed (<a href="https://nederlandco.civicweb.net/document/127855/" target="_blank" rel="noopener">Ord. 885</a>). That's $10.6 million a year for $120 million borrowed.</p>
+
+    <h3>Normal and bad years</h3>
+    <p>A ski area's costs are mostly fixed, and most of Eldora's lift-ticket revenue comes from Ikon Pass payments made for each visit, so fewer skiers cut earnings quickly. The ranges run from a milder case to a harsher one, explained under &ldquo;How the review works.&rdquo;</p>
+    <div class="scroll"><table>
+      <thead><tr><th scope="col">Skier visits</th><th scope="col" class="num">Short at $120M</th><th scope="col" class="num">Short at $180M</th></tr></thead>
+      <tbody>
+        <tr><td>Normal year</td><td class="num short">&minus;$0.1M</td><td class="num short">&minus;$5.4M</td></tr>
+        <tr><td>Down 10%</td><td class="num short">&minus;$2.1M to &minus;$3.3M</td><td class="num short">&minus;$7.4M to &minus;$8.6M</td></tr>
+        <tr><td>Down 20%</td><td class="num short">&minus;$4.1M to &minus;$6.5M</td><td class="num short">&minus;$9.4M to &minus;$11.8M</td></tr>
+        <tr><td>Down 30%</td><td class="num short">&minus;$6.1M to &minus;$9.7M</td><td class="num short">&minus;$11.4M to &minus;$15.0M</td></tr>
+      </tbody>
+    </table></div>
+    <p>How long would reserves last? With visits down 25%, then 15%, then 5%, here's what would be left at $120 million, starting from the $10 million reserve the Town planned (<a href="https://web.archive.org/web/20251112014324/https://townofnederland.colorado.gov/press-release/eldora-mountain-acquisition-faqs-40" target="_blank" rel="noopener">FAQ 4.0</a>) and from the reserves in the <a href="https://eldorarecord.org/#may-draft" target="_blank" rel="noopener">May 2026 draft</a>: a year of senior bond payments (about $10.6 million) plus an operating reserve of $6.2 million, about $16.8 million in all.</p>
+    <div class="scroll"><table>
+      <thead><tr><th scope="col">Starting reserve and case</th><th scope="col" class="num">After year 1</th><th scope="col" class="num">After year 2</th><th scope="col" class="num">After year 3</th></tr></thead>
+      <tbody>
+        <tr><td>Town's $10M, milder</td><td class="num">$4.9M</td><td class="num">$1.8M</td><td class="num">$0.7M</td></tr>
+        <tr><td>Town's $10M, harsher</td><td class="num">$1.9M</td><td class="num short">&minus;$3.0M</td><td class="num short">&minus;$4.7M</td></tr>
+        <tr><td>May draft&rsquo;s $16.8M, milder</td><td class="num">$11.7M</td><td class="num">$8.6M</td><td class="num">$7.5M</td></tr>
+        <tr><td>May draft&rsquo;s $16.8M, harsher</td><td class="num">$8.7M</td><td class="num">$3.8M</td><td class="num">$2.1M</td></tr>
+      </tbody>
+    </table></div>
+    <p>The larger reserves in the draft would last, but they wouldn't prevent a default. The draft makes any year in which earnings fall below the senior bond payments a default, even if the reserves pay the bondholders (&sect;6.20). At $120 million, a normal year is already at about that line, and a year with visits down 10% falls below it. A default would let bondholders accelerate the bonds, seek a receiver, and direct changes in how the resort is run, with money still in the reserves. Drawing on the reserves would also send all spare cash back to early repayment, and they would have to be refilled before capital projects (&sect;5.07, &sect;5.12). In roughly the first three years, interest paid from the bonds themselves would cover the payments, so early bad years would strain operations more than the bond payments.</p>
+
+    <h3 id="viable-price">At what price would the modeled deal work?</h3>
+    <p>The price paid to POWDR and the amount borrowed are different. The Town expected to borrow $180 million for a $120 million price (<a href="https://nederlandco.civicweb.net/document/123060/" target="_blank" rel="noopener">Res. 2025-17</a>); the rest would pay for the reserve, interest during the first years, issuance costs, starting deposits, and capital projects. So the review first asks how much the resort could borrow, then subtracts those other costs.</p>
+    <p>Viable here means earnings at least 1.25 times the bond payments in a normal year, the minimum in the Town's January and May draft bond documents (<a href="https://nederlandco.civicweb.net/document/127181/" target="_blank" rel="noopener">draft indenture §6.20</a>, <a href="https://eldorarecord.org/#may-draft" target="_blank" rel="noopener">May 2026 draft</a>). That allows bond payments of about $8.4 million a year ($10.5 million &divide; 1.25), which at 8.5% repays about $95 million over 40 years, or about $90 million over the 30 years the drafts set for the main bonds. The May draft pays only interest until about 2035 and repays principal from then to 2056, which puts it near the low end.</p>
+    <div class="scroll"><table>
+      <thead><tr><th scope="col">Other costs paid from the bonds</th><th scope="col" class="num">Price</th></tr></thead>
+      <tbody>
+        <tr><td>About $25M: the May draft's operating reserve ($11.7M at closing) and a year of senior bond payments in reserve (about $7.5M), plus issuance costs and the Town's costs to date</td><td class="num"><strong>$65M&ndash;$70M</strong></td></tr>
+        <tr><td>About $40M: paying about three years of interest from the bonds, as the drafts provide; the payment reserve is then mostly not needed at closing</td><td class="num">$50M&ndash;$55M</td></tr>
+      </tbody>
+    </table></div>
+    <p>The result depends most on the earnings estimate, which comes from a trade report, not Eldora's books. For a $120 million price to work from borrowing alone, Eldora would need to earn about $18 million to $21 million a year before interest and depreciation, rather than $12.5 million, or roughly 45% to 65% more. If earnings were 20% higher or lower than the estimate, the cash price would be about $90 million or about $45 million.</p>
+    <p>By cash price I mean what POWDR could be paid at closing from the bonds the resort can support. The Town is still pursuing the purchase at $120 million (<a href="https://nederlandco.civicweb.net/document/132785/" target="_blank" rel="noopener">Oct. 20 memo</a>), which leaves a gap of about $50 million to $70 million. It would have to come from outside money (the Town has named about $20 million in philanthropy for capital projects, <a href="https://www.nederlandco.gov/m/newsflash/home/detail/21" target="_blank" rel="noopener">Sept. 30 update</a>); from POWDR taking part of the price in seller bonds, as in the <a href="https://eldorarecord.org/#may-draft" target="_blank" rel="noopener">May 2026 draft</a>, where POWDR would take subordinate bonds it couldn't sell before 2036, whose value grows until they're paid from what the resort has left after the senior bonds and required deposits; or from higher earnings, since each $1 million a year of actual earnings above the reported figures supports about $9 million more borrowing.</p>
+    <p>The draft would also make any calendar year with earnings below the bond payments a default, even if the reserve covers the payments (§6.20). At about $90 million, one year with visits down 10% to 20% could do that. Both drafts predate the sale-leaseback plan, and as of Oct. 22 the Town said the lease "has not been drafted" (<a href="https://eldorarecord.org/records/2026-10-22-town-cora-response.txt" target="_blank" rel="noopener">Town response</a>). Either price is below the bid POWDR rejected in 2024, according to the <a href="https://coloradosun.com/2024/11/26/nederland-vying-to-buy-eldora/" target="_blank" rel="noopener">Colorado Sun</a>. Outside money lowers the borrowing needed dollar for dollar, so the borrowing figure is the steadier target.</p>
+    <p>Could better bond terms, such as those a sale-leaseback might bring, close the gap on their own? A $120 million price plus about $25 million to $40 million in other costs needs roughly $145 million to $160 million of borrowing.</p>
+    <div class="scroll"><table>
+      <thead><tr><th scope="col">Bond terms</th><th scope="col" class="num">Most it could borrow</th></tr></thead>
+      <tbody>
+        <tr><td>Today's assumptions: 8.5%, 30 years, 1.25 times coverage</td><td class="num">$90M</td></tr>
+        <tr><td>7.5%, 40 years, 1.25 times</td><td class="num">$106M</td></tr>
+        <tr><td>7%, 40 years, 1.10 times</td><td class="num">$127M</td></tr>
+        <tr><td>6%, 40 years, 1.10 times</td><td class="num">$144M</td></tr>
+      </tbody>
+    </table></div>
+    <p>Even the last row falls just short, and it would take rates about 2&frac12; points lower, the longest term the Board allowed, and a thinner safety margin all at once. Bond buyers have pushed the other way, asking the Town &ldquo;to more aggressively model poor snow years&rdquo; (<a href="https://www.nederlandco.gov/m/newsflash/home/detail/21" target="_blank" rel="noopener">Sept. 30 update</a>). The trustee holding title would help bondholders after a default, but it wouldn't make a bad winter less likely. What would change the odds is a much lower price or much more outside money, not the financing structure. So in my view, a sale-leaseback that closes the gap on its own is highly unlikely.</p>
+
+    <h3>How this compares with SE Group's study</h3>
+    <p>SE Group, the Town's due-diligence consultant, had Eldora's actual books, but its projections &ldquo;typically stop at the EBITDA line level&rdquo; (<a href="https://nederlandco.civicweb.net/document/122625/" target="_blank" rel="noopener">proposal</a>); its report isn't public. This review picks up where that stops: whether the earnings can carry the debt. Before its review, SE Group wrote that &ldquo;there appears to be sufficient NOI to serve the planned debt, but a strategic plan will additionally be needed&rdquo; for maintenance and improvements. That matches this review at $120 million.</p>
+
+    <details class="method">
+      <summary>How the review works</summary>
+      <ul>
+        <li><strong>Two cases for bad years.</strong> Milder: 30% of revenue doesn't change with visits, and 40% of operating costs fall with visits, so each 10% drop in visits cuts earnings about $2 million. Harsher, based on Karen Blakemore's ChatGPT analysis: revenue falls 80% as fast as visits and costs fall little, about $3.2 million per 10% drop.</li>
+        <li><strong>Ikon.</strong> Sources told The Colorado Sun that 60% to 75% of Eldora's lift-ticket revenue comes from Alterra's Ikon payments (<a href="https://coloradosun.com/2025/07/23/nederland-buying-eldora-powdr/" target="_blank" rel="noopener">Colorado Sun</a>); the purchase agreement describes that money as payable &ldquo;for scans&rdquo; (<a href="https://nederlandco.civicweb.net/document/126803/" target="_blank" rel="noopener">APA §2.2, §8.13</a>). The review assumes the Ikon agreement keeps its current terms. The current agreement is among POWDR, Snowbird Resort, and Alterra, so the Town would need its own agreement for Eldora (<a href="https://nederlandco.civicweb.net/document/126803/" target="_blank" rel="noopener">APA definitions, §3.2(f)</a>).</li>
+        <li><strong>Bad years aren't far-fetched.</strong> Colorado Ski Country USA's preliminary figures put statewide skier visits at 10.5 million in 2025&ndash;26, down 24% from 13.9 million, in a low-snow winter. SAM also noted that advance-purchase season passes kept revenue at many resorts from falling as much as visits ({'<a href="https://www.saminfo.com/colorado-resorts-endured-historic-visit-decline-in-2025-26/" target="_blank" rel="noopener">SAM</a>'}). Eldora's own numbers aren't public.</li>
+        <li><strong>Bonds.</strong> The Town now models rates &ldquo;closer to 8.5 percent.&rdquo; Real bonds wouldn't have equal payments; the January plan included bonds with later payments, which ease early years but cost more later. The bonds would be repaid only from the resort; if the reserve ran out, remedies would be the bondholders' (<a href="https://eldorarecord.org/#revised-plan">where things stand</a>).</li>
+        <li><strong>The price.</strong> The price is the borrowing less the other costs paid from the bonds. The draft bond documents would also fund a CapEx fund, a capital maintenance fund, and an operating reserve at closing, with the deposits left blank (<a href="https://nederlandco.civicweb.net/document/127181/" target="_blank" rel="noopener">draft indenture §3.02, §5.05</a>); the <a href="https://eldorarecord.org/#may-draft" target="_blank" rel="noopener">May 2026 draft</a> sets an operating reserve of $11.7 million at closing and a CapEx requirement of $47.5 million. It also measures coverage after administrative costs, including POWDR's transition fees and amounts owed to Alterra, which this review doesn't subtract, so the review may overstate what the resort can borrow. Upkeep is the Town's $2 million a year, which doesn't cover new lifts or lodges. The price is an estimate of what the reported earnings could support, not a Town or POWDR figure, and says nothing about what POWDR would accept.</li>
+      </ul>
+    </details>
+    <p>The records that would settle these questions, including SE Group's report, the bond payment schedule, and the amounts set aside at closing, are on the Eldora Record's list of <a href="https://eldorarecord.org/#records-needed">records anyone can request</a>. This is also why I think the Board should require an independent review that tests the final terms at current interest rates and through bad snow years before any vote.</p>
+  </section>
+  <p><a class="back" href="https://eldorarecord.org/">Back to the Eldora Record</a></p>
+  <footer>I'll revise these opinions as new records come in and note the date when I do.</footer>
+</main>
